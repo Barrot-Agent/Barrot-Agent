@@ -1,0 +1,5 @@
+on:
+  push:
+    branches:
+      - private-barrot-restore
+  workflow_dispatch:   # Barrot can now trigger redeploys himself
