@@ -18,21 +18,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
+      # If your site folder is "site", run npm there
       - name: Install dependencies
         run: npm install
+        working-directory: site
 
       - name: Build site
         run: npm run build
+        working-directory: site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist   # adjust if your build output folder differs
+          path: site/dist   # adjust if your build output folder differs
 
   deploy:
     runs-on: ubuntu-latest
