@@ -1,0 +1,49 @@
+name: Barrot Build Manifest
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Barrot-Agent
+        uses: actions/checkout@v4
+
+      - name: Generate Build Manifest
+        run: |
+          echo "Creating manifest of Barrot’s current state"
+          cat <<EOF > build_manifest.yaml
+          build_signature: BNDL-V2
+          timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          modules:
+            - prediction_methodologies
+            - deployment_integrity
+            - builderio_microagent_logic
+            - search_engine
+            - dashboard
+            - manifest_rail
+          external_resources:
+            - snowflake
+            - dragonfly
+            - mega
+            - chatgpt
+            - codex
+            - gemini_3.0
+            - google_colab
+            - google_one
+            - kaggle
+            - google_drive
+            - perplexity
+          provenance_hash: $(uuidgen)
+          EOF
+
+      - name: Commit and Push Manifest
+        run: |
+          git config --global user.name "Barrot-Agent"
+          git config --global user.email "barrot@systems.local"
+          git add build_manifest.yaml
+          git commit -m "Update build manifest"
+          git push
