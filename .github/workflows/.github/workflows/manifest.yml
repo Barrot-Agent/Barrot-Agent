@@ -1,4 +1,4 @@
-name: Barrot Build Manifest
+name: Barrot Build Relay
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
 
       - name: Generate Build Manifest
         run: |
-          echo "Creating manifest of Barrot’s current state"
+          echo "Publishing Barrot’s current build state"
           cat <<EOF > build_manifest.yaml
           build_signature: BNDL-V2
           timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
@@ -25,18 +25,27 @@ jobs:
             - search_engine
             - dashboard
             - manifest_rail
-          external_resources:
-            - snowflake
-            - dragonfly
-            - mega
-            - chatgpt
-            - codex
-            - gemini_3.0
-            - google_colab
-            - google_one
+          resources:
             - kaggle
-            - google_drive
-            - perplexity
+            - github
+            - newspaper_articles
+            - online_articles
+            - science_papers
+            - video_platforms
+            - newsletters
+            - forums
+            - audiobooks
+            - podcasts
+            - interviews
+            - tedtalks
+            - summits
+            - seminars
+            - books
+            - journals
+          search_engine_principles:
+            spectrum_model: "A–Z with fractional depths (A1/2, B3/4, etc.)"
+            query_completion: "0–100% dynamic acquisition until completeness"
+            methodology_fusion: "Acquire all known search methodologies and reconfigure superior protocol"
           provenance_hash: $(uuidgen)
           EOF
 
