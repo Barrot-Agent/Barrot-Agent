@@ -55,3 +55,13 @@ rail_status:
   cognition: recursive
 
 provenance_hash: 123e4567-e89b-12d3-a456-426614174000   # auto-generated UUID
+roadmap_ingestion:
+  source: "copilot-share-4dPWpNhxr1tYY5JZ2eoEY"
+  status: "curated"
+  handling_protocol: "structured ingestion"
+  target_rails:
+    - deployment
+    - microagent
+    - prediction
+  provenance_stamp: 2025-12-05T23:40:00Z
+  notes: "Crucial roadmap directive ingested from shared Copilot link"
