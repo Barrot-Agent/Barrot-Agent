@@ -22,7 +22,7 @@
       "properties": {
         "platform": {
           "type": "string",
-          "enum": ["kaggle", "openai", "github", "quantum-libraries", "public-apis"]
+          "enum": ["kaggle", "openai", "github", "quantum-libraries", "public-apis", "synthetic-generation"]
         },
         "url": {
           "type": "string",

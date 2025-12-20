@@ -7,8 +7,8 @@
     "url": "internal-demonstration"
   },
   "ingestion": {
-    "first_ingested": "2025-12-20T23:36:04.771860Z",
-    "last_updated": "2025-12-20T23:36:04.771886Z",
+    "first_ingested": "2025-12-20T23:39:33.872559Z",
+    "last_updated": "2025-12-20T23:39:33.872570Z",
     "frequency": "on-demand",
     "status": "completed"
   },

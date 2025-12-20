@@ -103,17 +103,18 @@ jobs:
 
       - name: Update Build Manifest
         run: |
-          cat > build_manifest_update.yaml << 'EOF'
+          CURRENT_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          cat > build_manifest_update.yaml << EOF
           
           # Permutation Enhancement Module
           permutation_capabilities:
             ingestion_status: active
-            last_pipeline_run: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
+            last_pipeline_run: ${CURRENT_DATE}
             active_sources:
-              - kaggle: ${{ needs.check-schedule.outputs.run_kaggle }}
-              - github: ${{ needs.check-schedule.outputs.run_github }}
-              - ml_training: ${{ needs.check-schedule.outputs.run_ml }}
-              - quantum: ${{ needs.check-schedule.outputs.run_quantum }}
+              kaggle: ${{ needs.check-schedule.outputs.run_kaggle }}
+              github: ${{ needs.check-schedule.outputs.run_github }}
+              ml_training: ${{ needs.check-schedule.outputs.run_ml }}
+              quantum: ${{ needs.check-schedule.outputs.run_quantum }}
             
           datasets_ingested:
             mathematical: active
