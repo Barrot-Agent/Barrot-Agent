@@ -24,11 +24,12 @@ jobs:
 
       - name: Parse comment for commands
         id: parse
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
         run: |
-          COMMENT_BODY="${{ github.event.comment.body }}"
-          echo "Processing comment: $COMMENT_BODY"
+          echo "Processing comment from environment variable"
           
-          # Extract command after @Barrot mention
+          # Extract command after @Barrot mention (using environment variable to prevent injection)
           COMMAND=""
           if echo "$COMMENT_BODY" | grep -iq "@Barrot analyze"; then
             COMMAND="analyze"

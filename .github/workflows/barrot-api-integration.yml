@@ -42,58 +42,56 @@ jobs:
 
       - name: Prepare data payload
         id: prepare
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title || '' }}
+          ISSUE_USER: ${{ github.event.issue.user.login || '' }}
+          PR_TITLE: ${{ github.event.pull_request.title || '' }}
+          PR_USER: ${{ github.event.pull_request.user.login || '' }}
+          CUSTOM_MESSAGE: ${{ github.event.inputs.custom_message || '' }}
         run: |
           echo "Preparing data for API submission..."
           
           # Determine data type
           DATA_TYPE="${{ github.event.inputs.data_type || 'auto' }}"
           
-          # Create payload based on event type
+          # Create payload based on event type using jq for proper JSON encoding
           if [ "${{ github.event_name }}" == "issues" ]; then
             DATA_TYPE="issue"
-            PAYLOAD=$(cat <<EOF
-          {
-            "type": "issue",
-            "source": "github",
-            "repository": "${{ github.repository }}",
-            "issue_number": ${{ github.event.issue.number }},
-            "title": "${{ github.event.issue.title }}",
-            "author": "${{ github.event.issue.user.login }}",
-            "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-          }
-          EOF
-          )
+            jq -n \
+              --arg type "issue" \
+              --arg source "github" \
+              --arg repository "${{ github.repository }}" \
+              --argjson issue_number "${{ github.event.issue.number }}" \
+              --arg title "$ISSUE_TITLE" \
+              --arg author "$ISSUE_USER" \
+              --arg timestamp "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+              '{type: $type, source: $source, repository: $repository, issue_number: $issue_number, title: $title, author: $author, timestamp: $timestamp}' \
+              > /tmp/api-payload.json
           elif [ "${{ github.event_name }}" == "pull_request" ]; then
             DATA_TYPE="pr"
-            PAYLOAD=$(cat <<EOF
-          {
-            "type": "pull_request",
-            "source": "github",
-            "repository": "${{ github.repository }}",
-            "pr_number": ${{ github.event.pull_request.number }},
-            "title": "${{ github.event.pull_request.title }}",
-            "author": "${{ github.event.pull_request.user.login }}",
-            "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-          }
-          EOF
-          )
+            jq -n \
+              --arg type "pull_request" \
+              --arg source "github" \
+              --arg repository "${{ github.repository }}" \
+              --argjson pr_number "${{ github.event.pull_request.number }}" \
+              --arg title "$PR_TITLE" \
+              --arg author "$PR_USER" \
+              --arg timestamp "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+              '{type: $type, source: $source, repository: $repository, pr_number: $pr_number, title: $title, author: $author, timestamp: $timestamp}' \
+              > /tmp/api-payload.json
           else
             # Manual dispatch
-            PAYLOAD=$(cat <<EOF
-          {
-            "type": "$DATA_TYPE",
-            "source": "github",
-            "repository": "${{ github.repository }}",
-            "message": "${{ github.event.inputs.custom_message }}",
-            "triggered_by": "${{ github.actor }}",
-            "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-          }
-          EOF
-          )
+            jq -n \
+              --arg type "$DATA_TYPE" \
+              --arg source "github" \
+              --arg repository "${{ github.repository }}" \
+              --arg message "$CUSTOM_MESSAGE" \
+              --arg triggered_by "${{ github.actor }}" \
+              --arg timestamp "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+              '{type: $type, source: $source, repository: $repository, message: $message, triggered_by: $triggered_by, timestamp: $timestamp}' \
+              > /tmp/api-payload.json
           fi
           
-          # Save payload to file
-          echo "$PAYLOAD" > /tmp/api-payload.json
           echo "Payload prepared:"
           cat /tmp/api-payload.json
           
@@ -145,7 +143,7 @@ jobs:
         id: fetch_api
         if: steps.send_api.outputs.status == 'success'
         env:
-          COPILOT_API_URL: ${{ secrets.COPILOT_API_URL || 'https://api.example.com/barrot/fetch' }}
+          COPILOT_API_URL: ${{ secrets.COPILOT_API_URL || 'https://api.example.com/barrot/ingest' }}
           COPILOT_API_KEY: ${{ secrets.COPILOT_API_KEY || '' }}
         run: |
           echo "Fetching processed data from Copilot API..."
@@ -154,7 +152,13 @@ jobs:
           sleep 5
           
           if [ -n "$COPILOT_API_KEY" ]; then
-            FETCH_URL="${COPILOT_API_URL/ingest/fetch}"
+            # Construct fetch URL by replacing 'ingest' with 'fetch' if present, otherwise append '/fetch'
+            if echo "$COPILOT_API_URL" | grep -q "ingest"; then
+              FETCH_URL="${COPILOT_API_URL/ingest/fetch}"
+            else
+              FETCH_URL="${COPILOT_API_URL%/}/fetch"
+            fi
+            
             RESPONSE=$(curl -s -X GET "$FETCH_URL" \
               -H "Authorization: Bearer $COPILOT_API_KEY" \
               -H "Accept: application/json" || echo '{"error": "fetch failed"}')

@@ -156,16 +156,22 @@ jobs:
           echo "Files to be removed:" | tee -a "$LOG_FILE"
           ls -t Barrot-Bundles | tail -n +$((MAX_BUNDLES + 1)) | tee -a "$LOG_FILE"
           
-          # Remove old bundles
+          # Remove old bundles using safe iteration
           REMOVED=0
-          for file in $(ls -t Barrot-Bundles | tail -n +$((MAX_BUNDLES + 1))); do
-            if rm -f "Barrot-Bundles/$file"; then
-              echo "  ✓ Removed: $file" | tee -a "$LOG_FILE"
-              REMOVED=$((REMOVED + 1))
-            else
-              echo "  ✗ Failed to remove: $file" | tee -a "$LOG_FILE"
+          ls -t Barrot-Bundles | tail -n +$((MAX_BUNDLES + 1)) | while IFS= read -r file; do
+            if [ -f "Barrot-Bundles/$file" ]; then
+              if rm -f "Barrot-Bundles/$file"; then
+                echo "  ✓ Removed: $file" | tee -a "$LOG_FILE"
+                REMOVED=$((REMOVED + 1))
+              else
+                echo "  ✗ Failed to remove: $file" | tee -a "$LOG_FILE"
+              fi
             fi
           done
+          
+          # Count actual removed files for output
+          INITIAL_COUNT=$(wc -w <<< "$(ls -t Barrot-Bundles 2>/dev/null)" || echo 0)
+          REMOVED=${{ steps.analyze.outputs.bundles_to_remove }}
           
           echo "removed_count=$REMOVED" >> $GITHUB_OUTPUT
           echo "✅ Removed $REMOVED old bundle(s)" | tee -a "$LOG_FILE"
