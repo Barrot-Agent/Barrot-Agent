@@ -374,7 +374,6 @@ See repository LICENSE file for details.
 ### Contact
 - Issues: GitHub issue tracker
 - Discussions: GitHub discussions
-- Email: barrot@systems.local
 
 ## Version History
 

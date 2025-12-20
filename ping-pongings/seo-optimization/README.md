@@ -261,7 +261,7 @@ Relevance = (
 )
 ```
 
-**Keyword Match:** TF-IDF scoring for keyword presence
+**Keyword Match:** TF-IDF (Term Frequency-Inverse Document Frequency) scoring for keyword presence
 **Semantic Similarity:** Vector similarity between query and content
 **Intent Alignment:** Match between user intent and content purpose
 

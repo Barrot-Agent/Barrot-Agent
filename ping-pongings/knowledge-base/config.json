@@ -7,6 +7,7 @@
     "verification_required": true,
     "conflict_resolution_strategy": "majority_vote",
     "quality_threshold": 0.75,
+    "_quality_threshold_note": "System-wide constant used across knowledge base, cognitive state, and verification systems",
     "max_entries_per_domain": 10000,
     "retention_policy_days": 365
   },
