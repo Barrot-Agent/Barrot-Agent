@@ -113,6 +113,14 @@ class QuantumAlgorithms:
         """
         import math
         
+        # Validate search space is power of 2
+        if search_space_size <= 0 or (search_space_size & (search_space_size - 1)) != 0:
+            logger.error(f"Search space size must be a power of 2, got {search_space_size}")
+            return {
+                'error': 'search_space_size must be a power of 2',
+                'provided': search_space_size
+            }
+        
         num_qubits = int(math.log2(search_space_size))
         circuit = self.builder.create_circuit(circuit_id, num_qubits)
         
@@ -126,7 +134,7 @@ class QuantumAlgorithms:
             'search_space': search_space_size,
             'iterations': iterations,
             'note': 'Extend with Qiskit Grover implementation',
-            'speedup': f"O(√N) vs O(N) classical"
+            'speedup': 'O(sqrt(N)) vs O(N) classical'
         }
         
         self.algorithms[circuit_id] = algorithm

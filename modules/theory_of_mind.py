@@ -181,6 +181,15 @@ class AgentGoalModeler:
     Model and predict agent goals in multi-agent scenarios
     """
     
+    # Goal classification types
+    GOAL_TYPES = {
+        'resource_acquisition': ['gather', 'collect', 'acquire', 'obtain'],
+        'construction': ['build', 'construct', 'create', 'make'],
+        'exploration': ['explore', 'search', 'discover', 'investigate'],
+        'communication': ['communicate', 'signal', 'message', 'inform'],
+        'general_task': []  # Default fallback
+    }
+    
     def __init__(self):
         self.agents = {}
         self.goal_predictions = []
@@ -259,17 +268,22 @@ class AgentGoalModeler:
         if not actions:
             return 'unknown'
         
-        # Simple inference based on action patterns
-        action_types = [a['action'].get('type', '') for a in actions]
+        # Extract action types
+        action_types = [a['action'].get('type', '').lower() for a in actions]
         
-        if 'gather' in action_types or 'collect' in action_types:
-            return 'resource_acquisition'
-        elif 'build' in action_types or 'construct' in action_types:
-            return 'construction'
-        elif 'explore' in action_types or 'search' in action_types:
-            return 'exploration'
-        else:
-            return 'general_task'
+        # Score each goal type based on keyword matches
+        goal_scores = {}
+        for goal_type, keywords in self.GOAL_TYPES.items():
+            score = sum(
+                1 for action_type in action_types 
+                for keyword in keywords 
+                if keyword in action_type
+            )
+            goal_scores[goal_type] = score
+        
+        # Return goal type with highest score, default to general_task
+        best_goal = max(goal_scores.items(), key=lambda x: x[1])
+        return best_goal[0] if best_goal[1] > 0 else 'general_task'
 
 
 # Module initialization
