@@ -27,11 +27,5 @@
       "src": "/(.*)",
       "dest": "website/index.html"
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/website/index.html"
-    }
   ]
 }

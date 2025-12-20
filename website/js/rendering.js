@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (exportRender) {
         exportRender.addEventListener('click', exportRendering);
     }
+    
+    // Add mouse controls for rotating the object
+    setupMouseControls();
 });
 
 function init3DRendering() {
@@ -229,11 +232,12 @@ function onWindowResize() {
 }
 
 // Add mouse controls for rotating the object
-let isDragging = false;
-let previousMousePosition = { x: 0, y: 0 };
+function setupMouseControls() {
+    let isDragging = false;
+    let previousMousePosition = { x: 0, y: 0 };
 
-const canvas = document.getElementById('renderCanvas');
-if (canvas) {
+    const canvas = document.getElementById('renderCanvas');
+    if (!canvas) return;
     canvas.addEventListener('mousedown', function(e) {
         isDragging = true;
     });

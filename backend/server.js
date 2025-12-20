@@ -12,7 +12,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../website')));
 
 // Database setup
-const db = new sqlite3.Database('./backend/db/barrot.db', (err) => {
+const dbPath = process.env.DB_PATH || './backend/db/barrot.db';
+const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.error('Database connection error:', err);
     } else {
