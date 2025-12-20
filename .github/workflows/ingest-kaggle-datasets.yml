@@ -48,7 +48,7 @@ jobs:
           cat > ingest_kaggle.py << 'EOFPYTHON'
           import os
           import json
-          from datetime import datetime
+          from datetime import datetime, timezone
           import subprocess
           
           datasets_to_ingest = [
@@ -75,7 +75,7 @@ jobs:
                           "url": f"https://www.kaggle.com/datasets/{dataset}"
                       },
                       "ingestion": {
-                          "last_updated": datetime.utcnow().isoformat() + "Z",
+                          "last_updated": datetime.now(timezone.utc).isoformat() + "Z",
                           "frequency": "monthly",
                           "status": "completed"
                       },
@@ -89,7 +89,7 @@ jobs:
           os.makedirs("datasets/metadata", exist_ok=True)
           with open("datasets/metadata/kaggle_ingestion.json", "w") as f:
               json.dump({
-                  "ingestion_timestamp": datetime.utcnow().isoformat() + "Z",
+                  "ingestion_timestamp": datetime.now(timezone.utc).isoformat() + "Z",
                   "source": "kaggle",
                   "datasets": metadata
               }, f, indent=2)

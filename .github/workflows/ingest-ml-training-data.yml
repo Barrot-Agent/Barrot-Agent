@@ -35,7 +35,7 @@ jobs:
           import os
           import json
           import numpy as np
-          from datetime import datetime
+          from datetime import datetime, timezone
           
           # Generate synthetic optimization datasets for training
           def generate_tsp_instances(n_instances=100, n_cities_range=(10, 50)):
@@ -111,7 +111,7 @@ jobs:
                   "url": "internal"
               },
               "ingestion": {
-                  "last_updated": datetime.utcnow().isoformat() + "Z",
+                  "last_updated": datetime.now(timezone.utc).isoformat() + "Z",
                   "frequency": "weekly",
                   "status": "completed"
               },
@@ -140,7 +140,7 @@ jobs:
           import os
           import json
           import numpy as np
-          from datetime import datetime
+          from datetime import datetime, timezone
           
           def generate_sorting_benchmarks(n_benchmarks=50):
               """Generate benchmarks for permutation-based sorting"""

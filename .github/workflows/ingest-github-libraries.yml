@@ -37,7 +37,7 @@ jobs:
           import os
           import json
           import requests
-          from datetime import datetime
+          from datetime import datetime, timezone
           
           # Target repositories for permutation libraries
           repositories = [
@@ -72,7 +72,7 @@ jobs:
                           "language": repo_data.get("language", "Unknown"),
                           "topics": repo_data.get("topics", []),
                           "last_updated": repo_data["updated_at"],
-                          "ingestion_timestamp": datetime.utcnow().isoformat() + "Z"
+                          "ingestion_timestamp": datetime.now(timezone.utc).isoformat() + "Z"
                       }
                       
                       ingested_libraries.append(library_info)
@@ -87,7 +87,7 @@ jobs:
           os.makedirs("datasets/metadata", exist_ok=True)
           with open("datasets/metadata/github_libraries.json", "w") as f:
               json.dump({
-                  "ingestion_timestamp": datetime.utcnow().isoformat() + "Z",
+                  "ingestion_timestamp": datetime.now(timezone.utc).isoformat() + "Z",
                   "source": "github",
                   "libraries": ingested_libraries,
                   "count": len(ingested_libraries)
@@ -107,7 +107,7 @@ jobs:
           import os
           import json
           import requests
-          from datetime import datetime
+          from datetime import datetime, timezone
           
           headers = {
               "Authorization": f"token {os.environ.get('GITHUB_TOKEN', '')}",
@@ -145,7 +145,7 @@ jobs:
           # Save algorithm search results
           with open("datasets/metadata/algorithm_search.json", "w") as f:
               json.dump({
-                  "search_timestamp": datetime.utcnow().isoformat() + "Z",
+                  "search_timestamp": datetime.now(timezone.utc).isoformat() + "Z",
                   "repositories": algorithm_repos,
                   "count": len(algorithm_repos)
               }, f, indent=2)
