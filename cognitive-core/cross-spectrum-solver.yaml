@@ -30,9 +30,12 @@ complementary_solution_discovery:
       - synthesize_cross_spectrum_resolution
     
     examples:
-      - problem: "data_scarcity" -> solution: "transfer_learning_from_abundance"
-      - problem: "over_complexity" -> solution: "simplification_from_minimal_domain"
-      - problem: "slow_sequential" -> solution: "parallel_from_distributed_systems"
+      - problem: "data_scarcity"
+        solution: "transfer_learning_from_abundance"
+      - problem: "over_complexity"
+        solution: "simplification_from_minimal_domain"
+      - problem: "slow_sequential"
+        solution: "parallel_from_distributed_systems"
   
   symmetry_detection:
     - mirror_problem_identification
