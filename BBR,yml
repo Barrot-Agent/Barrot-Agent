@@ -56,10 +56,9 @@ jobs:
       - name: Update Cognitive Snapshot
         run: |
           TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          ACTIONS=$((RANDOM % 100 + 1200))
           
           # Update timestamp and activity in cognitive snapshot
-          sed -i "s/Last Updated:.*/Last Updated:** $TIMESTAMP  /" cognitive-snapshot.md
+          sed -i "s/\*\*Last Updated:\*\* .*/\*\*Last Updated:\*\* $TIMESTAMP  /" cognitive-snapshot.md
           
           # Append to activity feed
           sed -i "/## 🔄 Live Activity Feed/a \\\n**$TIMESTAMP** — Build cycle completed — Cognitive state updated  " cognitive-snapshot.md
