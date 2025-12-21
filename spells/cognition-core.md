@@ -101,7 +101,7 @@ This spell is **always active** and operates on the following schedule:
 - **Self-Assessment**: Every 15 minutes
 - **Gap Filling**: Continuous (as gaps identified)
 - **Workflow Refinement**: Every hour
-- **Performance Monitoring**: Real-time (sub-second intervals)
+- **Performance Monitoring**: Real-time (100ms intervals)
 
 ## Success Criteria
 
