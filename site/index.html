@@ -449,15 +449,15 @@
 
     <!-- Navigation Tabs -->
     <div class="tabs">
-      <div class="tab active" onclick="showSection('search')">Search Engine</div>
-      <div class="tab" onclick="showSection('data')">Data Mastery</div>
-      <div class="tab" onclick="showSection('surveillance')">Competitor Surveillance</div>
-      <div class="tab" onclick="showSection('ide')">IDE</div>
-      <div class="tab" onclick="showSection('daw')">DAW</div>
-      <div class="tab" onclick="showSection('web3')">Web3</div>
-      <div class="tab" onclick="showSection('nft')">NFT Marketplace</div>
-      <div class="tab" onclick="showSection('blockchain')">Chameleon Chain</div>
-      <div class="tab" onclick="showSection('operations')">Operations</div>
+      <div class="tab active" onclick="showSection('search', event)">Search Engine</div>
+      <div class="tab" onclick="showSection('data', event)">Data Mastery</div>
+      <div class="tab" onclick="showSection('surveillance', event)">Competitor Surveillance</div>
+      <div class="tab" onclick="showSection('ide', event)">IDE</div>
+      <div class="tab" onclick="showSection('daw', event)">DAW</div>
+      <div class="tab" onclick="showSection('web3', event)">Web3</div>
+      <div class="tab" onclick="showSection('nft', event)">NFT Marketplace</div>
+      <div class="tab" onclick="showSection('blockchain', event)">Chameleon Chain</div>
+      <div class="tab" onclick="showSection('operations', event)">Operations</div>
     </div>
 
     <!-- Search Engine Section -->
@@ -974,7 +974,7 @@ function barrotOptimize() {
     }
 
     // Tab navigation
-    function showSection(sectionId) {
+    function showSection(sectionId, event) {
       document.querySelectorAll('.content-section').forEach(section => {
         section.classList.remove('active');
       });
@@ -982,7 +982,9 @@ function barrotOptimize() {
         tab.classList.remove('active');
       });
       document.getElementById(sectionId).classList.add('active');
-      event.target.classList.add('active');
+      if (event && event.target) {
+        event.target.classList.add('active');
+      }
     }
 
     // IDE functions
@@ -1031,13 +1033,17 @@ function barrotOptimize() {
 
     // Simulate real-time updates
     setInterval(() => {
-      // Update random metrics
+      // Update random metrics that are pure numbers
       const metrics = document.querySelectorAll('.metric-value');
       if (metrics.length > 0 && Math.random() > 0.7) {
         const randomMetric = metrics[Math.floor(Math.random() * metrics.length)];
-        const currentValue = parseInt(randomMetric.textContent.replace(/[^0-9]/g, ''));
-        if (!isNaN(currentValue)) {
-          randomMetric.textContent = (currentValue + Math.floor(Math.random() * 10)).toLocaleString();
+        const text = randomMetric.textContent;
+        // Only update if it's a pure number or number with commas
+        if (/^[\d,]+$/.test(text)) {
+          const currentValue = parseInt(text.replace(/,/g, ''));
+          if (!isNaN(currentValue)) {
+            randomMetric.textContent = (currentValue + Math.floor(Math.random() * 10)).toLocaleString();
+          }
         }
       }
     }, 3000);
