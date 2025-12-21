@@ -336,8 +336,18 @@ contract ChameleonToken is IERC20, Ownable, Pausable {
         VestingSchedule storage schedule = vestingSchedules[_msgSender()];
         require(schedule.total > 0, "No vesting schedule found");
 
+        // Initialize vesting start if first claim
+        if (schedule.vestingStart == 0) {
+            schedule.vestingStart = tgeTimestamp;
+        }
+
         uint256 releasable = _calculateReleasableAmount(_msgSender());
         require(releasable > 0, "No tokens available for release");
+
+        // Mark TGE as claimed if applicable
+        if (!schedule.tgeClaimed && block.timestamp >= tgeTimestamp) {
+            schedule.tgeClaimed = true;
+        }
 
         schedule.released += releasable;
         
@@ -348,7 +358,7 @@ contract ChameleonToken is IERC20, Ownable, Pausable {
     }
 
     /**
-     * @dev Calculate releasable amount for an address
+     * @dev Calculate releasable amount for an address (does not modify state)
      */
     function _calculateReleasableAmount(address beneficiary) private view returns (uint256) {
         VestingSchedule storage schedule = vestingSchedules[beneficiary];
@@ -358,6 +368,7 @@ contract ChameleonToken is IERC20, Ownable, Pausable {
         }
 
         uint256 releasable = 0;
+        uint256 vestingStart = schedule.vestingStart > 0 ? schedule.vestingStart : tgeTimestamp;
 
         // TGE amount (25%)
         if (!schedule.tgeClaimed && block.timestamp >= tgeTimestamp) {
@@ -365,19 +376,29 @@ contract ChameleonToken is IERC20, Ownable, Pausable {
         }
 
         // Vested amount (75% over 6 months)
-        if (schedule.vestingStart == 0) {
-            schedule.vestingStart = tgeTimestamp;
-        }
-
-        if (block.timestamp > schedule.vestingStart) {
+        if (block.timestamp > vestingStart) {
             uint256 vestedAmount = schedule.total - schedule.tgeAmount;
-            uint256 elapsed = block.timestamp - schedule.vestingStart;
+            uint256 elapsed = block.timestamp - vestingStart;
             
+            // Calculate how much has vested so far
+            uint256 totalVested;
             if (elapsed >= schedule.vestingDuration) {
-                releasable += vestedAmount - (schedule.released - schedule.tgeAmount);
+                totalVested = vestedAmount;
             } else {
-                uint256 vested = (vestedAmount * elapsed) / schedule.vestingDuration;
-                releasable += vested - (schedule.released - schedule.tgeAmount);
+                totalVested = (vestedAmount * elapsed) / schedule.vestingDuration;
+            }
+            
+            // Calculate how much of the vested portion has already been released
+            uint256 vestedReleased = 0;
+            if (schedule.released > 0) {
+                if (schedule.tgeClaimed) {
+                    vestedReleased = schedule.released - schedule.tgeAmount;
+                }
+            }
+            
+            // Add unreleased vested amount
+            if (totalVested > vestedReleased) {
+                releasable += totalVested - vestedReleased;
             }
         }
 
@@ -481,16 +502,35 @@ contract ChameleonToken is IERC20, Ownable, Pausable {
     function withdrawETH() external onlyOwner {
         uint256 balance = address(this).balance;
         require(balance > 0, "No ETH to withdraw");
-        payable(owner()).transfer(balance);
+        (bool success, ) = payable(owner()).call{value: balance}("");
+        require(success, "ETH transfer failed");
     }
 
     /**
-     * @dev Receive function to accept ETH
+     * @dev Receive function to accept ETH for presale
      */
     receive() external payable {
-        // Allow receiving ETH for presale
-        if (presaleActive && msg.value > 0) {
-            this.buyTokens{value: msg.value}();
-        }
+        // Only allow ETH during presale
+        require(presaleActive, "Presale is not active");
+        require(msg.value > 0, "Must send ETH to buy tokens");
+        require(currentPhase > 0 && currentPhase <= 4, "Invalid presale phase");
+        
+        PresalePhase storage phase = presalePhases[currentPhase];
+        require(phase.active, "Current phase is not active");
+
+        // Calculate tokens to buy
+        uint256 tokenAmount = (msg.value * 10**decimals) / phase.price;
+        require(tokenAmount > 0, "Token amount must be greater than zero");
+        require(phase.sold + tokenAmount <= phase.allocation, "Phase allocation exceeded");
+        require(totalPresaleSold + tokenAmount <= totalPresaleAllocation, "Total presale allocation exceeded");
+
+        // Update phase and total sold
+        phase.sold += tokenAmount;
+        totalPresaleSold += tokenAmount;
+
+        // Create vesting schedule for buyer
+        _createVestingSchedule(_msgSender(), tokenAmount);
+
+        emit TokensPurchased(_msgSender(), tokenAmount, msg.value, currentPhase);
     }
 }
