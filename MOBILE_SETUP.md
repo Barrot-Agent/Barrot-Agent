@@ -426,7 +426,7 @@ pkg update && pkg upgrade
 
 ### Tools
 - **Termux Wiki**: https://wiki.termux.com/
-- **iSH Documentation**: https://github.com/iscsh/ish
+- **iSH Documentation**: https://github.com/ish-app/ish
 - **GitHub Mobile Docs**: https://docs.github.com/en/get-started/using-github/github-mobile
 
 ---
