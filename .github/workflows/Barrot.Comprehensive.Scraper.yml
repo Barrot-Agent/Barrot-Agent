@@ -1,4 +1,8 @@
 name: Barrot Comprehensive Web Scraper
+
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: '10,40 * * * *'  # Every 30 minutes at :10 and :40 (staggered 10 min after RE)

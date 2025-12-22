@@ -1,4 +1,8 @@
 name: Barrot Reverse Engineering Mastery Engine
+
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: '0,30 * * * *'  # Every 30 minutes at :00 and :30

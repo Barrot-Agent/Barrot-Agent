@@ -1,4 +1,8 @@
 name: Barrot AI Model Capability Harvester
+
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: '20,50 * * * *'  # Every 30 minutes at :20 and :50 (staggered 20 min after RE)
