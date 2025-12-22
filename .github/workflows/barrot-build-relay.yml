@@ -15,25 +15,12 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Generate Build Manifest
+      - name: Update Build Manifest Timestamp
         run: |
           timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           
-          cat <<EOF > build_manifest.yaml
-          build_signature: BNDL-V2
-          timestamp: $timestamp
-          rail_status:
-            ingestion: active
-            deployment: stable
-            microagent: recursive
-            prediction: evolving
-            dashboard: publishing
-            cognition: maximum
-            metacognition: active
-            adaptive_learning: enabled
-            pattern_synthesis: operational
-            cross_validation: continuous
-          EOF
+          # Update only the timestamp in the existing manifest
+          sed -i "s/timestamp: .*/timestamp: $timestamp/" build_manifest.yaml
           
           echo "📦 Build manifest updated at $timestamp" >> memory-bundles/outcome-relay.md
 

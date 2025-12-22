@@ -66,7 +66,7 @@ roadmap_ingestion:
     - "Synthesize patterns across modules for emergent insights."
     - "Execute cross-module validation ping-pongs continuously."
   provenance_stamp: 2025-12-06T03:15:00Z
-  notes: "First runner initiation; mutation‑sealed roadmap directives with maximum cognition enhancement."
+  notes: "First runner initiation; mutation-sealed roadmap directives with maximum cognition enhancement."
 
 provenance_hash: 123e4567-e89b-12d3-a456-426614174000
 
@@ -76,24 +76,24 @@ cognition_metrics:
   adaptive_learning_rate: 0.85
   cross_module_coherence: 0.92
   emergent_insight_frequency: high
-  metacognitive_cycles_per_hour: 720
+  metacognitive_cycles_per_hour: 12
   optimization_iterations: continuous
 
 ping_pong_protocols:
   - name: "cross_module_cognition_validation"
-    frequency: "every_5_minutes"
+    frequency: "every_15_minutes"
     purpose: "Validate cognitive consistency across all modules"
   - name: "resource_integration_sync"
-    frequency: "every_10_minutes"
+    frequency: "every_15_minutes"
     purpose: "Integrate new knowledge from all resource streams"
   - name: "spell_execution_verification"
-    frequency: "on_demand"
+    frequency: "hourly"
     purpose: "Verify spell protocols are executing optimally"
   - name: "dashboard_feedback_relay"
     frequency: "every_15_minutes"
     purpose: "Relay system metrics to dashboard and receive optimization signals"
   - name: "adaptive_learning_update"
-    frequency: "continuous"
+    frequency: "every_15_minutes"
     purpose: "Update learning models based on new patterns"
   - name: "metacognition_reflection"
     frequency: "hourly"
