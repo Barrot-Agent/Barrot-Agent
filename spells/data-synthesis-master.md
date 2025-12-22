@@ -86,7 +86,10 @@ Decode proprietary binary formats:
 ## Advanced Techniques
 
 ### Quantum Data Manipulation
-Operating at the theoretical minimum unit:
+Operating at the theoretical minimum unit (Future Research Direction):
+
+**Note**: The following capabilities represent advanced research directions and theoretical frameworks for future implementation as quantum computing technology matures.
+
 - **Quantum Bit Representation**: Superposition of data states
 - **Entangled Data Structures**: Correlated information pairs
 - **Probabilistic Inference**: Handle uncertainty natively

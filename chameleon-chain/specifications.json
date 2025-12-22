@@ -40,19 +40,19 @@
         {
           "name": "Ethereum",
           "chainId": 1,
-          "bridgeContract": "0x...",
+          "bridgeContract": "TBD_DEPLOY_MAINNET",
           "status": "active"
         },
         {
           "name": "Binance Smart Chain",
           "chainId": 56,
-          "bridgeContract": "0x...",
+          "bridgeContract": "TBD_DEPLOY_MAINNET",
           "status": "active"
         },
         {
           "name": "Polygon",
           "chainId": 137,
-          "bridgeContract": "0x...",
+          "bridgeContract": "TBD_DEPLOY_MAINNET",
           "status": "active"
         },
         {
