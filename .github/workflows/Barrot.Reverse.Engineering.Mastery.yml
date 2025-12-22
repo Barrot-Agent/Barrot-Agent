@@ -1,7 +1,7 @@
 name: Barrot Reverse Engineering Mastery Engine
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Every 30 minutes
+    - cron: '0,30 * * * *'  # Every 30 minutes at :00 and :30
   workflow_dispatch:
     inputs:
       target_domain:

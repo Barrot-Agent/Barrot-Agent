@@ -1,7 +1,7 @@
 name: Barrot Comprehensive Web Scraper
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Every 30 minutes
+    - cron: '10,40 * * * *'  # Every 30 minutes at :10 and :40 (staggered 10 min after RE)
   workflow_dispatch:
     inputs:
       scraper_focus:

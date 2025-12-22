@@ -6,18 +6,20 @@ This document details Barrot's advanced capabilities including reverse engineeri
 
 ## System Architecture
 
-### Execution Schedule (All Systems)
+### Execution Schedule (All Systems - Staggered to Prevent Resource Contention)
 
 ```
 Every 10 min:  Data Validation (5 specialists)
 Every 15 min:  Continuous Intelligence (8+ specialists, 3 waves)
-Every 30 min:  Full Ingestion Bundle (6 ingesters, UPATSAR)
-Every 30 min:  Reverse Engineering Mastery (12 operatives)
-Every 30 min:  Comprehensive Scraper (14 scrapers, 50k+ sources)
-Every 30 min:  AI Model Harvester (8 operatives, 200+ models)
+Every 30 min:  Full Ingestion Bundle (6 ingesters, UPATSAR) - at :00, :30
+Every 30 min:  Reverse Engineering Mastery (12 operatives) - at :00, :30
+Every 30 min:  Comprehensive Scraper (14 scrapers, 50k+ sources) - at :10, :40
+Every 30 min:  AI Model Harvester (8 operatives, 200+ models) - at :20, :50
 Every 4 hours: Web Intelligence (8 operatives, 1000+ domains)
 Every 6 hours: Master Orchestration (6 entities, 14 streams)
 Real-time:     Knowledge base updates + search engine sync
+
+Note: 30-minute workflows are staggered by 10-minute intervals to prevent concurrent execution.
 ```
 
 ### Total Operatives: 57+
@@ -956,8 +958,12 @@ gh workflow run Barrot.AI.Model.Harvester.yml \
 ### Scheduled Execution
 
 All workflows run automatically on their defined schedules:
-- **Cron**: `*/30 * * * *` (every 30 minutes)
-- **Always active**: Continuous operation
+- **Reverse Engineering**: `:00, :30` (every 30 minutes)
+- **Comprehensive Scraper**: `:10, :40` (every 30 minutes, staggered)
+- **AI Model Harvester**: `:20, :50` (every 30 minutes, staggered)
+- **Continuous operation**: Workflows execute indefinitely on schedule
+
+**Note**: Current implementation uses simulated data for demonstration. Production deployment requires actual API connections, web scraping infrastructure, and data processing pipelines as outlined in Future Enhancements section.
 
 ### Monitoring
 

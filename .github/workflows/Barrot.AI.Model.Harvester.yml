@@ -1,7 +1,7 @@
 name: Barrot AI Model Capability Harvester
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Every 30 minutes
+    - cron: '20,50 * * * *'  # Every 30 minutes at :20 and :50 (staggered 20 min after RE)
   workflow_dispatch:
     inputs:
       focus_area:
