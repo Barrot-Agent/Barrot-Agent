@@ -143,7 +143,31 @@ ISC License - See repository for details
 - **Repository**: https://github.com/Barrot-Agent/Barrot-Agent
 - **Dashboard**: https://barrot-agent.github.io/Barrot-Agent/
 - **Issues**: https://github.com/Barrot-Agent/Barrot-Agent/issues
-- **📱 Mobile Setup**: [MOBILE_SETUP.md](MOBILE_SETUP.md)
+
+## 📚 Documentation
+
+- **📱 [Mobile Setup](MOBILE_SETUP.md)** - Access Barrot from your phone
+- **💻 [VS Code Setup](VSCODE_SETUP.md)** - Optimal development environment
+- **💰 [Sponsorship](SPONSORSHIP.md)** - Support Barrot-Agent development
+- **🎖️ [Sponsors](SPONSORS.md)** - Our amazing sponsors
+- **📊 [Output Logging](OUTPUT_LOGGING.md)** - Comprehensive logging framework
+- **🔄 [Data Transformation](DATA_TRANSFORMATION.md)** - Data transformation guide
+- **🚀 [AGI Development](AGI_DEVELOPMENT.md)** - AGI acceleration protocols
+
+## 💰 Support Barrot-Agent
+
+Love Barrot-Agent? Consider becoming a sponsor!
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-💰-pink)](SPONSORSHIP.md)
+
+Your sponsorship helps us:
+- 🔬 Accelerate AGI research
+- 🏆 Dominate AI benchmarks
+- 🤖 Develop autonomous capabilities
+- 📊 Improve transparency and logging
+- 🌍 Grow the open-source community
+
+**[View Sponsorship Tiers](SPONSORSHIP.md)**
 
 ---
 
