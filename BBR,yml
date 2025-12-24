@@ -17,6 +17,7 @@ jobs:
           cat <<EOF > build_manifest.yaml
           build_signature: BNDL-V2
           timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          reasoning_engine: SHRM_v2
           rail_status:
             ingestion: active
             deployment: stable
@@ -24,6 +25,8 @@ jobs:
             prediction: evolving
             dashboard: publishing
             cognition: recursive
+            contradiction_harvesting: enabled
+            temporal_plasticity: enabled
           EOF
 
       - name: Commit and Push Manifest
