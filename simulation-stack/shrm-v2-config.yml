@@ -37,7 +37,7 @@ scenarios:
       through polarity synthesis.
     components:
       - quantum_chronodynamics: true
-      - hermetic_principles: [correspondence, vibration, polarity, rhythm, causation, gender]
+      - hermetic_principles: [mentalism, correspondence, vibration, polarity, rhythm, causation, gender]
       - emerald_tablet_axioms: true
       - kybalion_laws: true
     tests:
