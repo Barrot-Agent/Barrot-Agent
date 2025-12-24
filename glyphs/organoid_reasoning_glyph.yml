@@ -26,7 +26,7 @@ attributes:
   
 applications:
   - adaptive_reasoning_systems
-  - skill_autonomous_learning
+  - autonomous_skill_learning
   - embodied_cognition_scenarios
   - feedback_driven_evolution
   - context_sensitive_intelligence
