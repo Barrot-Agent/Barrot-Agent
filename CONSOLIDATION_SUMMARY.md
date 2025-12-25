@@ -182,7 +182,7 @@ Directories:
 5. Read CONTRIBUTING.md for guidelines
 
 ### For Operations
-1. Configure required secrets (see SECURITY_SUMMARY.md)
+1. ✅ Required secrets already configured (Vercel tokens confirmed)
 2. Enable branch protection for Main
 3. Run cleanup_merged_branches.sh to remove old branches
 4. Set up Dependabot
