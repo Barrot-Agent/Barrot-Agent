@@ -37,10 +37,11 @@ jobs:
 
       - name: Commit Changes
         run: |
+          TIMESTAMP=$(date -u +"%a %b %e %H:%M:%S UTC %Y")
           git config user.name "Barrot-Agent"
           git config user.email "barrot@systems.local"
           git add memory-bundles/outcome-relay.md
           git add SHRM-System/
           git add memory-bundles/build-ledger.json
-          git commit -m "🏓 Barrot-SHRM Ping-Pong cycle executed" || echo "No changes to commit"
+          git commit -m "🏓 Barrot-SHRM Ping-Pong cycle executed at $TIMESTAMP" || echo "No changes to commit"
           git push
