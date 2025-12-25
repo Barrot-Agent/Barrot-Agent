@@ -1,4 +1,4 @@
-# Assuming the "barrot.ps1" file already includes configuration settings, this example appends the SHRM v2 reference.
+$ErrorActionPreference='Stop'
 
 # Import SHRM Version 2 Configuration
 $configPath = "config/shrm_v2.yaml"
@@ -11,5 +11,17 @@ if (Test-Path $configPath) {
     $ConfigData = ConvertFrom-Yaml -Yaml ($configContent)
     Write-Host "SHRM v2 Config Loaded: " $ConfigData
 } else {
-    Write-Error "SHRM v2 configuration file not found at $configPath!"
+    Write-Warning "SHRM v2 configuration file not found at $configPath - continuing without it"
+}
+
+# Deploy to Vercel if in the correct directory
+if (Test-Path "$HOME\ns_site") {
+    Set-Location "$HOME\ns_site"
+    Get-Content vercel.json -Raw | ConvertFrom-Json | Out-Null
+    $u = (vercel deploy --prod | Select-String 'https://.*\.vercel\.app' | Select-Object -Last 1).Matches.Value
+    "`nLIVE:   $u"
+    "PORTAL: $u/portal"
+    "PRICE:  $u/pricing.html"
+} else {
+    Write-Host "Vercel deployment directory not found - skipping deployment"
 }
