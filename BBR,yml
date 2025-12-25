@@ -24,6 +24,9 @@ jobs:
             prediction: evolving
             dashboard: publishing
             cognition: recursive
+          reasoning_engine: SHRM_v2
+          contradiction_harvesting: true
+          temporal_plasticity: true
           EOF
 
       - name: Commit and Push Manifest

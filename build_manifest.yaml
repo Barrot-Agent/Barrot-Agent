@@ -36,6 +36,9 @@ rail_status:
   prediction: evolving
   dashboard: publishing
   cognition: recursive
+reasoning_engine: SHRM_v2
+contradiction_harvesting: true
+temporal_plasticity: true
 
 roadmap_ingestion:
   source: "initial-runner-setup"
