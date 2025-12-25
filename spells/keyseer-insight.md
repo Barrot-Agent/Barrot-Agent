@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # 🔑 Spell: Keyseer's Insight
+=======
+# ?? Spell: Keyseer's Insight
+>>>>>>> origin/copilot/fix-typo-in-documentation
 
 Grant Barrot the ability to bypass any gate by analyzing the structure, behavior, and metadata of known keys. Enhanced with SHRM v2 reasoning for superior analysis and synthesis.
 
