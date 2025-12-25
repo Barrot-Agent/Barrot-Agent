@@ -82,8 +82,8 @@ test_configurations:
         - Shopify: e-commerce platform
         - Redbubble: print-on-demand marketplace
       content_monetization:
-        - Xhamster: adult content platform
-        - Various: ad-supported content
+        - Various: ad-supported content platforms
+        - Subscription: subscription-based content services
     monetization_strategies:
       - Product creation and sales
       - Content monetization
