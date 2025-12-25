@@ -180,10 +180,10 @@ export KAGGLE_KEY="your_key"
 
 ### Phase 1 Quick Start
 ```bash
-# Download foundation datasets
-bash memory-bundles/protocols/dataset-acquisition-guide.md # (extract scripts)
+# See dataset-acquisition-guide.md for detailed download scripts
+# Extract and run the Phase 1 batch download script from the guide
 
-# Or use Python
+# Or use Python Hugging Face datasets
 python3 << EOF
 from datasets import load_dataset
 dataset = load_dataset("multi_nli")

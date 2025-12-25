@@ -130,8 +130,8 @@ unzip howto100m_videos.zip
 cd ~/barrot_datasets/augmented/wikidata
 wget https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
 
-# For testing, use a sample
-wget https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz -O - | gunzip | head -n 100000 > wikidata_sample.json
+# For testing, use a sample (requires jq for proper JSON handling)
+wget https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz -O - | gunzip | head -c 100M > wikidata_sample.ndjson
 ```
 
 ### 9. CLEVR (Compositional Reasoning)
@@ -148,10 +148,11 @@ unzip CLEVR_v1.0.zip
 
 ### 10. Scientific Contradictions (arXiv)
 ```bash
-# Using arXiv API
+# Using arXiv API with error handling
 python3 << EOF
 import urllib.request
 import time
+import sys
 
 base_url = "http://export.arxiv.org/api/query?"
 categories = ["cs.AI", "cs.LG", "cs.CL", "physics", "math"]
@@ -159,10 +160,16 @@ categories = ["cs.AI", "cs.LG", "cs.CL", "physics", "math"]
 for cat in categories:
     query = f"search_query=cat:{cat}&start=0&max_results=1000"
     url = base_url + query
-    response = urllib.request.urlopen(url).read()
+    try:
+        print(f"Fetching {cat}...")
+        response = urllib.request.urlopen(url, timeout=30).read()
+        
+        with open(f"arxiv_{cat.replace('.', '_')}.xml", "wb") as f:
+            f.write(response)
+        print(f"✓ {cat} downloaded successfully")
+    except Exception as e:
+        print(f"✗ Error downloading {cat}: {e}", file=sys.stderr)
     
-    with open(f"arxiv_{cat.replace('.', '_')}.xml", "wb") as f:
-        f.write(response)
     time.sleep(3)  # Rate limiting
 EOF
 

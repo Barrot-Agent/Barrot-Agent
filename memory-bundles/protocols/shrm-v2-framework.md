@@ -4,7 +4,7 @@
 The SHRM v2 framework defines Barrot's enhanced reasoning capabilities through three core pillars:
 1. **Contradiction Harvesting** - Identifying and extracting value from contradictory information
 2. **Symbolic Reasoning** - Operating on abstract symbols, logic, and mathematical structures
-3. **Augmented Cognition** - Multimodal integration and recursive thought expansion
+3. **Augmented Cognition** - Multimodal integration and recursive reasoning expansion
 
 ## Core Capabilities
 

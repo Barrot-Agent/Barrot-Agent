@@ -11,7 +11,8 @@ import json
 import yaml
 import sys
 
-BASE_DIR = "/home/runner/work/Barrot-Agent/Barrot-Agent"
+# Use script directory as base, or allow override via environment variable
+BASE_DIR = os.environ.get('BARROT_BASE_DIR', os.path.dirname(os.path.abspath(__file__)))
 
 def color_print(text, color_code):
     """Print colored text for better visibility"""

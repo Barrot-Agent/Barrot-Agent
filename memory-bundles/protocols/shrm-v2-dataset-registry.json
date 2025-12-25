@@ -174,7 +174,7 @@
             "priority": "medium",
             "phase": 2,
             "sources": [
-              "proofwiki.org"
+              "https://proofwiki.org"
             ],
             "metrics": ["proof_structure_understanding", "strategy_learning"]
           },
