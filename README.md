@@ -76,6 +76,7 @@ Barrot-Agent is an advanced AI system powered by **SHRM v2 (Strategic Hierarchic
 - **[SHRM v2 Framework](SHRM-v2-Framework.md)**: Core cognitive architecture
 - **[Integration Guide](SHRM-v2-Integration-Guide.md)**: Complete integration documentation
 - **[Monetization Protocols](MONETIZATION-PROTOCOLS.md)**: Revenue generation strategies (NEW)
+- **[Getting Started Guide](GETTING-STARTED.md)**: Step-by-step launch checklist (NEW)
 - **Build Manifest**: Real-time system status and metrics
 
 ### 🧩 Memory Bundles (`memory-bundles/`)
