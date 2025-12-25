@@ -15,6 +15,7 @@ modules:
   - performance_optimizer
   - monetization_engine
   - claude_shrm_pingpong_framework
+  - multi_agent_pingpong_unified_framework
 
 resources:
   - kaggle
@@ -152,5 +153,59 @@ claude_shrm_pingpong:
     implementation_rate: "monitoring"
     improvement_rate: "monitoring"
     discovery_rate: "monitoring"
+
+multi_agent_pingpong:
+  status: active
+  framework_version: 2.0.0
+  established: 2025-12-25T21:21:00Z
+  architecture: dual_layer_unified
+  
+  system_1_strategic:
+    enabled: true
+    participants: [copilot_claude, shrm_v2]
+    purpose: "continuous_system_improvement"
+    frequency: "5-10 cycles per day"
+    
+  system_2_execution:
+    enabled: true
+    purpose: "iterative_task_execution_and_refinement"
+    max_passes: 10
+    quality_threshold: 0.95
+    early_stop_threshold: 0.98
+    
+  agent_tiers:
+    core_tier:
+      - barrot_agent
+      - copilot_claude
+      - shrm_v2
+    override_tier:
+      - override_alpha_quality
+      - override_beta_performance
+      - override_gamma_security
+    clone_tier:
+      - clone_alpha_architecture
+      - clone_beta_implementation
+      - clone_gamma_testing
+      - clone_delta_documentation
+      - clone_epsilon_performance
+      - clone_zeta_integration
+      - clone_eta_domain_expert
+      
+  data_flow_models:
+    - linear_pass_through
+    - circular_refinement
+    - parallel_processing
+    - hybrid_recommended
+    
+  quality_targets:
+    pass_1: "60-70%"
+    pass_2: "75-85%"
+    pass_3: "85-95%"
+    pass_4_plus: "95-100%"
+    
+  integration:
+    system_1_to_system_2: "improvements_flow_down"
+    system_2_to_system_1: "learning_flows_up"
+    bidirectional: true
 
 provenance_hash: 123e4567-e89b-12d3-a456-426614174000
