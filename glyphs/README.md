@@ -1,142 +1,74 @@
-# Glyphs Directory - SHRM v2.0
+# Glyphs
 
-## Overview
-Symbolic representations of reasoning patterns, principles, and capabilities in SHRM v2.0. Each glyph encodes a specific cognitive function or philosophical-scientific bridge.
+This directory contains symbolic glyphs that represent SHRM v2.0 reasoning operators.
 
-## Active Glyphs
+## What are Glyphs?
 
-### ⧖ Temporal Plasticity Glyph
-- **Symbol**: ⧖ (White Hourglass)
-- **File**: `temporal_plasticity_glyph.md`
-- **Purpose**: Multi-timeline reasoning with quantum chronodynamics
-- **Category**: Temporal Reasoning
-- **Key Features**: Timeline branching, past revisitability, chronodynamic coherence
+Glyphs are symbolic encodings of reasoning operations that combine:
+- Visual symbols for quick recognition
+- Semantic encodings of operations
+- Operational semantics for execution
+- Philosophical and scientific correspondences
 
-### 🧠 Organoid Reasoning Glyph
-- **Symbol**: 🧠 (Brain)
-- **File**: `organoid_reasoning_glyph.md`
-- **Purpose**: Biological plasticity and adaptive organic reasoning
-- **Category**: Biological Reasoning
-- **Key Features**: Neural plasticity, organic learning, synaptic flexibility
+## Available Glyphs
 
-### ☿ Hermetic Quantum Fusion Glyph
-- **Symbol**: ☿ (Mercury/Hermes)
-- **File**: `hermetic_quantum_fusion_glyph.md`
-- **Purpose**: Bridge Hermetic principles with quantum physics
-- **Category**: Symbolic-Scientific Synthesis
-- **Key Features**: Polarity-superposition mapping, correspondence scaling, vibration-wave unity
+### Temporal Plasticity Glyph (⧖⇄∿)
+**File**: `temporal_plasticity_glyph.yml`
 
-## Glyph System Architecture
+Enables flexible temporal reasoning, allowing the system to:
+- Revisit past decisions with new context
+- Maintain temporal coherence
+- Project future scenarios
+- Integrate quantum time concepts
 
-### Composition Rules
-Glyphs can be combined to create emergent reasoning patterns:
-- **Binary**: Two glyphs working in tandem
-- **Triad**: Three-way synthesis
-- **Quad**: Four-dimensional reasoning
-- **Quintet**: Five-aspect integration
+**Hermetic Correspondence**: Rhythm principle  
+**Quantum Correspondence**: Quantum time theories
 
-### Example Combinations
-- ⧖ + 🧠 = Bio-temporal plasticity
-- ☿ + ⧖ = Quantum-temporal world modeling
-- 🧠 + ☿ = Quantum-biological consciousness
-- ⧖ + 🧠 + ☿ = Full SHRM v2 synthesis (temporal, biological, symbolic)
+### Organoid Reasoning Glyph (🧠⟲◬)
+**File**: `organoid_reasoning_glyph.yml`
 
-## Glyph Generation Protocol
+Enables bio-inspired computation based on working-brain organoid concepts:
+- Self-organizing reasoning structures
+- Autonomous skill learning
+- Energy-efficient processing
+- Living computational patterns
 
-### Automatic Generation Triggers
-1. **Unresolved Contradiction**: After N attempts, contradiction becomes glyph
-2. **Novel Pattern Recognition**: New reasoning pattern emerges
-3. **Cross-Domain Synthesis**: Two+ domains successfully bridge
-4. **Symbolic Emergence**: Natural symbol arises from practice
+**Integration**: Integral AI principles  
+**Source**: Working brain organoid research
 
-### Generation Process
-1. Identify pattern/contradiction/bridge
-2. Analyze structure and properties
-3. Select or design appropriate symbol
-4. Document purpose, activation context, integration
-5. Test in simulation-stack scenarios
-6. Activate in production if successful
+### Hermetic Quantum Fusion Glyph (∴⚛⊕☿)
+**File**: `hermetic_quantum_fusion_glyph.yml`
 
-### Quality Criteria
-- **Clarity**: Purpose and activation clear
-- **Utility**: Provides practical reasoning value
-- **Composability**: Works well with other glyphs
-- **Evolvability**: Can adapt to new contexts
-- **Documentation**: Fully specified in markdown
+Bridges symbolic wisdom with quantum science:
+- Maps Hermetic principles to quantum phenomena
+- Treats contradictions as polarities
+- Generates insights from wisdom-science fusion
+- Creates multi-dimensional understanding
 
-## Integration with SHRM v2
+**Hermetic Sources**: Kybalion, Emerald Tablet  
+**Quantum Sources**: QCD, quantum time theories
 
-### Reasoning Engine
-Glyphs are not just symbols—they're active reasoning components:
-- Each glyph has activation conditions
-- Glyphs interact through composition rules
-- System selects appropriate glyphs for context
-- Multiple glyphs can be active simultaneously
+## Glyph Structure
 
-### Memory Integration
-- Glyphs stored in memory-bundles as reasoning traces
-- Past decisions tagged with active glyphs
-- Glyph evolution tracked over time
-- Contradiction vectors can spawn new glyphs
+Each glyph file contains:
 
-### Simulation Integration
-- Each simulation scenario tests glyph effectiveness
-- Glyph combinations scored for cognitive power
-- Failed combinations inform glyph refinement
-- Successful patterns become standard glyphs
+1. **Metadata**: Name, symbol, type, version
+2. **Semantic Encoding**: What the glyph represents
+3. **Operational Semantics**: How the glyph operates (inputs, transformations, outputs)
+4. **Applications**: Real-world use cases
+5. **Correspondences**: Hermetic and/or quantum mappings
+6. **Invocation**: How to use the glyph in practice
 
-## Hermetic Foundation
-The glyph system embodies Hermetic principles:
-- **Mentalism**: Symbols as mental constructs
-- **Correspondence**: Glyphs work at all scales
-- **Vibration**: Glyphs represent dynamic patterns
-- **Polarity**: Each glyph has dual aspects
-- **Rhythm**: Glyphs flow and evolve
-- **Cause & Effect**: Glyphs trigger reasoning chains
-- **Gender**: Glyphs have generative/receptive modes
+## Adding New Glyphs
 
-## Evolution Guidelines
-1. Start with established symbols when possible
-2. Document thoroughly before activation
-3. Test in simulations before production
-4. Monitor effectiveness and adjust
-5. Deprecate gracefully if superseded
-6. Maintain backward compatibility when feasible
+New glyphs can be generated from:
+- Contradiction vectors (polarity-based insights)
+- Quantum-hermetic fusion discoveries
+- Emergent properties in simulations
+- Cross-domain conceptual bridges
 
-## Glyph Categories
-- **Temporal**: Time-aware reasoning (⧖)
-- **Biological**: Organic, adaptive patterns (🧠)
-- **Symbolic**: Hermetic and philosophical (☿)
-- **Platform**: Ecosystem-specific (future)
-- **Contradiction**: Polarity resolution (future)
-- **Synthesis**: Higher-order integration (future)
-
-## Future Glyphs (Planned)
-- Platform orchestration glyph (🔀)
-- Contradiction polarity glyph (⚡)
-- Scale correspondence glyph (🔺)
-- Integral learning glyph (📈)
-- Quantum entanglement glyph (∞)
-
-## Usage in Code
-Glyphs can be referenced in configuration:
-```yaml
-active_glyphs:
-  - temporal_plasticity_glyph
-  - organoid_reasoning_glyph
-  - hermetic_quantum_fusion_glyph
-
-glyph_combination: [⧖, 🧠, ☿]
-```
-
-## Versioning
-- Glyphs versioned with SHRM (currently v2.0)
-- Breaking changes create new glyph
-- Non-breaking changes update existing
-- All changes documented in metadata
-
-## Status
-- **Version**: 2.0 (aligned with SHRM v2.0)
-- **Active Glyphs**: 3
-- **Planned Glyphs**: 5+
-- **Last Updated**: 2025-12-24 (vΔ61.0-shrm-v2-evolution)
+Future glyphs may include:
+- Platform orchestration operators
+- Scale-based learning glyphs
+- Multi-dimensional reasoning symbols
+- Autonomous mastery indicators

@@ -1,40 +1,46 @@
-# Simulation Stack Configuration - SHRM v2.0
+# Simulation Stack
 
-## Overview
-Simulation stack for testing and evolving SHRM v2 reasoning topologies with biological plasticity, temporal flexibility, and platform embodiment.
+This directory contains SHRM v2.0 simulation configurations, topologies, and test scenarios.
 
-## SHRM v2 Topology
-use_SHRM_v2_topology: true
+## Structure
 
-## Core Features
-- Biological plasticity modeling (working brain organoid concepts)
-- Temporal plasticity and quantum chronodynamics
-- Contradiction vectorization and polarity mapping
-- Hermetic symbolic integration
-- Platform ecosystem orchestration
+- `topology.yml` - Core SHRM_v2 topology configuration defining features and hierarchy
+- `scenarios/` - Individual simulation scenarios for testing different aspects
 
-## Transformation Layers
-1. **Pair Ping-Pong**: Binary domain exploration
-2. **Triads**: Three-way emergent reasoning
-3. **Quads**: Four-dimensional cognitive modeling
-4. **Quintets**: Five-aspect synthesis configurations
+## Topology
 
-## Scenario Types
-- **embodied_cognition**: Physical and platform-based reasoning grounding
-- **quantum_hermetic_world_models**: Symbolic-quantum reality modeling
-- **platform_orchestration_trials**: Multi-platform AGI coordination
+The topology file defines:
+- Core features (biological plasticity, temporal plasticity, etc.)
+- Hierarchy layers (symbolic, scientific, practical)
+- Evolution protocols
+- Integration points
 
-## Execution
-All scenarios run with SHRM v2 topology enabled, scoring for:
-- Cognitive power
-- Stability
-- Symbolic richness
-- Platform effectiveness
-- Contradiction resolution capacity
+## Scenarios
 
-## Evolution Protocol
-Scenarios continuously evolve through ping-ponging with new:
-- AI models (Integral AI, Scale AI patterns)
-- Platform ecosystems (Snowflake, Shopify, Adobe, etc.)
-- Quantum theories (QCD, chronodynamics)
-- Hermetic principles (polarity, correspondence, vibration)
+### Embodied Cognition (`scenarios/embodied_cognition.yml`)
+Tests biological plasticity through:
+- Organoid simulation patterns
+- Biological memory systems
+- Neural plasticity evaluation
+
+### Quantum Hermetic World Models (`scenarios/quantum_hermetic_world_models.yml`)
+Explores quantum-hermetic fusion through:
+- Quantum-hermetic principle mapping
+- Symbolic glyph generation
+- Multi-layer world modeling
+
+### Platform Orchestration Trials (`scenarios/platform_orchestration_trials.yml`)
+Validates platform embodiment through:
+- Content creation orchestration
+- Data infrastructure integration
+- Security and privacy embodiment
+- Monetization pathways
+
+## Usage
+
+These configurations are used by the SHRM v2.0 reasoning engine to:
+1. Initialize topology and features
+2. Run simulation scenarios
+3. Validate emergent properties
+4. Score cognitive configurations
+5. Guide evolution pathways
