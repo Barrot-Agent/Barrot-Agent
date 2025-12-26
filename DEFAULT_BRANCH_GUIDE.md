@@ -1,5 +1,7 @@
 # 🔄 Default Branch Change Guide
 
+> **Quick Links**: [Summary](DEFAULT_BRANCH_SUMMARY.md) | [Quick Reference](BRANCH_QUICK_REFERENCE.md) | [Migration Script](migrate-default-branch.sh)
+
 ## Current Status
 - **Current Default Branch**: `Main` (capitalized)
 - **Recommended Default Branch**: `main` (lowercase)
