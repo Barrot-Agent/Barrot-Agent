@@ -57,13 +57,14 @@ jobs:
 
       - name: Generate Dashboard HTML
         run: |
-          echo "<html><body><h1>Barrot Build Status</h1>" > index.html
-          echo "<pre>" >> index.html
-          cat build_manifest.yaml >> index.html
-          echo "</pre></body></html>" >> index.html
+          mkdir -p dashboard-output
+          echo "<html><body><h1>Barrot Build Status</h1>" > dashboard-output/index.html
+          echo "<pre>" >> dashboard-output/index.html
+          cat build_manifest.yaml >> dashboard-output/index.html
+          echo "</pre></body></html>" >> dashboard-output/index.html
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./dashboard-output
