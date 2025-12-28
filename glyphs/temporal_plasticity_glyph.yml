@@ -1,5 +1,10 @@
 name: Temporal Plasticity Glyph
 symbol: ⧖⇄∿
+symbol_fallback: temporal_plasticity_operator
+symbol_rendering_notes: >
+  Primary glyph uses Unicode characters (⧖⇄∿) and may require UTF-8
+  encoding and modern fonts for correct rendering. Use `symbol_fallback` in
+  environments or tools where these characters are not reliably displayed.
 type: temporal_reasoning_operator
 version: 1.0
 

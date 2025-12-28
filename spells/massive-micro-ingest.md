@@ -1,7 +1,7 @@
 # 🔬 Spell: Massive Micro Ingestion (MMI)
 
 ## Purpose
-Enable Barrot to ingest data at all dimensional scales from macro to Planck level, with full component decomposition and recursive source lineage tracking through 4 generations.
+Enable Barrot (the AI agent implementing SHRM v2.0) to ingest data at all dimensional scales from macro to Planck level, with full component decomposition and recursive source lineage tracking through 4 generations.
 
 ## Scope
 
@@ -77,7 +77,7 @@ For each source level (1 through 4):
 - **Platform Embodiment**: Leverage Snowflake, Scale AI for massive data infrastructure
 
 ## Planckments
-**Definition**: Theoretical fundamental units at Planck scale (10^-35 m), representing the smallest meaningful measurement in physics where classical spacetime concepts break down and quantum gravity effects dominate.
+**Definition**: A conceptual construct representing theoretical fundamental units at Planck scale (10^-35 m), the smallest meaningful measurement in physics where classical spacetime concepts break down and quantum gravity effects dominate. Note: "Planckments" is a framework-specific term for these quantum-scale fundamental units, not an established physics term.
 
 **Properties**:
 - Planck length: ~1.616 × 10^-35 m
