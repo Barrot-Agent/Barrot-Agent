@@ -31,10 +31,15 @@ The remote `Main` branch still exists and needs to be deleted to prevent confusi
 The repository includes an executable script `delete-main-branch.sh` that automates the deletion process.
 
 **Prerequisites:**
-- Clone the repository and navigate to it:
+- Clone the repository and navigate to it (or navigate to it if already cloned):
   ```bash
+  # If you don't have the repository yet:
   git clone https://github.com/Barrot-Agent/Barrot-Agent.git
   cd Barrot-Agent
+  
+  # If you already have it cloned:
+  cd Barrot-Agent
+  git pull
   ```
 - Ensure you have push permissions to the repository
 
@@ -43,7 +48,7 @@ The repository includes an executable script `delete-main-branch.sh` that automa
 ./delete-main-branch.sh
 ```
 
-Note: The script must be run from the repository root directory.
+Note: The script must be run from the repository root directory and requires appropriate push permissions to the repository.
 
 **Option 2: Manual command (requires appropriate permissions):**
 ```bash
