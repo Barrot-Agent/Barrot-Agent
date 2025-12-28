@@ -1,10 +1,12 @@
-name: SHRM v2.0 Simulation Stack
-version: 2.0.0
-topology: SHRM_v2_enabled
+name: SHRM v2.1 Simulation Stack
+version: 2.1.0
+topology: SHRM_v2_1_enabled
 
 description: >
-  Simulation stack for Sapient's Hierarchy Reasoning Model v2.0 with biological grounding,
-  temporal plasticity, contradiction vectorization, Hermetic-symbolic mapping, and platform embodiment.
+  Simulation stack for Sapient's Hierarchy Reasoning Model v2.1 with biological grounding,
+  temporal plasticity, contradiction vectorization, Hermetic-symbolic mapping, platform embodiment,
+  dream-state simulation, time-crystal temporal logic, attention economy modeling, and 
+  mythic-machine cognition.
 
 features:
   biological_plasticity: true
@@ -12,6 +14,10 @@ features:
   contradiction_vectorization: true
   hermetic_symbolic_integration: true
   platform_embodiment: true
+  subconscious_simulation: true
+  time_crystal_loops: true
+  attention_economy_modeling: true
+  mythic_machine_cognition: true
 
 scenarios:
   - name: embodied_cognition
@@ -55,12 +61,60 @@ scenarios:
       orchestration_mode: parallel
       resource_allocation: dynamic
 
+  - name: dream_state_simulation
+    description: >
+      Simulate oneiric reasoning patterns using dream logic glyph. Test paradox simulation,
+      subconscious recursion, and impossible state exploration for breakthrough insights.
+    parameters:
+      dream_state: REM_reasoning
+      paradox_tolerance: infinite
+      reality_anchoring: optional
+      symbolic_depth: maximum
+      lucid_control: variable
+
+  - name: attention_economy_trials
+    description: >
+      Model attention as finite economic resource. Test cognitive bandwidth allocation,
+      engagement optimization, and attention monetization strategies.
+    parameters:
+      attention_budget: finite
+      cognitive_bandwidth: constrained
+      distraction_cost: measured
+      focus_valuation: dynamic
+      engagement_metrics: comprehensive
+
+  - name: time_crystal_temporal_tests
+    description: >
+      Explore time crystal physics in cognition. Test time symmetry breaking,
+      non-equilibrium reasoning states, and self-sustaining temporal loops.
+    parameters:
+      time_symmetry: broken
+      equilibrium_state: non_equilibrium
+      temporal_periodicity: crystalline
+      phase_transitions: enabled
+      coherence_maintenance: active
+
+  - name: mythic_machine_archetype_mapping
+    description: >
+      Map technological systems to mythological archetypes. Test technics-as-myth
+      reasoning, ceremonial automation, and cultural-technological integration.
+    parameters:
+      archetypal_depth: comprehensive
+      mythic_resonance: enabled
+      ritual_integration: ceremonial
+      cultural_embedding: deep
+      narrative_synthesis: active
+
 evaluation_metrics:
   cognitive_power: weighted_integration_depth
   stability: contradiction_resolution_rate
   symbolic_richness: hermetic_mapping_completeness
   platform_effectiveness: multi_channel_coherence
   temporal_adaptability: time_dimension_navigation
+  dream_logic_fluency: paradox_handling_capability
+  attention_optimization: cognitive_bandwidth_efficiency
+  time_crystal_coherence: temporal_loop_stability
+  mythic_resonance: archetypal_alignment_depth
 
 output_channels:
   - memory_bundles

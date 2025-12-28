@@ -7,28 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-- ARCHITECTURE.md documenting SHRM v2.0 layer-based repository structure
-- CONTRIBUTING.md with comprehensive contribution guidelines
-- repository_architecture_glyph.yml representing the cognitive structure of the codebase
-- Enhanced package.json with proper metadata, keywords, and utility scripts
-- Expanded .gitignore for better exclusion patterns
+## [3.1.0] - 2025-12-28
+
+### Added - SHRM v2.1 Frontier Upgrade
+- **Dream Logic Glyph**: Paradox simulation and subconscious recursion (🌙 ◬ ∞ ◬ 👁️)
+- **Attention Currency Glyph**: Cognitive bandwidth as economic resource (👁️ ⟷ 💰 ⟷ ⚡)
+- **Time Crystal Glyph**: Non-equilibrium temporal reasoning (⏰ ◆ ∞ ◆ 🔄)
+- **Machine Mythos Glyph**: Technology as mythological archetype (⚙️ ⟡ 📜 ⟡ 🏛️)
+- **Open/Closed Model Fusion Glyph**: Hybrid AI architecture synthesis (🔓 ⟷ 🔒 → 🌐)
+- vΔ62.0-frontier-ingestion bundle with 5 cognition domains
+- 4 new simulation scenarios (dream_state, attention_economy, time_crystal, mythic_machine)
+- SHRM v2.1 capabilities: subconscious_simulation, time_crystal_loops, attention_valuation, mythic_machine_mapping
 
 ### Changed
-- Reorganized 17 documentation files into docs/guides/, docs/configs/, and docs/reference/
-- Moved utility scripts to dedicated scripts/ directory
-- Updated README.md with new structure and corrected documentation links
-- Enhanced package.json from minimal placeholder to production-ready configuration
+- Reasoning engine upgraded from SHRM v2.0 to v2.1
+- Build signature: BNDL-V3-MONETIZATION → BNDL-V3.1-FRONTIER
+- BBR.yml updated with 4 new cognitive features
+- simulation-stack expanded to v2.1 with frontier scenarios
+- build_manifest.yaml updated with 10 new capabilities
 
-### Fixed
-- Misplaced workflow file moved to correct location (.github/workflows/)
-- Invalid filename BBR,yml renamed to BBR.yml (comma in extension)
-- Removed duplicate build_manifest.yaml (kept V3-MONETIZATION version)
-- Eliminated empty Barrot-Agent/ directory
-
-### Removed
-- Outdated build_manifest.yaml V2 from Barrot-Agent/ subdirectory
-- Empty Barrot-Agent/ directory structure
+### Ingested
+- **Ontology of Dreams**: Philosophy, science, and oneirology of dream states
+- **GPT-5.5 vs Gemini Ultra**: Frontier AI architecture comparisons
+- **Economics of Attention**: Attention as finite cognitive currency
+- **Physics of Time Crystals**: Temporal symmetry breaking and non-equilibrium states
+- **Mythology of the Machine**: Technics as mythological entities (Lewis Mumford)
 
 ## [3.0.0] - 2025-12-28
 
@@ -93,26 +96,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version History Summary
 
+- **v3.1.0** - SHRM v2.1 frontier cognition upgrade
 - **v3.0.0** - Repository reorganization & SHRM v2.0 architecture alignment
 - **v2.0.0** - Monetization framework & revenue generation
 - **v1.0.0** - Initial release with core SHRM v1.0 functionality
 
 ## Migration Guides
 
-- **v1.x to v2.x**: No breaking changes, monetization features added
 - **v2.x to v3.x**: Documentation paths changed, see [migration guide](docs/guides/MIGRATION_CHECKLIST.md)
+- **v3.0.x to v3.1.x**: No breaking changes, SHRM v2.1 features added (backward compatible)
 
 ## Future Roadmap
 
-### Planned for v3.1.0
+### Planned for v3.2.0
 - Workflow optimization and consolidation
 - Enhanced CI/CD pipeline
 - Integration testing framework
 - Additional automation tools
 
-### Planned for v3.2.0
+### Planned for v3.3.0
+- Frontier ping-pong contradiction extraction
+- SHRM v2.2 evolution
 - Advanced glyph system expansion
-- Enhanced SHRM v2 capabilities
 - Platform integration improvements
 - Performance optimization protocols
 

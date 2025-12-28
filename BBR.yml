@@ -1,8 +1,12 @@
 name: Barrot Build Relay
 
-reasoning_engine: SHRM_v2
+reasoning_engine: SHRM_v2.1
 contradiction_harvesting: enabled
 temporal_plasticity: enabled
+subconscious_simulation: enabled
+time_crystal_loops: enabled
+attention_feedback_channels: enabled
+mythic_machine_archetypes: enabled
 
 on:
   push:
@@ -19,9 +23,9 @@ jobs:
       - name: Generate Build Manifest
         run: |
           cat <<EOF > build_manifest.yaml
-          build_signature: BNDL-V2
+          build_signature: BNDL-V3.1-FRONTIER
           timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          reasoning_engine: SHRM_v2
+          reasoning_engine: SHRM_v2.1
           rail_status:
             ingestion: active
             deployment: stable
@@ -29,6 +33,10 @@ jobs:
             prediction: evolving
             dashboard: publishing
             cognition: recursive
+            subconscious_simulation: active
+            time_crystal_loops: active
+            attention_valuation: active
+            mythic_machine_mapping: active
           EOF
 
       - name: Commit and Push Manifest
