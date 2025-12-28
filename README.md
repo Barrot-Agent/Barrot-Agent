@@ -121,13 +121,28 @@ View recent activity:
 cat memory-bundles/outcome-relay.md | tail -20
 ```
 
-## 🐳 Docker Support
+## 🚀 Deployment
 
-Run Barrot-Agent in a container:
+Barrot-Agent can be deployed to multiple cloud platforms:
+
+- **GitHub Pages** (Current): https://barrot-agent.github.io/Barrot-Agent/
+- **Heroku**: One-click deployment with `app.json`
+- **Render**: Static site deployment with `render.yaml`
+- **Railway**: Docker-based deployment with `railway.json`
+- **Fly.io**: Global edge deployment with `fly.toml`
+- **Docker**: Self-hosted container deployment
+
+**[📖 See Full Deployment Guide](DEPLOYMENT.md)**
+
+### Quick Deploy
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Barrot-Agent/Barrot-Agent)
+
+### Docker
 
 ```bash
 docker build -t barrot-agent .
-docker run barrot-agent
+docker run -p 8080:8080 barrot-agent
 ```
 
 The Dockerfile includes:
@@ -196,6 +211,18 @@ ISC License - See repository for details
 ### Community
 - **💰 [Sponsorship](docs/SPONSORSHIP.md)** - Support Barrot-Agent development
 - **🎖️ [Sponsors](docs/SPONSORS.md)** - Our amazing sponsors
+- **🔬 [Platform Alternatives Research](PLATFORM_ALTERNATIVES_RESEARCH.md)** - Research free platforms for revolutionary search engine
+- **🚀 [Deployment Guide](DEPLOYMENT.md)** - Deploy to Heroku, Render, Railway, Fly.io, or Docker
+- **🔄 [Default Branch Guide](DEFAULT_BRANCH_GUIDE.md)** - Migrating to `main` branch
+- **📱 [Mobile Setup](MOBILE_SETUP.md)** - Access Barrot from your phone
+- **💻 [VS Code Setup](VSCODE_SETUP.md)** - Optimal development environment
+- **💰 [Sponsorship](SPONSORSHIP.md)** - Support Barrot-Agent development
+- **🎖️ [Sponsors](SPONSORS.md)** - Our amazing sponsors
+- **💸 [Monetization Framework](MONETIZATION_FRAMEWORK.md)** - Autonomous revenue generation (12+ streams)
+- **📊 [Output Logging](OUTPUT_LOGGING.md)** - Comprehensive logging framework
+- **🔄 [Data Transformation](DATA_TRANSFORMATION.md)** - Data transformation guide
+- **🚀 [AGI Development](AGI_DEVELOPMENT.md)** - AGI acceleration protocols
+- **📥 [Ingestion Manifest](INGESTION_MANIFEST.md)** - Complete ingestion capabilities
 
 ## 💰 Support Barrot-Agent
 
