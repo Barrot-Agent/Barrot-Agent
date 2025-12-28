@@ -42,7 +42,8 @@ Barrot-Agent/
 ├── Barrot-Agent/          # Agent configuration
 ├── Barrot-Bundles/        # Bundle storage
 ├── memory-bundles/        # Memory and activity logs
-├── site/                  # Web dashboard files
+├── site/                  # Barrot Agent dashboard
+├── search-engine/         # Standalone search engine
 ├── spells/                # Agent capability definitions
 ├── build_manifest.yaml    # Current build status
 └── MOBILE_SETUP.md       # Mobile setup guide
@@ -54,9 +55,33 @@ Barrot-Agent/
 - **Prediction Methodologies** - Advanced prediction capabilities
 - **Deployment Integrity** - Reliable deployment systems
 - **Microagent Logic** - Builder.io integration
-- **Search Engine** - Comprehensive search capabilities
-- **Dashboard** - Real-time status monitoring
+- **Search Engine** - Standalone search system (see `/search-engine/`)
+- **Dashboard** - Agent management interface (see `/site/`)
 - **Manifest Rail** - Build tracking system
+
+### Two Distinct Systems
+
+#### 🔍 Search Engine (`/search-engine/`)
+A standalone, privacy-first search engine with:
+- Quantum-enhanced search algorithms
+- Edge-first architecture for global distribution
+- Zero tracking and complete privacy
+- Dynamic ingestion modes for real-time processing
+
+**[→ Visit Search Engine](search-engine/)**
+
+#### 🦜 Barrot Agent Dashboard (`/site/`)
+Comprehensive automation platform featuring:
+- Data Mastery & Protocol Development
+- Competitor Surveillance Network
+- Integrated Development Environment (IDE)
+- Digital Audio Workstation (DAW)
+- Web3 Integration Hub
+- NFT Marketplace
+- Chameleon Chain Blockchain
+- Operations Monitoring
+
+**[→ Visit Agent Dashboard](site/)**
 
 ### Agent Spells
 - **Ω-Ingest** (Omega-Ingest) - Quantum data assimilation
@@ -91,10 +116,14 @@ Automated workflows handle:
 
 ## 📊 Monitoring
 
-### Web Dashboard
-Access the live dashboard at:
+### Web Dashboards
+Access the live dashboards at:
 ```
-https://barrot-agent.github.io/Barrot-Agent/
+# Barrot Agent Dashboard
+https://barrot-agent.github.io/Barrot-Agent/site/
+
+# Search Engine
+https://barrot-agent.github.io/Barrot-Agent/search-engine/
 ```
 
 ### GitHub Actions
