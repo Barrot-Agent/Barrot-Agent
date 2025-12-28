@@ -1,0 +1,5 @@
+# Barrot-Agent Python Dependencies
+# Minimal dependencies for serving static dashboard
+
+# No additional dependencies required for static file serving
+# Python's built-in http.server is used
