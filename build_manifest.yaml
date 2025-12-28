@@ -41,6 +41,7 @@ reasoning_engine: SHRM_v2
 contradiction_harvesting: true
 temporal_plasticity: true
 massive_micro_ingestion: enabled
+mmi_retroactive_ingestion: enabled
 mmi_component_scales:
   - primary_data
   - components
@@ -49,6 +50,12 @@ mmi_component_scales:
   - macro_micro
   - nano_planck
 mmi_source_lineage_depth: 4
+mmi_retroactive_targets:
+  - all_historical_memory_bundles
+  - previous_cognition_bundles
+  - existing_spells_and_protocols
+  - platform_integration_data
+  - archived_decisions_and_reasoning
 
 roadmap_ingestion:
   source: "initial-runner-setup"
