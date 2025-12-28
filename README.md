@@ -135,13 +135,32 @@ The Dockerfile includes:
 - Git, curl, and essential tools
 - GitHub Actions runner setup
 
+## 🏛️ Architecture
+
+Barrot-Agent is built on **SHRM v2.0** (Sapient's Hierarchy Reasoning Model), featuring a five-layer cognitive architecture where the repository structure itself embodies intelligent reasoning principles:
+
+- **Layer 1** (docs/guides/) - Pattern Recognition: User-facing interaction patterns
+- **Layer 2** (docs/reference/) - Abstraction: Deep knowledge structures  
+- **Layer 3** (scripts/) - Narrative Simulation: Executable action sequences
+- **Layer 4** (docs/configs/) - Meta-Reasoning: System introspection
+- **Layer 5** (glyphs/) - Symbolic Ethics: Meaning and resonance
+
+Each directory corresponds to a distinct cognitive layer, creating a living, reasoning codebase. See [ARCHITECTURE.md](ARCHITECTURE.md) for complete details.
+
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to:
-- Submit issues
-- Create pull requests
-- Improve documentation
-- Add new features
+Contributions are welcome! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) guide for:
+- Development workflow and branch strategy
+- Naming conventions and code standards
+- Commit message guidelines
+- Pull request process
+- Testing and logging guidelines
+
+New contributors should start with [ARCHITECTURE.md](ARCHITECTURE.md) to understand the SHRM v2.0 layer mappings.
+
+## 📝 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for version history and migration guides.
 
 ## 📄 License
 
@@ -152,6 +171,9 @@ ISC License - See repository for details
 - **Repository**: https://github.com/Barrot-Agent/Barrot-Agent
 - **Dashboard**: https://barrot-agent.github.io/Barrot-Agent/
 - **Issues**: https://github.com/Barrot-Agent/Barrot-Agent/issues
+- **Architecture**: [ARCHITECTURE.md](ARCHITECTURE.md)
+- **Contributing**: [CONTRIBUTING.md](CONTRIBUTING.md)
+- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
 ## 📚 Documentation
 

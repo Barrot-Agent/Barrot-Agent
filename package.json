@@ -1,20 +1,44 @@
 {
-  "name": "scrib",
-  "version": "1.0.0",
-  "description": ";;...## Hi there 👋",
-  "main": "index.js",
+  "name": "barrot-agent",
+  "version": "3.0.0",
+  "description": "Intelligent agent system with advanced capabilities for data ingestion, prediction, and deployment powered by SHRM v2.0",
+  "main": "site/index.html",
   "scripts": {
-    "test": "echo \"No tests specified\""
+    "test": "echo \"No tests specified\"",
+    "lint:yaml": "yamllint .github/workflows/*.yml glyphs/*.yml SHRM-System/*.yaml simulation-stack/*.yml",
+    "validate:manifest": "cat build_manifest.yaml",
+    "deploy:vercel": "vercel deploy --prod",
+    "check:structure": "ls -R docs/ scripts/ glyphs/",
+    "logs:activity": "tail -n 20 memory-bundles/activity-log.md",
+    "logs:outcome": "tail -n 20 memory-bundles/outcome-relay.md"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Barrot-Agent/Barrot-Agent.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "ai",
+    "agent",
+    "shrm",
+    "agi",
+    "reasoning",
+    "automation",
+    "data-ingestion",
+    "prediction",
+    "deployment",
+    "hermetic",
+    "biological-computing",
+    "temporal-plasticity"
+  ],
+  "author": "Barrot-Agent Team",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Barrot-Agent/Barrot-Agent/issues"
   },
-  "homepage": "https://github.com/Barrot-Agent/Barrot-Agent#readme"
+  "homepage": "https://barrot-agent.github.io/Barrot-Agent/",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
 }
