@@ -158,6 +158,7 @@ ISC License - See repository for details
 
 ## 📚 Documentation
 
+- **🔬 [Platform Alternatives Research](PLATFORM_ALTERNATIVES_RESEARCH.md)** - Research free platforms for revolutionary search engine
 - **🚀 [Deployment Guide](DEPLOYMENT.md)** - Deploy to Heroku, Render, Railway, Fly.io, or Docker
 - **🔄 [Default Branch Guide](DEFAULT_BRANCH_GUIDE.md)** - Migrating to `main` branch
 - **📱 [Mobile Setup](MOBILE_SETUP.md)** - Access Barrot from your phone

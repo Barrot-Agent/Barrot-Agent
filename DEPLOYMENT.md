@@ -129,7 +129,7 @@ Deploy as a static site on Render with automatic builds.
 Deploy using Docker on Railway with automatic deployments.
 
 **Files**:
-- `railway.json` - Railway configuration
+- `railway.toml` - Railway configuration
 - `Dockerfile` - Container definition
 
 **Deployment**:
@@ -257,7 +257,7 @@ services:
 | `app.json` | Heroku | App metadata and configuration |
 | `runtime.txt` | Heroku | Python version specification |
 | `render.yaml` | Render | Blueprint configuration |
-| `railway.json` | Railway | Project configuration |
+| `railway.toml` | Railway | Project configuration |
 | `fly.toml` | Fly.io | App and deployment settings |
 | `Dockerfile` | Docker/Railway/Fly.io | Container definition |
 
