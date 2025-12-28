@@ -1,5 +1,7 @@
 # Main Branch Merge Completion
 
+**Date:** December 28, 2025
+
 ## Summary
 This document records the merge of the `Main` branch into the `main` branch.
 
@@ -25,12 +27,21 @@ This document records the merge of the `Main` branch into the `main` branch.
 ### Remote Branch Deletion
 The remote `Main` branch still exists and needs to be deleted to prevent confusion.
 
-**Command to execute (requires appropriate permissions):**
+**Option 1: Using the provided script**
+The repository includes an executable script `delete-main-branch.sh` that automates the deletion process.
+
+```bash
+./delete-main-branch.sh
+```
+
+Note: The script is already marked as executable. It requires appropriate push permissions to the repository.
+
+**Option 2: Manual command (requires appropriate permissions):**
 ```bash
 git push origin --delete Main
 ```
 
-Or via GitHub web interface:
+**Option 3: Via GitHub web interface:**
 1. Go to https://github.com/Barrot-Agent/Barrot-Agent/branches
 2. Find the `Main` branch
 3. Click the delete icon/button
