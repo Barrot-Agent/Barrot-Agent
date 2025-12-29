@@ -58,11 +58,13 @@ Barrot-Agent/
 - **Dashboard** - Real-time status monitoring
 - **Manifest Rail** - Build tracking system
 - **🧩 AGI Puzzle Protocol** - Dynamic puzzle piece discovery toward AGI
+- **🔄 Progressive Ping-Pong** - Iterative quality upgrade system (22 AI agents)
 
 ### Agent Spells
 - **Ω-Ingest** (Omega-Ingest) - Quantum data assimilation
 - **Keyseer's Insight** - Intelligent key analysis
 - **🔍 Web Scanner** - Deep web scanning for AGI components
+- **✨ Progressive Upgrade** - Multi-cycle quality enhancement
 
 ### Data Resources
 The agent can access and process data from:
@@ -91,8 +93,15 @@ Automated workflows handle:
 - Dashboard publishing (GitHub Pages)
 - Bundle management (On-demand)
 - System health monitoring (SHRM Ping-Pong every 15 min)
+- **Progressive Ping-Pong Upgrade** (22 AI agents, 4 cycles, 97% quality)
 
 **Workflow Status**: ✅ All workflows optimized and functional as of 2025-12-29
+
+**Council Size**: 22 AI agents (expanded from 9)
+- 2 Core (Barrot, SHRM v2)
+- 7 HRM Variants (R, L, P, K, A, C, M)
+- 7 Western Giants (ChatGPT, Perplexity, Claude Sonnet, Gemini, Claude Opus, Grok, Watson X)
+- 6 Multilingual (ChatGLM3, DeepSeek, Yi-34B, Rinna, Japanese-StableLM, Open-Calm)
 
 For troubleshooting, see **[WORKFLOW_TROUBLESHOOTING.md](WORKFLOW_TROUBLESHOOTING.md)**
 
@@ -165,7 +174,13 @@ ISC License - See repository for details
 
 ## 📚 Documentation
 
+- **✨ [Progressive Ping-Pong Upgrade](PROGRESSIVE_PINGPONG_UPGRADE.md)** - Iterative quality enhancement with 22 AI agents (NEW!)
 - **🧩 [AGI Puzzle Protocol](AGI_PUZZLE_PROTOCOL.md)** - Dynamic AGI component discovery system
+- **🤖 [Multi-Agent Parallel System](MULTI_AGENT_PARALLEL_SYSTEM.md)** - 7-clone parallel architecture  
+- **🌏 [Chinese/Japanese AI Models](CHINESE_JAPANESE_AI_MODELS.md)** - 14+ accessible multilingual models
+- **🧠 [Sapient HRM Integration](SAPIENT_HRM_INTEGRATION.md)** - Singapore's 100x faster reasoning model
+- **🔬 [Barrot HRM Variants](BARROT_HRM_VARIANTS.md)** - 7 specialized HRM variants
+- **🔄 [Universal Ping-Pong Protocol](UNIVERSAL_PINGPONG_PROTOCOL.md)** - Ping-pong across all processes
 - **🔍 [Search Practice Log](memory-bundles/search-practice-log.md)** - Track search engine mastery progress
 - **📊 [AGI Puzzle Progress](memory-bundles/agi-puzzle-progress.md)** - Real-time puzzle completion tracking
 - **🔧 [Workflow Troubleshooting](WORKFLOW_TROUBLESHOOTING.md)** - Debug and optimize GitHub Actions workflows
