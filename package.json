@@ -4,7 +4,11 @@
   "description": ";;...## Hi there 👋",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No tests specified\""
+    "test": "python -m pytest tests/ -v",
+    "test:coverage": "python -m pytest tests/ --cov=. --cov-report=html --cov-report=term",
+    "lint": "echo 'No linting configured yet'",
+    "validate": "python scripts/validate_manifest.py",
+    "health": "python scripts/health_check.py"
   },
   "repository": {
     "type": "git",

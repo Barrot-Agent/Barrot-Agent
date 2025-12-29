@@ -13,13 +13,25 @@ Welcome to **Barrot-Agent** - an intelligent agent system with advanced capabili
    cd Barrot-Agent
    ```
 
-2. View the current build manifest:
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run health check:
+   ```bash
+   npm run health
+   ```
+
+4. View the current build manifest:
    ```bash
    cat build_manifest.yaml
    ```
 
-3. Access the dashboard:
+5. Access the dashboard:
    - Visit: https://barrot-agent.github.io/Barrot-Agent/
+
+**For Developers**: See [DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md) for setup, testing, and contribution guidelines.
 
 ### 📱 Mobile Setup
 Want to access Barrot-Agent from your phone? 
@@ -39,13 +51,24 @@ The mobile guide covers:
 ```
 Barrot-Agent/
 ├── .github/workflows/      # GitHub Actions automation
+│   ├── ci-cd.yml          # Comprehensive CI/CD pipeline
+│   └── BBR.yml            # Build Relay workflow
+├── tests/                 # Test suite
+│   ├── test_manifest_validation.py
+│   ├── test_workflow_integrity.py
+│   └── test_documentation.py
+├── scripts/               # Utility scripts
+│   ├── validate_manifest.py
+│   └── health_check.py
 ├── Barrot-Agent/          # Agent configuration
 ├── Barrot-Bundles/        # Bundle storage
 ├── memory-bundles/        # Memory and activity logs
 ├── site/                  # Web dashboard files
 ├── spells/                # Agent capability definitions
 ├── build_manifest.yaml    # Current build status
-└── MOBILE_SETUP.md       # Mobile setup guide
+├── DEVELOPER_GUIDE.md     # Developer setup and guidelines
+├── GAP_ANALYSIS.md        # Gap analysis and improvements
+└── IMPLEMENTATION_SUMMARY.md  # Implementation summary
 ```
 
 ## 🎯 Features
@@ -146,6 +169,23 @@ Contributions are welcome! Please feel free to:
 - Improve documentation
 - Add new features
 
+**For Contributors**: See [DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md) for complete development setup, testing guidelines, and contribution workflow.
+
+### Quick Contribution Workflow
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run tests
+npm test
+
+# Run health check
+npm run health
+
+# Validate manifest
+npm run validate
+```
+
 ## 📄 License
 
 ISC License - See repository for details
@@ -170,6 +210,11 @@ ISC License - See repository for details
 - **🔄 [Data Transformation](DATA_TRANSFORMATION.md)** - Data transformation guide
 - **🚀 [AGI Development](AGI_DEVELOPMENT.md)** - AGI acceleration protocols
 - **📥 [Ingestion Manifest](INGESTION_MANIFEST.md)** - Complete ingestion capabilities
+
+### 🆕 Development & Quality Assurance
+- **👨‍💻 [Developer Guide](DEVELOPER_GUIDE.md)** - Complete setup, testing, and contribution guide
+- **🔍 [Gap Analysis](GAP_ANALYSIS.md)** - Comprehensive analysis and improvements
+- **📋 [Implementation Summary](IMPLEMENTATION_SUMMARY.md)** - Complete implementation overview
 
 ## 💰 Support Barrot-Agent
 

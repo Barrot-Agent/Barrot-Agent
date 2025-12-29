@@ -22,7 +22,18 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install PyYAML
+
       - name: Generate Build Manifest
+        id: generate
         run: |
           cat <<EOF > build_manifest.yaml
           build_signature: BNDL-V2
@@ -36,22 +47,48 @@ jobs:
             dashboard: publishing
             cognition: recursive
           EOF
+          
+          echo "manifest_generated=true" >> $GITHUB_OUTPUT
+
+      - name: Validate Manifest
+        if: steps.generate.outputs.manifest_generated == 'true'
+        run: |
+          echo "🔍 Validating generated manifest..."
+          python -c "
+          import yaml
+          with open('build_manifest.yaml', 'r') as f:
+              manifest = yaml.safe_load(f)
+              assert 'build_signature' in manifest, 'Missing build_signature'
+              assert 'timestamp' in manifest, 'Missing timestamp'
+              assert 'rail_status' in manifest, 'Missing rail_status'
+              print('✅ Manifest validation passed')
+          "
 
       - name: Commit and Push Manifest
+        if: success()
         run: |
           git config --global user.name "Barrot-Agent"
           git config --global user.email "barrot@systems.local"
           git add build_manifest.yaml
           if ! git diff --staged --quiet; then
-            git commit -m "Update build manifest"
+            git commit -m "🔄 Update build manifest [automated]"
             git push
+            echo "✅ Manifest updated and pushed"
           else
-            echo "No changes to commit"
+            echo "ℹ️ No changes to commit"
           fi
+      
+      - name: Report Failure
+        if: failure()
+        run: |
+          echo "❌ Manifest update failed!"
+          echo "Check the logs above for details"
+          exit 1
 
   publish-dashboard:
     runs-on: ubuntu-latest
     needs: update-manifest
+    if: success()
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -60,18 +97,114 @@ jobs:
           fetch-depth: 0
 
       - name: Pull latest changes
-        run: git pull origin main
+        run: |
+          git pull origin main
+          echo "✅ Latest changes pulled"
+
+      - name: Verify manifest exists
+        run: |
+          if [ ! -f "build_manifest.yaml" ]; then
+            echo "❌ build_manifest.yaml not found!"
+            exit 1
+          fi
+          echo "✅ Manifest file exists"
 
       - name: Generate Dashboard HTML
+        id: generate_dashboard
         run: |
           mkdir -p dashboard-output
-          echo "<html><body><h1>Barrot Build Status</h1>" > dashboard-output/index.html
-          echo "<pre>" >> dashboard-output/index.html
+          
+          # Create enhanced dashboard
+          cat > dashboard-output/index.html <<'DASHBOARD_EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Barrot Build Status</title>
+            <style>
+              body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 2rem;
+                margin: 0;
+              }
+              .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                background: rgba(0,0,0,0.2);
+                padding: 2rem;
+                border-radius: 15px;
+                backdrop-filter: blur(10px);
+              }
+              h1 {
+                margin-top: 0;
+                border-bottom: 2px solid rgba(255,255,255,0.3);
+                padding-bottom: 1rem;
+              }
+              pre {
+                background: rgba(0,0,0,0.5);
+                padding: 1.5rem;
+                border-radius: 8px;
+                overflow-x: auto;
+                border-left: 4px solid #00ffcc;
+              }
+              .status {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                background: #00ff88;
+                color: #000;
+                border-radius: 20px;
+                font-weight: bold;
+                margin: 1rem 0;
+              }
+              .footer {
+                margin-top: 2rem;
+                text-align: center;
+                opacity: 0.8;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>🦜 Barrot Build Status Dashboard</h1>
+              <div class="status">✅ OPERATIONAL</div>
+              <h2>Current Build Manifest</h2>
+              <pre>
+          DASHBOARD_EOF
+          
           cat build_manifest.yaml >> dashboard-output/index.html
-          echo "</pre></body></html>" >> dashboard-output/index.html
+          
+          cat >> dashboard-output/index.html <<'DASHBOARD_EOF'
+              </pre>
+              <div class="footer">
+                <p>Last updated: $(date -u +"%Y-%m-%d %H:%M:%S UTC")</p>
+                <p>Powered by Barrot Build Relay</p>
+              </div>
+            </div>
+          </body>
+          </html>
+          DASHBOARD_EOF
+          
+          echo "dashboard_generated=true" >> $GITHUB_OUTPUT
+          echo "✅ Dashboard HTML generated"
 
       - name: Deploy to GitHub Pages
+        if: steps.generate_dashboard.outputs.dashboard_generated == 'true'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dashboard-output
+      
+      - name: Verify Deployment
+        if: success()
+        run: |
+          echo "✅ Dashboard deployed successfully!"
+          echo "📊 View at: https://barrot-agent.github.io/Barrot-Agent/"
+      
+      - name: Report Failure
+        if: failure()
+        run: |
+          echo "❌ Dashboard deployment failed!"
+          exit 1

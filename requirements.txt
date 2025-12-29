@@ -1,3 +1,8 @@
 # Barrot-Agent Python Dependencies
+# Testing dependencies
+PyYAML>=6.0
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
 # For static file serving, no external packages required
 # Standard library only - using Python's built-in http.server module
