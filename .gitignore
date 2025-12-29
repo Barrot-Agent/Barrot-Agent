@@ -15,6 +15,14 @@ temp/
 *.tmp
 *.cache
 
+# Test artifacts
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+*.pyc
+__pycache__/
+
 # OS files
 .DS_Store
 Thumbs.db
