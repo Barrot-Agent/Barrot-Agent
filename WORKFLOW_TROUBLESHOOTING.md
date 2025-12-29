@@ -118,9 +118,9 @@ act push  # Simulate push event
 
 ### 1. Always Use Specific Action Versions
 
-❌ **Bad**: `uses: actions/checkout@v4`  
-✅ **Good**: `uses: actions/checkout@v4` (v4 is acceptable for latest)  
-✅ **Better**: Pin to specific SHA for maximum security
+❌ **Bad**: `uses: actions/checkout@v3` (outdated)  
+✅ **Good**: `uses: actions/checkout@v4` (latest stable)  
+✅ **Better**: Pin to specific SHA for maximum security (e.g., `actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11`)
 
 ### 2. Prevent Infinite Loops
 
