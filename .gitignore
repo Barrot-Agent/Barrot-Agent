@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies
 node_modules/
 package-lock.json
@@ -33,12 +34,43 @@ build/
 out/
 
 # IDE and editor files
+=======
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDE
+>>>>>>> origin/copilot/add-snapshot-functionality
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
+<<<<<<< HEAD
 # Testing
 coverage/
 .nyc_output/
@@ -62,3 +94,14 @@ temp/
 # OS files
 .DS_Store
 Thumbs.db
+=======
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# HTML dashboards (generated)
+snapshot_dashboard.html
+>>>>>>> origin/copilot/add-snapshot-functionality
