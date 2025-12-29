@@ -84,10 +84,15 @@ The `build_manifest.yaml` file tracks:
 
 ### Workflows
 Automated workflows handle:
-- Build manifest updates
-- Repository cleanup
-- Dashboard publishing
-- Bundle management
+- Build manifest updates (BBR - Barrot Build Relay)
+- Repository cleanup (Weekly maintenance)
+- Dashboard publishing (GitHub Pages)
+- Bundle management (On-demand)
+- System health monitoring (SHRM Ping-Pong every 15 min)
+
+**Workflow Status**: ✅ All workflows optimized and functional as of 2025-12-29
+
+For troubleshooting, see **[WORKFLOW_TROUBLESHOOTING.md](WORKFLOW_TROUBLESHOOTING.md)**
 
 ## 📊 Monitoring
 
@@ -158,6 +163,8 @@ ISC License - See repository for details
 
 ## 📚 Documentation
 
+- **🔧 [Workflow Troubleshooting](WORKFLOW_TROUBLESHOOTING.md)** - Debug and optimize GitHub Actions workflows
+- **📋 [MMI Analysis Report](MMI_ANALYSIS_REPORT.md)** - Massive Micro Ingest protocol analysis results
 - **🔬 [Platform Alternatives Research](PLATFORM_ALTERNATIVES_RESEARCH.md)** - Research free platforms for revolutionary search engine
 - **🚀 [Deployment Guide](DEPLOYMENT.md)** - Deploy to Heroku, Render, Railway, Fly.io, or Docker
 - **🔄 [Default Branch Guide](DEFAULT_BRANCH_GUIDE.md)** - Migrating to `main` branch
