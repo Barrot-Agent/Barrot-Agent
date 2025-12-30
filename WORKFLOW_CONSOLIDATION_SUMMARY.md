@@ -159,13 +159,13 @@ Alternatively, individual jobs can be disabled by:
 ## Success Metrics
 
 Monitor these to confirm successful consolidation:
-- [ ] Build manifest updates on push to main
-- [ ] Dashboard publishes successfully
-- [ ] Ping-pong runs every 15 minutes
-- [ ] Cleanup runs weekly on Sunday
-- [ ] Manual workflow dispatch works with all options
-- [ ] No workflow execution errors
-- [ ] All file operations complete successfully
+- Build manifest updates on push to main
+- Dashboard publishes successfully
+- Ping-pong runs every 15 minutes
+- Cleanup runs weekly on Sunday
+- Manual workflow dispatch works with all options
+- No workflow execution errors
+- All file operations complete successfully
 
 ## Conclusion
 
