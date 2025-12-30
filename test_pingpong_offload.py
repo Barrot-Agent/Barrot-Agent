@@ -21,7 +21,7 @@ def test_module_import():
     """Test that the module can be imported."""
     print("✓ Testing module import...")
     try:
-        from barrot_offload import PingPongOffload
+        _ = PingPongOffload
         print("  ✅ Module imported successfully")
         return True
     except ImportError as e:
