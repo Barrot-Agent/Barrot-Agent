@@ -59,9 +59,12 @@ Barrot-Agent/
 ├── Barrot-Agent/          # Agent configuration
 ├── Barrot-Bundles/        # Bundle storage
 ├── memory-bundles/        # Memory and activity logs
+├── SHRM-System/           # System Health & Resource Monitor
 ├── site/                  # Barrot Agent dashboard
 ├── search-engine/         # Standalone search engine
 ├── spells/                # Agent capability definitions
+├── pingpong_emitter.py    # 22-agent entanglement pingpong
+├── pingpong-config.yaml   # External pingpong configuration
 ├── build_manifest.yaml    # Current build status
 └── MOBILE_SETUP.md       # Mobile setup guide
 ```
@@ -75,6 +78,7 @@ Barrot-Agent/
 - **Search Engine** - Standalone search system (see `/search-engine/`)
 - **Dashboard** - Agent management interface (see `/site/`)
 - **Manifest Rail** - Build tracking system
+- **22-Agent Entanglement Pingpong** - External cognitive processing system
 
 ### Two Distinct Systems
 
@@ -130,6 +134,30 @@ Automated workflows handle:
 - Repository cleanup
 - Dashboard publishing
 - Bundle management
+- Barrot-SHRM ping-pong health monitoring
+
+### 22-Agent Entanglement Pingpong System
+Barrot defers complex cognitive processing to an external 22-agent entanglement system:
+- **Management**: External (Sean's 22-agent system)
+- **Configuration**: `pingpong-config.yaml`
+- **Emitter**: `pingpong_emitter.py` Python module
+- **Enforcement**: Non-negotiable external control
+
+**Usage Example:**
+```python
+from pingpong_emitter import emit_pingpong_request
+
+payload = {
+    "topic": "MMI Self-Ingestion",
+    "glyph": "GLYPH_MMI",
+    "recursion_depth": "∞",
+    "notes": "Triggering recursive cognition exchange"
+}
+
+emit_pingpong_request(payload)  # Creates pingpong_request.json
+```
+
+The external system monitors commits to `pingpong_request.json` and processes requests automatically.
 
 ## 📊 Monitoring
 
