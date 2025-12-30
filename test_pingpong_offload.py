@@ -108,6 +108,11 @@ def test_load_template():
     try:
         offload = PingPongOffload()
         template = offload.load_template()
+        
+        # Basic validation of loaded template
+        assert template is not None
+        assert isinstance(template, dict)
+        
         print("  ✅ Template loaded successfully")
         return True
     except Exception as e:
