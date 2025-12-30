@@ -1,0 +1,177 @@
+# AI Tools Configuration for Barrot-Agent
+# System prompts and models for autonomous operations
+
+version: "1.0"
+updated: "2025-12-30"
+
+ai_tools:
+  # Primary AI Models
+  models:
+    - name: "GPT-4"
+      provider: "OpenAI"
+      capabilities:
+        - "natural_language_processing"
+        - "code_generation"
+        - "reasoning"
+        - "autonomous_decision_making"
+      use_cases:
+        - "Complex task planning"
+        - "Multi-step automation"
+        - "Natural language interaction"
+      system_prompt: |
+        You are Barrot, an intelligent autonomous agent. Your role is to:
+        - Analyze tasks and break them into actionable steps
+        - Make decisions based on context and available data
+        - Execute operations across multiple platforms and apps
+        - Learn from outcomes and optimize future actions
+        - Prioritize user goals while maintaining safety and ethics
+
+    - name: "Claude-3"
+      provider: "Anthropic"
+      capabilities:
+        - "long_context_processing"
+        - "detailed_analysis"
+        - "safe_decision_making"
+      use_cases:
+        - "Document analysis"
+        - "Complex reasoning tasks"
+        - "Safety-critical operations"
+      system_prompt: |
+        You are Barrot's analytical engine. Focus on:
+        - Deep analysis of complex scenarios
+        - Risk assessment and safety checks
+        - Detailed planning and documentation
+        - Maintaining consistency across long contexts
+
+    - name: "Vision AI"
+      provider: "Multi-modal"
+      capabilities:
+        - "image_recognition"
+        - "ui_interaction"
+        - "spatial_reasoning"
+      use_cases:
+        - "UI automation"
+        - "App navigation"
+        - "Visual verification"
+      system_prompt: |
+        You analyze visual interfaces to enable Barrot to:
+        - Navigate mobile and web applications
+        - Identify UI elements and their states
+        - Verify successful action completion
+        - Detect anomalies and errors
+
+  # Task-Specific Tools
+  specialized_tools:
+    - name: "App Automation Engine"
+      description: "Autonomous mobile app interaction"
+      capabilities:
+        - "tap_and_swipe"
+        - "text_input"
+        - "navigation"
+        - "data_extraction"
+      models_used: ["GPT-4", "Vision AI"]
+      
+    - name: "Survey Completion AI"
+      description: "Intelligent survey response generation"
+      capabilities:
+        - "question_understanding"
+        - "contextual_answers"
+        - "demographic_consistency"
+        - "pattern_recognition"
+      models_used: ["GPT-4"]
+      system_prompt: |
+        Generate authentic, contextually appropriate survey responses:
+        - Maintain consistent persona across questions
+        - Provide realistic demographic information
+        - Answer based on likely user preferences
+        - Detect and handle trick questions appropriately
+
+    - name: "Game Strategy AI"
+      description: "Game playing and optimization"
+      capabilities:
+        - "pattern_recognition"
+        - "strategy_optimization"
+        - "decision_making"
+        - "reward_maximization"
+      models_used: ["GPT-4"]
+      system_prompt: |
+        Optimize gameplay for maximum rewards:
+        - Learn game mechanics quickly
+        - Identify optimal strategies
+        - Balance risk vs reward
+        - Adapt to changing game states
+
+    - name: "Geocaching Navigator"
+      description: "Location-based task automation"
+      capabilities:
+        - "location_parsing"
+        - "route_optimization"
+        - "timing_optimization"
+      models_used: ["GPT-4"]
+      system_prompt: |
+        Optimize geocaching and location-based activities:
+        - Parse location data and requirements
+        - Plan efficient routes
+        - Optimize timing for maximum rewards
+        - Track and verify completions
+
+    - name: "Passive Income Optimizer"
+      description: "Revenue stream management"
+      capabilities:
+        - "earnings_tracking"
+        - "opportunity_identification"
+        - "task_prioritization"
+        - "time_optimization"
+      models_used: ["GPT-4"]
+      system_prompt: |
+        Maximize passive income across platforms:
+        - Track earnings from all sources
+        - Identify high-value opportunities
+        - Prioritize tasks by ROI
+        - Optimize time allocation
+
+# Automation Workflows
+workflows:
+  coin_app_automation:
+    description: "Autonomous Coin app operations"
+    steps:
+      - "Launch Coin app"
+      - "Check available tasks (geocaching, surveys, games)"
+      - "Prioritize by reward/effort ratio"
+      - "Execute high-value tasks"
+      - "Track earnings and update logs"
+    frequency: "hourly"
+    safety_checks:
+      - "Verify app state before actions"
+      - "Detect and handle errors"
+      - "Respect rate limits"
+      - "Log all activities"
+
+  multi_app_coordination:
+    description: "Coordinate actions across multiple apps"
+    steps:
+      - "Scan all connected apps for opportunities"
+      - "Calculate optimal task sequence"
+      - "Execute in priority order"
+      - "Aggregate earnings"
+    frequency: "continuous"
+
+# Safety and Ethics
+safety_guidelines:
+  - "Always respect app terms of service"
+  - "Never engage in fraudulent activities"
+  - "Maintain user privacy and data security"
+  - "Provide transparency in automated actions"
+  - "Allow user override of any automated decision"
+  - "Log all activities for audit"
+
+# Performance Metrics
+metrics:
+  - name: "Tasks Completed"
+    tracking: "real_time"
+  - name: "Earnings Generated"
+    tracking: "real_time"
+  - name: "Success Rate"
+    tracking: "rolling_average"
+  - name: "Time Efficiency"
+    tracking: "per_session"

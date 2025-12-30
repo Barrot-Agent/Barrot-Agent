@@ -62,7 +62,9 @@ Barrot-Agent/
 ├── SHRM-System/           # System Health & Resource Monitor
 ├── site/                  # Barrot Agent dashboard
 ├── search-engine/         # Standalone search engine
+├── coin-app/              # Coin app integration & automation
 ├── spells/                # Agent capability definitions
+├── ai-tools-config.yaml   # AI models and system prompts
 ├── pingpong_emitter.py    # 22-agent entanglement pingpong
 ├── pingpong-config.yaml   # External pingpong configuration
 ├── build_manifest.yaml    # Current build status
@@ -77,6 +79,8 @@ Barrot-Agent/
 - **Microagent Logic** - Builder.io integration
 - **Search Engine** - Standalone search system (see `/search-engine/`)
 - **Dashboard** - Agent management interface (see `/site/`)
+- **Coin App Integration** - Autonomous passive income automation (see `/coin-app/`)
+- **AI Tools** - System prompts and models for autonomous operations (see `ai-tools-config.yaml`)
 - **Manifest Rail** - Build tracking system
 - **22-Agent Entanglement Pingpong** - External cognitive processing system
 
@@ -100,9 +104,28 @@ Comprehensive automation platform featuring:
 - Web3 Integration Hub
 - NFT Marketplace
 - Chameleon Chain Blockchain
+- **🪙 Coin App Automation** - Passive income through geocaching, surveys, and games
 - Operations Monitoring
 
 **[→ Visit Agent Dashboard](site/)**
+
+### 🪙 Coin App Integration
+Autonomous passive income generation through:
+- **Geocaching Automation** - Automated location-based coin collection
+- **Survey Completion** - AI-powered survey responses with demographic consistency
+- **Game Optimization** - Strategic gameplay for maximum rewards
+- **Income Tracking** - Real-time earnings dashboard and analytics
+
+**[→ Read Coin App Documentation](coin-app/README.md)**
+
+### 🤖 AI Tools Configuration
+System prompts and AI models for autonomous operations:
+- **GPT-4** - Complex reasoning and decision-making
+- **Claude-3** - Long context processing and analysis
+- **Vision AI** - UI interaction and navigation
+- **Specialized Tools** - Survey completion, game strategy, route optimization
+
+**[→ View AI Tools Configuration](ai-tools-config.yaml)**
 
 ### Agent Spells
 - **Ω-Ingest** (Omega-Ingest) - Quantum data assimilation
@@ -235,6 +258,8 @@ ISC License - See repository for details
 - **🔄 [System Separation Architecture](SYSTEM_SEPARATION.md)** - Details on the modular separation
 - **🔍 [Search Engine Docs](search-engine/README.md)** - Search engine documentation
 - **🦜 [Agent Dashboard Docs](site/README.md)** - Dashboard documentation
+- **🪙 [Coin App Integration](coin-app/README.md)** - Autonomous passive income automation
+- **🤖 [AI Tools Configuration](ai-tools-config.yaml)** - System prompts and AI models
 - **🔬 [Platform Alternatives Research](PLATFORM_ALTERNATIVES_RESEARCH.md)** - Research free platforms for revolutionary search engine
 - **🚀 [Deployment Guide](DEPLOYMENT.md)** - Deploy to Heroku, Render, Railway, Fly.io, or Docker
 - **🔄 [Default Branch Guide](DEFAULT_BRANCH_GUIDE.md)** - Migrating to `main` branch
