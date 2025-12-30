@@ -38,8 +38,11 @@ payload = {
     "source": "barrot-agent"
 }
 
-# Emit the request
+# Emit the request (writes to pingpong_request.json by default)
 emit_pingpong_request(payload)
+
+# Or specify a custom output file
+emit_pingpong_request(payload, "custom_request.json")
 ```
 
 ### Request Format

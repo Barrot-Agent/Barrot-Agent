@@ -18,7 +18,7 @@ emit_pingpong_request({
 print()
 
 # Example 2: Data synchronization request
-print("\nExample 2: Data sync request")
+print("Example 2: Data sync request")
 emit_pingpong_request({
     "type": "data_sync",
     "data_source": "memory-bundles",
@@ -28,7 +28,7 @@ emit_pingpong_request({
 print()
 
 # Example 3: System monitoring request
-print("\nExample 3: System monitoring request")
+print("Example 3: System monitoring request")
 emit_pingpong_request({
     "type": "system_monitor",
     "metrics": ["cpu", "memory", "disk", "network"],
