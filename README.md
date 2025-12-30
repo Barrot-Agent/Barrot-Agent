@@ -219,6 +219,7 @@ ISC License - See repository for details
 - **🔄 [Data Transformation](DATA_TRANSFORMATION.md)** - Data transformation guide
 - **🚀 [AGI Development](AGI_DEVELOPMENT.md)** - AGI acceleration protocols
 - **📥 [Ingestion Manifest](INGESTION_MANIFEST.md)** - Complete ingestion capabilities
+- **🧮 [Millennium Problems Status](MILLENNIUM_PROBLEMS_STATUS.md)** - Progress on the Seven Millennium Prize Problems
 
 ## 💰 Support Barrot-Agent
 

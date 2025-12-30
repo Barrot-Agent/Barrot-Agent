@@ -162,6 +162,8 @@ Complete mathematical framework ingestion:
 - Computational implications
 - Potential AI/ML applications
 
+**Progress Tracking**: See [MILLENNIUM_PROBLEMS_STATUS.md](MILLENNIUM_PROBLEMS_STATUS.md) for detailed progress on each problem
+
 ---
 
 ## 🎯 Arc-AGI Dataset Integration
