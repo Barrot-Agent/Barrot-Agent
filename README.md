@@ -74,6 +74,8 @@ Barrot-Agent/
 ## 🎯 Features
 
 ### Core Modules
+- **28 AI Agents** - Comprehensive multi-agent architecture (see [AI_AGENTS_ANALYSIS.md](AI_AGENTS_ANALYSIS.md))
+- **22-Agent Entanglement Pingpong** - External cognitive processing system
 - **Prediction Methodologies** - Advanced prediction capabilities
 - **Deployment Integrity** - Reliable deployment systems
 - **Microagent Logic** - Builder.io integration
@@ -82,7 +84,6 @@ Barrot-Agent/
 - **Coin App Integration** - Autonomous passive income automation (see `/coin-app/`)
 - **AI Tools** - System prompts and models for autonomous operations (see `ai-tools-config.yaml`)
 - **Manifest Rail** - Build tracking system
-- **22-Agent Entanglement Pingpong** - External cognitive processing system
 
 ### Two Distinct Systems
 
@@ -255,26 +256,37 @@ ISC License - See repository for details
 
 ## 📚 Documentation
 
+### Core System Documentation
+- **🤖 [AI Agents Analysis](AI_AGENTS_ANALYSIS.md)** - **NEW!** Comprehensive reverse engineering of all 28 AI agents
+- **🏗️ [Agent Architecture Diagram](AGENT_ARCHITECTURE_DIAGRAM.md)** - **NEW!** System architecture and agent interaction diagrams
 - **🔄 [System Separation Architecture](SYSTEM_SEPARATION.md)** - Details on the modular separation
+- **🚀 [AGI Development](AGI_DEVELOPMENT.md)** - AGI acceleration protocols
+- **💸 [Monetization Framework](MONETIZATION_FRAMEWORK.md)** - Autonomous revenue generation (12+ streams)
+
+### Platform & Features
 - **🔍 [Search Engine Docs](search-engine/README.md)** - Search engine documentation
 - **🦜 [Agent Dashboard Docs](site/README.md)** - Dashboard documentation
 - **🪙 [Coin App Integration](coin-app/README.md)** - Autonomous passive income automation
 - **🤖 [AI Tools Configuration](ai-tools-config.yaml)** - System prompts and AI models
 - **🔬 [Platform Alternatives Research](PLATFORM_ALTERNATIVES_RESEARCH.md)** - Research free platforms for revolutionary search engine
+
+### Setup & Deployment
 - **🚀 [Deployment Guide](DEPLOYMENT.md)** - Deploy to Heroku, Render, Railway, Fly.io, or Docker
 - **🔄 [Default Branch Guide](DEFAULT_BRANCH_GUIDE.md)** - Migrating to `main` branch
 - **📱 [Mobile Setup](MOBILE_SETUP.md)** - Access Barrot from your phone
 - **💻 [VS Code Setup](VSCODE_SETUP.md)** - Optimal development environment
-- **💰 [Sponsorship](SPONSORSHIP.md)** - Support Barrot-Agent development
-- **🎖️ [Sponsors](SPONSORS.md)** - Our amazing sponsors
-- **💸 [Monetization Framework](MONETIZATION_FRAMEWORK.md)** - Autonomous revenue generation (12+ streams)
+
+### Advanced Capabilities
 - **📊 [Output Logging](OUTPUT_LOGGING.md)** - Comprehensive logging framework
 - **🔄 [Data Transformation](DATA_TRANSFORMATION.md)** - Data transformation guide
-- **🚀 [AGI Development](AGI_DEVELOPMENT.md)** - AGI acceleration protocols
 - **📥 [Ingestion Manifest](INGESTION_MANIFEST.md)** - Complete ingestion capabilities
 - **🧮 [Millennium Problems Status](MILLENNIUM_PROBLEMS_STATUS.md)** - Progress on the Seven Millennium Prize Problems
 - **🚀 [Advanced Propulsion Research](ADVANCED_PROPULSION_RESEARCH.md)** - Revolutionary plane engine, 3D-printable hoverbike, and warp drive development
 - **⚡ [Advanced Energy Ingestion](ADVANCED_ENERGY_INGESTION.md)** - Nuclear fusion, warp drive, and photovoltaic technology data acquisition
+
+### Community & Support
+- **💰 [Sponsorship](SPONSORSHIP.md)** - Support Barrot-Agent development
+- **🎖️ [Sponsors](SPONSORS.md)** - Our amazing sponsors
 
 ## 💰 Support Barrot-Agent
 
