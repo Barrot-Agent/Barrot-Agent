@@ -24,6 +24,7 @@ character-capabilities/
 
 ### Cartoons
 - **Avatar: The Last Airbender (Aang)** - Multi-resource management, power modes, holistic integration
+- **Rick and Morty (Rick Sanchez)** - Rapid prototyping, dimensional routing, resilience architecture
 
 ### Video Games
 - **The Legend of Zelda (Link)** - Tool utilization, algorithm solving, exploration systems
@@ -178,7 +179,6 @@ Character capabilities enable Barrot to:
 Planned character profiles:
 - **Sherlock Holmes** - Deductive reasoning, pattern recognition
 - **Doctor Who** - Time-space navigation, problem solving
-- **Rick Sanchez** - Dimensional routing, rapid prototyping
 - **Ender Wiggin** - Strategic optimization, game theory
 - **Commander Shepard** - Leadership systems, decision optimization
 - **Goku** - Performance scaling, energy management

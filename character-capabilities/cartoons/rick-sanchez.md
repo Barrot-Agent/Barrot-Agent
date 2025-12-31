@@ -92,6 +92,9 @@ class RickSanchezModule:
     Implements Rick-inspired rapid innovation and dimensional routing
     """
     
+    # Crisis threshold constant
+    CRISIS_THRESHOLD = 9000  # Reference to DBZ power level meme
+    
     def __init__(self):
         self.portal_gun = DimensionalRouter()
         self.gadget_inventory = []
@@ -151,7 +154,7 @@ class RickSanchezModule:
         # Assess situation severity
         severity = self.assess_crisis(crisis_situation)
         
-        if severity > 9000:  # Over 9000!
+        if severity > self.CRISIS_THRESHOLD:
             # Activate crisis mode
             self.enable_crisis_mode()
         
