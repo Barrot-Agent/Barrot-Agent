@@ -140,6 +140,8 @@ jobs:
           fi
           
           echo "-----------------------------------" | tee -a "$LOG_FILE"
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
       - name: Remove old bundles (keep last ${{ env.MAX_BUNDLES }})
         id: remove_bundles
@@ -175,6 +177,9 @@ jobs:
           
           echo "removed_count=$REMOVED" >> $GITHUB_OUTPUT
           echo "✅ Removed $REMOVED old bundle(s)" | tee -a "$LOG_FILE"
+          if [ "$(ls -A Barrot-Bundles 2>/dev/null)" ]; then
+            ls -t Barrot-Bundles | tail -n +11 | xargs -I {} rm -f Barrot-Bundles/{} || true
+          fi
 
       - name: Remove temp files
         id: remove_temp
@@ -226,6 +231,7 @@ jobs:
           else
             echo "⚠️ Cleanup completed with $CLEANUP_ERRORS error(s)" | tee -a "$LOG_FILE"
           fi
+          rm -rf tmp/ *.log *.cache 2>/dev/null || true
 
       - name: Clean old backups
         id: clean_backups
@@ -317,4 +323,12 @@ jobs:
             echo "Some cleanup tasks encountered issues"
             echo "Check the logs for details"
             exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --staged --quiet; then
+            git commit -m "🧹 Repo cleanup by Barrot"
+            git push
+          else
+            echo "✅ Nothing to clean"
           fi
