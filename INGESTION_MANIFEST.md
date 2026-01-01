@@ -19,6 +19,11 @@
   - Topics: Setup, usage patterns, code suggestions, chat interface
   - IDE integrations, API access, enterprise features
   - Best practices and optimization guides
+- **GitHub Copilot Cookbook** - Practical recipes and patterns for GitHub Copilot
+  - Repository URL: https://github.com/features/copilot/cookbook
+  - Code examples, use cases, and best practices
+  - Integration patterns and advanced techniques
+  - Real-world implementation guides
 - **ChatGPT/OpenAI Docs** - OpenAI API and ChatGPT documentation
   - Documentation URL: https://platform.openai.com/docs
   - Topics: API reference, models, prompting, function calling
@@ -37,11 +42,13 @@
   - Expert-crafted content from top institutions
   - Courses: Algebra, Calculus, Quantum Computing, Neural Networks, Python, Algorithmic Thinking
 - **Claude Skills (Claude for Education)** - AI-powered educational platform
+  - Documentation URL: https://claude.ai/skills (and related resources)
   - Learning Mode with Socratic questioning for critical thinking
   - Guided reasoning over direct answer provision
   - Academic integrity-focused approach
   - Support for students, faculty, and administrators
   - Integration with Canvas LMS and major universities
+  - Best practices for educational AI usage
 - **Nice** - AI-powered customer experience
 - **Temporal AI** - Workflow orchestration and automation
 - **HubSpot** - Marketing and CRM intelligence

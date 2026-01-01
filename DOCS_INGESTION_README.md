@@ -1,6 +1,6 @@
 # 📚 Documentation Ingestion System
 
-Automated documentation ingestion system for Barrot-Agent that collects and processes documentation from GitHub, Copilot, ChatGPT/OpenAI, and Snowflake.
+Automated documentation ingestion system for Barrot-Agent that collects and processes documentation from GitHub, Copilot, ChatGPT/OpenAI, Snowflake, and Claude.
 
 ## 🎯 Overview
 
@@ -22,7 +22,18 @@ This system automatically fetches, parses, and stores documentation from multipl
 - Management and administration
 - Troubleshooting
 
-### 3. **OpenAI/ChatGPT Docs** (`https://platform.openai.com/docs`)
+### 3. **GitHub Copilot Cookbook** (`https://docs.github.com/copilot`)
+- Example prompts for GitHub Copilot Chat
+- Getting code suggestions in your IDE
+- Asking questions in your IDE
+- Practical recipes and patterns
+
+### 4. **Claude Skills Documentation** (`https://support.anthropic.com`)
+- Educational platform documentation
+- Collections and articles
+- Best practices for educational AI usage
+
+### 5. **OpenAI/ChatGPT Docs** (`https://platform.openai.com/docs`)
 - API Introduction
 - Quickstart guides
 - API Reference
@@ -30,7 +41,7 @@ This system automatically fetches, parses, and stores documentation from multipl
 - Prompt engineering
 - Assistants API
 
-### 4. **Snowflake Docs** (`https://docs.snowflake.com`)
+### 6. **Snowflake Docs** (`https://docs.snowflake.com`)
 - User Guide
 - SQL Reference
 - Developer Guide
@@ -57,7 +68,7 @@ python3 docs_ingestion.py
 
 This will:
 1. Create an `ingested_docs/` directory
-2. Fetch documentation from all four platforms
+2. Fetch documentation from all six platforms
 3. Save individual page content as text files
 4. Generate JSON summaries for each platform
 5. Create an overall ingestion summary

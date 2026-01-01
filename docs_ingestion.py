@@ -128,6 +128,23 @@ class DocsIngestionSystem:
                     '/en/copilot/managing-copilot'
                 ]
             },
+            'copilot_cookbook': {
+                'name': 'GitHub Copilot Cookbook',
+                'base_url': 'https://docs.github.com',
+                'key_paths': [
+                    '/en/copilot/example-prompts-for-github-copilot-chat',
+                    '/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide-with-github-copilot',
+                    '/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide'
+                ]
+            },
+            'claude_skills': {
+                'name': 'Claude Skills Documentation',
+                'base_url': 'https://support.anthropic.com',
+                'key_paths': [
+                    '/en/collections',
+                    '/en/articles'
+                ]
+            },
             'openai': {
                 'name': 'OpenAI/ChatGPT Docs',
                 'base_url': 'https://platform.openai.com',
