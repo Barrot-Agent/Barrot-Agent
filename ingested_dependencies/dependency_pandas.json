@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "name": "pandas",
+    "version": "latest",
+    "category": "data_science",
+    "description": "pandas - Python package",
+    "homepage": "https://pandas.pydata.org/docs/",
+    "documentation_url": "https://pandas.pydata.org/docs/",
+    "repository_url": "https://github.com/pandas/pandas",
+    "license": "Various",
+    "dependencies": [],
+    "key_features": [
+      "DataFrame and Series data structures",
+      "Data cleaning and transformation",
+      "Time series functionality",
+      "SQL-like joins and merges",
+      "I/O for various formats (CSV, JSON, SQL, etc.)"
+    ],
+    "use_cases": [
+      "Data analysis and exploration",
+      "Data cleaning and preprocessing",
+      "Time series analysis",
+      "Financial data analysis",
+      "Business intelligence"
+    ],
+    "last_updated": "2026-01-02T13:05:00.377481+00:00"
+  },
+  "architecture": [
+    {
+      "name": "pandas.DataFrame",
+      "type": "class",
+      "purpose": "2D labeled data structure",
+      "key_classes": [],
+      "key_functions": [
+        "read_csv",
+        "to_csv",
+        "merge",
+        "groupby",
+        "pivot"
+      ],
+      "design_patterns": [
+        "Builder",
+        "Facade"
+      ]
+    }
+  ],
+  "api_endpoints": [],
+  "best_practices": [
+    "Use vectorized operations instead of apply",
+    "Set appropriate dtypes for columns",
+    "Use categorical dtype for string columns with few unique values",
+    "Chunk large datasets with read_csv(chunksize=...)",
+    "Use query() for complex filtering"
+  ],
+  "common_patterns": [
+    "Split-apply-combine pattern with groupby",
+    "Method chaining for transformations",
+    "MultiIndex for hierarchical data",
+    "Pivot tables for aggregation"
+  ],
+  "performance_tips": [
+    "Use eval() for complex expressions",
+    "Avoid frame copies with inplace=True cautiously",
+    "Use HDFStore for large datasets",
+    "Leverage numexpr for numerical operations"
+  ],
+  "security_considerations": [],
+  "integration_notes": [
+    "Essential for MMI data analysis",
+    "Used in monetization engine for financial data",
+    "Integrates with email analyzer for structured data extraction"
+  ]
+}

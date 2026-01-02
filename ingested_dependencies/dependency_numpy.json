@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "name": "numpy",
+    "version": "latest",
+    "category": "scientific",
+    "description": "numpy - Python package",
+    "homepage": "https://numpy.org/doc/stable/",
+    "documentation_url": "https://numpy.org/doc/stable/",
+    "repository_url": "https://github.com/numpy/numpy",
+    "license": "Various",
+    "dependencies": [],
+    "key_features": [
+      "N-dimensional array operations",
+      "Broadcasting and vectorization",
+      "Linear algebra operations",
+      "Fourier transforms",
+      "Random number generation"
+    ],
+    "use_cases": [
+      "Scientific computing",
+      "Matrix operations",
+      "Signal processing",
+      "Image processing",
+      "Statistical analysis"
+    ],
+    "last_updated": "2026-01-02T13:05:00.376678+00:00"
+  },
+  "architecture": [
+    {
+      "name": "numpy.ndarray",
+      "type": "class",
+      "purpose": "N-dimensional array container",
+      "key_classes": [],
+      "key_functions": [
+        "reshape",
+        "transpose",
+        "dot",
+        "sum",
+        "mean"
+      ],
+      "design_patterns": [
+        "Iterator",
+        "Template"
+      ]
+    }
+  ],
+  "api_endpoints": [],
+  "best_practices": [
+    "Vectorize operations instead of loops",
+    "Use views instead of copies when possible",
+    "Preallocate arrays for better performance",
+    "Use appropriate dtypes to save memory",
+    "Leverage broadcasting for element-wise operations"
+  ],
+  "common_patterns": [],
+  "performance_tips": [
+    "Use ufuncs for element-wise operations",
+    "Leverage BLAS libraries for linear algebra",
+    "Use einsum for complex tensor operations",
+    "Memory-map large arrays with np.memmap"
+  ],
+  "security_considerations": [],
+  "integration_notes": [
+    "Core dependency for all numerical operations in Barrot",
+    "Used extensively in advanced algorithms module",
+    "Critical for data transformation pipelines"
+  ]
+}
