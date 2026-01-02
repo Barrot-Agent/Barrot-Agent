@@ -19,7 +19,7 @@ Barrot-Agent can be accessed and managed from your mobile device in several ways
 The simplest way to interact with Barrot-Agent is through the web dashboard:
 
 1. **Open your mobile browser** (Chrome, Safari, Firefox, etc.)
-2. **Navigate to**: `https://barrot-agent.github.io/Barrot-Agent/`
+2. **Navigate to**: `https://barrot-agent.github.io/B-Agent/`
 3. **Bookmark the page** for quick access
 
 The dashboard displays:
@@ -230,7 +230,7 @@ Same commands as Android Termux (see above).
 ### Viewing the Repository Website
 
 1. Open browser on your phone
-2. Navigate to: `https://barrot-agent.github.io/Barrot-Agent/`
+2. Navigate to: `https://barrot-agent.github.io/B-Agent/`
 3. View live build status and manifests
 
 ### Using GitHub.com Mobile Site
@@ -282,7 +282,7 @@ To authenticate Git operations on mobile:
 
 **Via Web Dashboard:**
 ```
-https://barrot-agent.github.io/Barrot-Agent/
+https://barrot-agent.github.io/B-Agent/
 ```
 
 **Via GitHub Actions:**
