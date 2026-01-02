@@ -91,6 +91,7 @@ Barrot-Agent/
 - **📧 Email Intelligence** - Automated email analysis and information extraction
 - **🎯 MMI (Massive Micro Ingestion)** - High-impact data identification for AGI acceleration
 - **💰 Advanced Monetization** - Revolutionary automation-first revenue generation protocols
+- **✨ Transformative Insights** - Acquire asynchronous data, detect convergence, generate epiphanies, realize transformative insights in real-time
 
 ### Two Distinct Systems
 
@@ -336,6 +337,7 @@ ISC License - See repository for details
 ## 📚 Documentation
 
 - **🔮 [Quantum AGI Integration](QUANTUM_AGI_INTEGRATION.md)** - Quantum Entanglement, AGI, and Advanced Algorithmic Logic integration
+- **✨ [Transformative Insights Guide](TRANSFORMATIVE_INSIGHTS_GUIDE.md)** - Acquire asynchronous data, detect convergence, generate epiphanies
 - **🔄 [System Separation Architecture](SYSTEM_SEPARATION.md)** - Details on the modular separation
 - **🔍 [Search Engine Docs](search-engine/README.md)** - Search engine documentation
 - **🦜 [Agent Dashboard Docs](site/README.md)** - Dashboard documentation
