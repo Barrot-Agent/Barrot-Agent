@@ -235,6 +235,9 @@ def example_8_export_and_integration():
     for category, count in sorted_categories[:5]:
         print(f"    • {category}: {count}")
     
+    # Export the full character capability database for integration
+    analyzer.export_to_json("character_capabilities_database.json")
+    
     print("\n📦 Exported to: character_capabilities_database.json")
     print("   Ready for integration with Barrot framework!")
 
