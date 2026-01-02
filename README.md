@@ -94,6 +94,7 @@ Barrot-Agent/
 - **🐍 Dependency Micro-Ingestion** - Comprehensive Python/PyTorch/ML ecosystem knowledge extraction with 21+ packages
 - **💰 Advanced Monetization** - Revolutionary automation-first revenue generation protocols
 - **✨ Transformative Insights** - Acquire asynchronous data, detect convergence, generate epiphanies, realize transformative insights in real-time
+- **🔀 Merge Conflict Resolution** - Automated conflict detection, analysis, and resolution with continuous learning
 
 ### Two Distinct Systems
 
@@ -401,6 +402,7 @@ ISC License - See repository for details
 - **🔄 [Data Transformation](DATA_TRANSFORMATION.md)** - Data transformation guide
 - **🚀 [AGI Development](AGI_DEVELOPMENT.md)** - AGI acceleration protocols
 - **📥 [Ingestion Manifest](INGESTION_MANIFEST.md)** - Complete ingestion capabilities
+- **🔀 [Merge Conflict Resolution Guide](MERGE_CONFLICT_RESOLUTION_GUIDE.md)** - Automated conflict resolution with continuous learning
 - **🧮 [Millennium Problems Status](MILLENNIUM_PROBLEMS_STATUS.md)** - Progress on the Seven Millennium Prize Problems
 - **🚀 [Advanced Propulsion Research](ADVANCED_PROPULSION_RESEARCH.md)** - Revolutionary plane engine, 3D-printable hoverbike, and warp drive development
 - **⚡ [Advanced Energy Ingestion](ADVANCED_ENERGY_INGESTION.md)** - Nuclear fusion, warp drive, and photovoltaic technology data acquisition

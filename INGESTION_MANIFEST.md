@@ -175,6 +175,20 @@ ingested_dependencies/
   - Cross-disciplinary research tracking
   - Permanent resource addition for indefinite ingestion
 
+### Development & Automation Platforms
+- **Merge Conflict Resolution Knowledge Base** - Comprehensive merge conflict strategies and best practices
+  - Conflict pattern detection and analysis (8 types: content, rename, delete-modify, binary, submodule, whitespace, line ending, encoding)
+  - Resolution technique library (7 strategies with success rates)
+  - Automated conflict resolution strategies
+  - Tool integration guidance (Git Rerere, Meld, KDiff3, VS Code, Semantic Merge)
+  - Best practices for conflict prevention and resolution
+  - Continuous learning from resolution outcomes
+  - Success rate tracking and strategy optimization
+  - Integration with GitHub PR automation
+  - Real-time conflict detection and analysis
+  - Automated application of learned resolution patterns
+  - Prevention of unresolved conflicts in communications
+
 ---
 
 ## 📊 Model Architectures & Algorithms
@@ -628,6 +642,7 @@ All listed resources are configured for **indefinite continuous ingestion**:
 | Warp Drive Physics | ✅ Active | FTL Propulsion |
 | Photovoltaic Technology | ✅ Active | Advanced Energy |
 | Propulsion Systems | ✅ Active | Aerospace Engineering |
+| Merge Conflict Resolution | ✅ Active | GitHub Automation & Learning |
 
 ---
 
