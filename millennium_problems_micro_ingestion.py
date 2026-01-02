@@ -172,6 +172,8 @@ class MillenniumProblemsMicroIngestion:
         problems = []
         
         # Find all problem sections (numbered 1-7)
+        # Pattern: ## <number>. <name>\n\n### Problem Statement\n<content>
+        # Matches until next ## section or end of document
         problem_sections = re.finditer(
             r'## (\d+)\.\s+(.+?)\n\n### Problem Statement\n(.+?)(?=\n## |\Z)',
             self.content,
@@ -184,7 +186,8 @@ class MillenniumProblemsMicroIngestion:
             full_section = match.group(3)
             
             # Extract problem statement (text before next ### heading)
-            stmt_match = re.search(r'^(.+?)(?=\n### )', full_section, re.DOTALL)
+            # Handle cases where problem statement may extend to end of section
+            stmt_match = re.search(r'^(.+?)(?=\n### |\Z)', full_section, re.DOTALL)
             problem_statement = stmt_match.group(1).strip() if stmt_match else ""
             
             # Extract current status
@@ -274,6 +277,14 @@ class MillenniumProblemsMicroIngestion:
             match = re.search(rf'\|\s*{metric_name}\s*\|\s*(.+?)\s*\|', metrics_text)
             return match.group(1).strip() if match else ""
         
+        # Safely extract and convert numeric metrics
+        ai_apps_str = extract_metric("AI Applications Identified")
+        try:
+            # Extract first number from string like "3 (P vs NP, Navier-Stokes, Poincaré)"
+            ai_apps = int(ai_apps_str.split()[0]) if ai_apps_str and ai_apps_str.split() else 0
+        except (ValueError, IndexError):
+            ai_apps = 0
+        
         return ProgressMetrics(
             problems_studied=extract_metric("Problems Studied"),
             frameworks_ingested=extract_metric("Frameworks Ingested"),
@@ -281,7 +292,7 @@ class MillenniumProblemsMicroIngestion:
             computational_experiments=extract_metric("Computational Experiments"),
             publications_reviewed=int(extract_metric("Publications Reviewed") or "0"),
             novel_insights_generated=int(extract_metric("Novel Insights Generated") or "0"),
-            ai_applications_identified=int(extract_metric("AI Applications Identified").split()[0] if extract_metric("AI Applications Identified") else "0")
+            ai_applications_identified=ai_apps
         )
     
     def extract_strategic_priorities(self) -> List[StrategicPriority]:
@@ -574,8 +585,16 @@ class MillenniumProblemsMicroIngestion:
         print(f"💾 Saved taxonomy: {taxonomy_file}")
         
         # Save individual problem files for easy access
+        # Sanitize filenames to handle special characters safely
         for problem in output["problem_details"]:
-            problem_file = f"{output_dir}/millennium_problem_{problem['number']}_{problem['name'].lower().replace(' ', '_').replace('&', 'and')}.json"
+            # Remove special characters and sanitize for filesystem
+            safe_name = problem['name'].lower()
+            # Replace problematic characters
+            safe_name = safe_name.replace(' ', '_').replace('&', 'and').replace('✅', '').strip('_')
+            # Remove any remaining non-alphanumeric characters except underscore and hyphen
+            safe_name = ''.join(c if c.isalnum() or c in '_-' else '' for c in safe_name)
+            
+            problem_file = f"{output_dir}/millennium_problem_{problem['number']}_{safe_name}.json"
             with open(problem_file, 'w', encoding='utf-8') as f:
                 json.dump(problem, f, indent=2, ensure_ascii=False)
         print(f"💾 Saved {len(output['problem_details'])} individual problem files")
