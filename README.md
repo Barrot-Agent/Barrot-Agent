@@ -91,6 +91,7 @@ Barrot-Agent/
 - **⚡ Advanced Algorithms** - Computational efficiency optimization and intelligent algorithm selection
 - **📧 Email Intelligence** - Automated email analysis and information extraction
 - **🎯 MMI (Massive Micro Ingestion)** - High-impact data identification for AGI acceleration
+- **🐍 Dependency Micro-Ingestion** - Comprehensive Python/PyTorch/ML ecosystem knowledge extraction with 21+ packages
 - **💰 Advanced Monetization** - Revolutionary automation-first revenue generation protocols
 - **✨ Transformative Insights** - Acquire asynchronous data, detect convergence, generate epiphanies, realize transformative insights in real-time
 
@@ -222,6 +223,44 @@ The agent can access and process data from:
 - Podcasts and interviews
 - Books and journals
 - And many more sources...
+
+### 🐍 Dependency Micro-Ingestion System
+Barrot continuously learns from the Python ecosystem to enhance its capabilities:
+
+#### Ingested Dependencies (21+ packages)
+- **ML/AI**: PyTorch, TensorFlow, scikit-learn, Transformers (Hugging Face)
+- **Scientific**: Python, NumPy, SciPy, asyncio
+- **Data Science**: Pandas, Matplotlib, Seaborn
+- **Web**: Flask, Django, FastAPI
+- **Utilities**: Requests, httpx, Pydantic, pytest
+- **Database**: SQLAlchemy
+- **Deployment**: Uvicorn, Gunicorn
+
+#### Capabilities
+- **Architecture Analysis** - Design patterns, components, modules
+- **API Extraction** - Function signatures, parameters, examples
+- **Optimization Engine** - Generates Barrot-specific performance recommendations
+- **Best Practices** - Security, performance, patterns
+- **Continuous Updates** - Weekly re-ingestion, version tracking
+- **Integration Intelligence** - How to best leverage dependencies in Barrot
+
+#### Generated Outputs
+- 21+ dependency knowledge files (JSON)
+- 4+ optimization recommendations (Critical, High, Medium priority)
+- Complete taxonomy by category, priority, use case
+- Integration notes for Barrot systems
+
+**[→ View Dependency Ingestion README](DEPENDENCY_MICRO_INGESTION_README.md)**  
+**[→ View Configuration](dependency-ingestion-config.yaml)**
+
+**Usage:**
+```bash
+# Run full ingestion
+python3 dependency_micro_ingestion.py
+
+# View examples
+python3 example_dependency_ingestion.py
+```
 
 ## 🔧 Configuration
 
