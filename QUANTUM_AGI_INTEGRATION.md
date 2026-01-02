@@ -575,7 +575,7 @@ result = learn_from_vast_dataset(dataset, learning_mode="continual")
 - Small: < 1,000 records
 - Medium: 1,000 - 100,000 records
 - Large: 100,000 - 10,000,000 records
-- Vast: > 10,000,000 records
+- Vast: >= 10,000,000 records
 
 #### 2. Autonomous Decision-Making with Ethical Safeguards
 
