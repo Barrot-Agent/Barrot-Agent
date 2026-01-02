@@ -36,6 +36,7 @@ Thumbs.db
 # Generated files
 pingpong_request.json
 email_analysis_report.json
+agi_capabilities_demo_results.json
 
 # Ingested documentation (large files, don't commit)
 ingested_docs/
