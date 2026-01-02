@@ -25,6 +25,10 @@ from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
 from html.parser import HTMLParser
 
+# Configuration constants
+MAX_DOC_CONTENT_SIZE = 5000  # Maximum characters to extract per documentation source
+                              # Prevents memory issues and focuses on key content
+
 
 class PackageCategory(Enum):
     """Categories for dependency packages"""
@@ -179,9 +183,34 @@ class DependencyMicroIngestion:
         self.config = self._load_config()
         
     def _load_config(self) -> Dict[str, Any]:
-        """Load configuration from YAML file"""
-        # For now, return default configuration
-        # In production, this would parse the YAML file
+        """Load configuration from YAML file or use defaults
+        
+        Note: YAML parsing requires PyYAML which is not a standard library.
+        The system uses hardcoded defaults that match the YAML config structure
+        to maintain zero-dependency operation. The YAML file serves as
+        documentation and can be used when PyYAML is available.
+        """
+        # Try to load YAML if available
+        try:
+            import yaml
+            if os.path.exists(self.config_file):
+                with open(self.config_file, 'r', encoding='utf-8') as f:
+                    full_config = yaml.safe_load(f)
+                    # Extract the ingestion_config section which contains packages
+                    if full_config and 'ingestion_config' in full_config:
+                        ing_config = full_config['ingestion_config']
+                        # Return in the expected format
+                        return {
+                            'packages': ing_config.get('packages', {}),
+                            'ingestion': ing_config.get('settings', {}),
+                            'analysis': ing_config.get('analysis', {}),
+                        }
+        except ImportError:
+            pass  # PyYAML not available, use defaults
+        except Exception as e:
+            print(f"⚠️  Error loading YAML config: {e}")
+        
+        # Use default configuration
         return self._get_default_config()
     
     def _get_default_config(self) -> Dict[str, Any]:
@@ -438,7 +467,7 @@ class DependencyMicroIngestion:
                     html = response.read().decode('utf-8', errors='ignore')
                     parser = DocHTMLParser()
                     parser.feed(html)
-                    content.append(parser.get_text()[:5000])  # Limit content size
+                    content.append(parser.get_text()[:MAX_DOC_CONTENT_SIZE])
             except (URLError, HTTPError, Exception) as e:
                 print(f"  ⚠️  Could not fetch {source}: {e}")
                 continue
@@ -635,7 +664,7 @@ class DependencyMicroIngestion:
                 'Can be integrated with Barrot AGI reasoning for neural architecture search',
                 'Model outputs can feed into transformative insights system',
                 'Training metrics can be analyzed by MMI data analyzer',
-                'Can leverage quantum entanglement concepts for parallel training',
+                'Supports distributed training for parallel model training across multiple GPUs/nodes',
             ],
             'numpy': [
                 'Core dependency for all numerical operations in Barrot',
