@@ -36,6 +36,14 @@ from transformative_insights import (
     discover_transformative_insights,
     TransformativeInsightsEngine
 )
+from agi_orchestrator import (
+    agi_orchestrator,
+    learn_from_data,
+    make_autonomous_decision,
+    solve_cross_domain,
+    LearningMode,
+    EthicalPrinciple
+)
 
 
 class BarrotIntegratedSystem:
@@ -47,6 +55,7 @@ class BarrotIntegratedSystem:
     def __init__(self):
         self.quantum_system = initialize_quantum_entanglement()
         self.agi_system = agi_engine
+        self.agi_orchestrator = agi_orchestrator
         self.algorithm_optimizer = algorithmic_optimizer
         self.performance_tracker = performance_monitor
         self.transformative_insights = transformative_engine
@@ -465,6 +474,7 @@ class BarrotIntegratedSystem:
                 "transcendence_events": len(self.transformative_insights.transcendence_log),
                 "epiphany_moments": len(self.transformative_insights.epiphany_moments)
             },
+            "agi_orchestrator_status": self.agi_orchestrator.get_agi_capabilities_report(),
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
     
@@ -484,7 +494,11 @@ class BarrotIntegratedSystem:
                     "evolution_tracking",
                     "transcendence_analysis",
                     "epiphany_generation",
-                    "real_time_realization"
+                    "real_time_realization",
+                    "vast_dataset_learning",
+                    "autonomous_decision_making",
+                    "cross_domain_reasoning",
+                    "ethical_ai_safeguards"
                 ],
                 "system_status": self.get_system_status(),
                 "backward_compatibility": "maintained",
@@ -572,3 +586,49 @@ def discover_continuous_insights() -> Dict[str, Any]:
         Comprehensive insights discovery report
     """
     return barrot_system.continuous_insight_discovery()
+
+
+# AGI Orchestration Functions
+def learn_from_vast_dataset(dataset: Dict[str, Any],
+                           learning_mode: str = "continual") -> Dict[str, Any]:
+    """
+    Learn from vast datasets with scalable processing
+    
+    Args:
+        dataset: Dataset with metadata (domain, type, size, etc.)
+        learning_mode: Learning approach (supervised, unsupervised, reinforcement, 
+                      transfer, meta_learning, continual)
+    
+    Returns:
+        Learning results with extracted knowledge and metrics
+    """
+    return learn_from_data(dataset, learning_mode)
+
+
+def make_ethical_decision(context: Dict[str, Any],
+                         options: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """
+    Make autonomous decisions with ethical AI safeguards
+    
+    Args:
+        context: Decision context with problem, constraints, stakeholders
+        options: Available decision options with metadata
+    
+    Returns:
+        Decision with rationale and ethical assessment
+    """
+    return make_autonomous_decision(context, options)
+
+
+def solve_complex_cross_domain_task(task: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Solve complex tasks spanning multiple domains using knowledge transfer
+    
+    Args:
+        task: Task specification with target_domain, related_domains, problem
+    
+    Returns:
+        Solution with cross-domain insights and transferred knowledge
+    """
+    return solve_cross_domain(task)
+
