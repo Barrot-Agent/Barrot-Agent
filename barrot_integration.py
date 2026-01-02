@@ -30,6 +30,12 @@ from email_analyzer import (
     analyze_email,
     analyze_emails
 )
+from transformative_insights import (
+    transformative_engine,
+    acquire_transformative_data,
+    discover_transformative_insights,
+    TransformativeInsightsEngine
+)
 
 
 class BarrotIntegratedSystem:
@@ -43,6 +49,7 @@ class BarrotIntegratedSystem:
         self.agi_system = agi_engine
         self.algorithm_optimizer = algorithmic_optimizer
         self.performance_tracker = performance_monitor
+        self.transformative_insights = transformative_engine
         self.integration_active = True
         self.initialization_time = datetime.now(timezone.utc).isoformat()
     
@@ -286,6 +293,157 @@ class BarrotIntegratedSystem:
         
         return " ".join(summary_parts)
     
+    def acquire_and_transform_data(self, data_items: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """
+        Acquire asynchronous/unrelated data and transform it into insights
+        
+        Args:
+            data_items: List of data items to acquire
+            
+        Returns:
+            Comprehensive transformation and insights report
+        """
+        start_time = datetime.now(timezone.utc)
+        
+        # Step 1: Acquire all data
+        fragment_ids = self.transformative_insights.acquire_bulk_data(data_items)
+        
+        # Step 2: Identify patterns across data
+        patterns = self.transformative_insights.identify_patterns(fragment_ids)
+        
+        # Step 3: Detect convergence points
+        convergences = self.transformative_insights.detect_convergence(fragment_ids)
+        
+        # Step 4: Track evolution if applicable
+        evolution_data = []
+        for fid in fragment_ids[:3]:  # Track evolution of first 3 for demo
+            evo = self.transformative_insights.track_evolution(fid, "evolved_state")
+            evolution_data.append(evo)
+        
+        # Step 5: Synthesize insights
+        insights = []
+        for i in range(0, len(fragment_ids), 3):
+            batch = fragment_ids[i:i+3]
+            if len(batch) >= 2:
+                insight = self.transformative_insights.synthesize_insights(batch)
+                insights.append(insight)
+        
+        # Step 6: Detect transcendence
+        transcendence_events = self.transformative_insights.detect_transcendence(
+            [ins.id for ins in insights]
+        )
+        
+        # Step 7: Generate epiphany
+        epiphany = self.transformative_insights.generate_epiphany({
+            "data_items": len(data_items),
+            "fragments": len(fragment_ids)
+        })
+        
+        # Step 8: Realize insights for application
+        realizations = self.transformative_insights.realize_insights(
+            [ins.id for ins in insights]
+        )
+        
+        # Track performance
+        processing_time = (datetime.now(timezone.utc) - start_time).total_seconds()
+        self.performance_tracker.track_metric("data_transformation_time", processing_time)
+        
+        return {
+            "acquisition": {
+                "data_items_acquired": len(data_items),
+                "fragments_created": len(fragment_ids),
+                "fragment_ids": fragment_ids
+            },
+            "patterns": patterns,
+            "convergences": {
+                "count": len(convergences),
+                "events": [
+                    {
+                        "id": c.id,
+                        "converged_data": c.converged_data,
+                        "convergence_point": c.convergence_point,
+                        "significance": c.significance
+                    }
+                    for c in convergences
+                ]
+            },
+            "evolution": {
+                "tracked_fragments": len(evolution_data),
+                "evolution_analyses": evolution_data
+            },
+            "insights": {
+                "count": len(insights),
+                "details": [
+                    {
+                        "id": ins.id,
+                        "type": ins.insight_type.value,
+                        "description": ins.description,
+                        "confidence": ins.confidence,
+                        "impact_score": ins.impact_score
+                    }
+                    for ins in insights
+                ]
+            },
+            "transcendence": {
+                "count": len(transcendence_events),
+                "events": transcendence_events
+            },
+            "epiphany": epiphany,
+            "realizations": realizations,
+            "processing_time_seconds": processing_time,
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "framework_integration_status": "active"
+        }
+    
+    def continuous_insight_discovery(self) -> Dict[str, Any]:
+        """
+        Run continuous discovery of transformative insights from all available data
+        
+        Returns:
+            Comprehensive insights discovery report
+        """
+        # Run comprehensive analysis on all data
+        analysis = self.transformative_insights.comprehensive_analysis()
+        
+        # Enhance with AGI reasoning
+        agi_enhancement = solve_with_agi(
+            "Analyze transformative insights for actionable strategies",
+            {"analysis": analysis}
+        )
+        
+        # Quantum optimize the insights application
+        insight_ids = list(self.transformative_insights.insights.keys())
+        if insight_ids:
+            application_options = [
+                {
+                    "strategy": "immediate_application",
+                    "confidence": 0.85,
+                    "insight_ids": insight_ids[:5]
+                },
+                {
+                    "strategy": "phased_rollout",
+                    "confidence": 0.90,
+                    "insight_ids": insight_ids
+                },
+                {
+                    "strategy": "experimental_validation",
+                    "confidence": 0.80,
+                    "insight_ids": insight_ids[:3]
+                }
+            ]
+            
+            optimal_strategy = quantum_optimize("insight_application", application_options)
+        else:
+            optimal_strategy = {"strategy": "awaiting_data"}
+        
+        return {
+            "comprehensive_analysis": analysis,
+            "agi_enhancement": agi_enhancement,
+            "optimal_application_strategy": optimal_strategy,
+            "system_readiness": "fully_operational",
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
+    
     def get_system_status(self) -> Dict[str, Any]:
         """Get comprehensive system status"""
         return {
@@ -300,6 +458,13 @@ class BarrotIntegratedSystem:
             "algorithm_status": self.algorithm_optimizer.get_optimization_report(),
             "performance_summary": self.performance_tracker.get_performance_summary(),
             "email_analysis_history": len(email_analyzer.analysis_history),
+            "transformative_insights_status": {
+                "total_fragments": len(self.transformative_insights.data_fragments),
+                "total_insights": len(self.transformative_insights.insights),
+                "convergence_events": len(self.transformative_insights.convergence_events),
+                "transcendence_events": len(self.transformative_insights.transcendence_log),
+                "epiphany_moments": len(self.transformative_insights.epiphany_moments)
+            },
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
     
@@ -313,7 +478,13 @@ class BarrotIntegratedSystem:
                     "agi_reasoning",
                     "advanced_algorithms",
                     "performance_optimization",
-                    "email_intelligence"
+                    "email_intelligence",
+                    "transformative_insights",
+                    "convergence_detection",
+                    "evolution_tracking",
+                    "transcendence_analysis",
+                    "epiphany_generation",
+                    "real_time_realization"
                 ],
                 "system_status": self.get_system_status(),
                 "backward_compatibility": "maintained",
@@ -378,3 +549,26 @@ def process_emails(emails: List[Dict[str, Any]]) -> Dict[str, Any]:
         Comprehensive email intelligence report with AGI insights and quantum prioritization
     """
     return barrot_system.analyze_emails_with_intelligence(emails)
+
+
+def transform_data_to_insights(data_items: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """
+    Transform asynchronous/unrelated data into transformative insights
+    
+    Args:
+        data_items: List of data items to analyze
+        
+    Returns:
+        Comprehensive transformation and insights report
+    """
+    return barrot_system.acquire_and_transform_data(data_items)
+
+
+def discover_continuous_insights() -> Dict[str, Any]:
+    """
+    Continuously discover transformative insights from all available data
+    
+    Returns:
+        Comprehensive insights discovery report
+    """
+    return barrot_system.continuous_insight_discovery()
