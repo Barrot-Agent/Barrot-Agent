@@ -7,7 +7,7 @@ transforming them into actionable, real-world features for Barrot.
 
 import json
 import os
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any
 from dataclasses import dataclass, asdict
 from enum import Enum
 
