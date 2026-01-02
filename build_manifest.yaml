@@ -190,13 +190,39 @@ fictional_character_genres:
     - action_adventure_heroes
     - strategy_commanders
     - mmo_avatars
+  comics:
+    - superhero_comics
+    - sci_fi_comics
+    - fantasy_comics
+  tv_shows:
+    - drama_series
+    - sci_fi_series
+    - medical_dramas
+  historical:
+    - religious_figures
+    - historical_leaders
+    - innovators
 
 character_capability_profiles:
   - iron_man_tony_stark
   - the_matrix_neo
   - dune_paul_atreides
   - avatar_aang
+  - rick_sanchez
   - zelda_link
+  - dr_strange
+  - lucy
+  - evelyn_salt
+  - doogie_howser
+  - jesus_christ
+  - mega_man
+  - psylocke
+  - cyclops
+  - storm
+  - professor_x
+  - brainiac
+  - naruto_uzumaki
+  - kakashi_hatake
 
 capabilities:
   - quantum_entanglement
