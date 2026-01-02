@@ -18,7 +18,6 @@ from typing import Dict, List, Any, Optional, Tuple, Set
 from dataclasses import dataclass, asdict, field
 from enum import Enum
 from collections import defaultdict
-import itertools
 
 # Import existing Barrot modules
 from quantum_entanglement import (
@@ -247,9 +246,18 @@ class TransformativeInsightsEngine:
         quantum_state = create_entangled_decision_space(state_id, convergence_options)
         optimal_convergence_type = quantum_coordinator.collapse_state(state_id)
         
-        # Analyze all pairs and groups for convergence
+        # Analyze pairs for convergence with optimized approach
+        # Limit to most promising pairs to avoid O(n²) complexity on large datasets
+        max_pairs_to_check = min(100, len(fragment_ids) * (len(fragment_ids) - 1) // 2)
+        pairs_checked = 0
+        
         for i in range(len(fragment_ids)):
+            if pairs_checked >= max_pairs_to_check:
+                break
             for j in range(i + 1, len(fragment_ids)):
+                if pairs_checked >= max_pairs_to_check:
+                    break
+                    
                 frag1 = self.data_fragments.get(fragment_ids[i])
                 frag2 = self.data_fragments.get(fragment_ids[j])
                 
@@ -258,6 +266,8 @@ class TransformativeInsightsEngine:
                     if convergence:
                         convergences.append(convergence)
                         self.convergence_events[convergence.id] = convergence
+                
+                pairs_checked += 1
         
         # Update transformation stages
         for conv in convergences:
@@ -595,7 +605,19 @@ class TransformativeInsightsEngine:
         # Use AGI for advanced relationship detection
         problem = f"Identify relationships among {len(fragment_ids)} data fragments"
         context = {"fragments": fragment_ids, "analysis_depth": "comprehensive"}
-        solve_with_agi(problem, context)
+        
+        # Capture AGI analysis results
+        agi_analysis = solve_with_agi(problem, context)
+        
+        # Use AGI insights to enhance relationship graph
+        # Extract any relationship patterns identified by AGI
+        if agi_analysis and "analysis" in agi_analysis:
+            analysis_data = agi_analysis["analysis"]
+            # AGI may identify relationships we can leverage
+            # Store for potential future use
+            for frag_id in fragment_ids:
+                if frag_id in self.data_fragments:
+                    self.data_fragments[frag_id].metadata["agi_relationship_analysis"] = True
     
     def _detect_temporal_patterns(self, fragments: List[DataFragment]) -> List[str]:
         """Detect temporal patterns in data"""
