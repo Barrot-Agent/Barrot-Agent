@@ -62,6 +62,7 @@ B-Agent/
 - **🤖 Autonomous Operations** - Self-directed decision-making and process execution
 - **⚛️ Quantum Entanglement** - Distributed multi-agent synchronization
 - **🔮 Asynchronous Insights** - Problem-solving every 30 minutes, 24/7
+- **🔄 Processing Pipeline** - Modular event processing with specialized agents (See [PIPELINE_ARCHITECTURE.md](PIPELINE_ARCHITECTURE.md))
 
 ### Agent Spells
 - **Ω-Ingest** (Omega-Ingest) - Quantum data assimilation
