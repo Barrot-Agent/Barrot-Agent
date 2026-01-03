@@ -1,0 +1,53 @@
+{
+  "deliberations": [
+    {
+      "timestamp": "2026-01-03T07:36:59.202401",
+      "consensus_reached": false,
+      "avg_agreement": 0.4798684928110167
+    }
+  ],
+  "agent_performance": {
+    "Pragmatist": {
+      "total_votes": 1,
+      "consensus_votes": 0,
+      "avg_agreement": 0.6502205033963121,
+      "consensus_contribution": 0.0
+    },
+    "Theorist": {
+      "total_votes": 1,
+      "consensus_votes": 0,
+      "avg_agreement": 0.010758392390305982,
+      "consensus_contribution": 0.0
+    },
+    "Skeptic": {
+      "total_votes": 1,
+      "consensus_votes": 0,
+      "avg_agreement": 0.6921267810649563,
+      "consensus_contribution": 0.0
+    },
+    "Optimist": {
+      "total_votes": 1,
+      "consensus_votes": 0,
+      "avg_agreement": 0.1901339274550597,
+      "consensus_contribution": 0.0
+    },
+    "Guardian": {
+      "total_votes": 1,
+      "consensus_votes": 0,
+      "avg_agreement": 0.5360167183287924,
+      "consensus_contribution": 0.0
+    },
+    "Experimentalist": {
+      "total_votes": 1,
+      "consensus_votes": 0,
+      "avg_agreement": 0.28912102175223675,
+      "consensus_contribution": 0.0
+    },
+    "Error Spotter": {
+      "total_votes": 1,
+      "consensus_votes": 0,
+      "avg_agreement": 0.9907021052894537,
+      "consensus_contribution": 0.0
+    }
+  }
+}

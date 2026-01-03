@@ -141,3 +141,131 @@ The council requires further deliberation due to disagreement.
 - Archival: Maintained
 
 ---
+
+## Council Deliberation: 2026-01-03T07:36:59.202276Z
+
+**Consensus Reached:** No
+**Average Agreement:** 0.48
+**Disagreement Level:** 0.097
+
+### Council Arguments
+- Pragmatist (practical_solutions) supports this approach
+- Theorist (conceptual_frameworks) opposes this approach
+- Skeptic (critical_analysis) supports this approach
+- Optimist (opportunity_seeking) opposes this approach
+- Guardian (risk_mitigation) supports this approach
+- Experimentalist (empirical_validation) opposes this approach
+- Error Spotter (fault_detection) strongly supports this approach
+
+### Decision
+The council requires further deliberation due to disagreement.
+
+### Agent Weights Used
+- Pragmatist: 1.00
+- Theorist: 0.80
+- Skeptic: 1.20
+- Optimist: 0.70
+- Guardian: 1.10
+- Experimentalist: 0.90
+- Error Spotter: 1.00
+
+---
+
+## Memory Compression: 2026-01-03T07:38:43.321104Z
+
+**Total Memory:** 110997 bytes
+**Total Files:** 22
+**Old Files Eligible:** 0
+**Files Compressed:** 0
+**Space Saved:** 0 bytes
+
+### Compression Strategy
+- Age threshold: 30 days
+- Symbolic essence: Preserved
+- Key markers: Extracted
+- Archival: Maintained
+- Lossy compression: Applied to non-critical data
+- Symbolic regeneration: Enabled for important data
+
+### Optimization Metrics by Category
+
+**Memory Optimization Efficiency:** Minimal
+
+---
+
+### Glyph Mapping: COUNCIL_ALIGNMENT_GLYPH
+**Timestamp:** 2026-01-03T07:39:36.565959  
+**Emitter:** council_vote  
+**Priority:** medium
+
+**Follow-up Actions:**
+1. Record consensus decision in decision log
+2. Update agent weight history
+3. Evaluate perspective coverage
+
+**Context:** {'consensus_reached': True, 'avg_agreement': 0.72}
+
+### Node Dependency: council_vote → node_self_reflect
+**Timestamp:** 2026-01-03T07:39:36.566606  
+**Type:** consensus_influence  
+**Context:** {'influence_score': 0.8}
+
+
+## GLYPH_MISALIGNMENT_RECOVERY Event: 2026-01-03T07:39:36.566862Z
+
+**Issue Detected:** Drift detected in cognition pattern execution
+
+### Corrective Actions Taken:
+1. Analyzed last 5 execution cycles
+2. Identified inconsistent node firing
+3. Applied weight normalization
+4. Verified pattern alignment
+
+**Outcome:** Successfully restored alignment. All nodes firing consistently.
+**Recovery Status:** Success
+
+---
+
+## Daily Glyph Insights Summary: 2026-01-03T07:43:12.232382
+
+**System Health:** Excellent (90.0/100)
+
+### Glyph Activity
+- Total Emissions: 1
+- Most Common: COUNCIL_ALIGNMENT_GLYPH
+- Most Active Node: council_vote
+
+### Council Performance
+- Deliberations: 1
+- Consensus Rate: 0.0%
+- Avg Agreement: 0.48
+
+### Issues Detected
+- No significant issues detected
+
+### Recommendations
+- [MEDIUM] Improve council deliberation: Consensus rate at 0.0% - consider adjusting agent weights
+
+---
+
+## Weekly Glyph Insights Summary: 2026-01-03T07:43:12.232943
+
+**System Health:** Excellent (90.0/100)
+
+### Glyph Activity
+- Total Emissions: 1
+- Most Common: COUNCIL_ALIGNMENT_GLYPH
+- Most Active Node: council_vote
+
+### Council Performance
+- Deliberations: 1
+- Consensus Rate: 0.0%
+- Avg Agreement: 0.48
+
+### Issues Detected
+- No significant issues detected
+
+### Recommendations
+- [MEDIUM] Improve council deliberation: Consensus rate at 0.0% - consider adjusting agent weights
+
+---

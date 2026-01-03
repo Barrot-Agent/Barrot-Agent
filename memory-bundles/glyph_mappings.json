@@ -1,0 +1,51 @@
+{
+  "mappings": {},
+  "user_defined": {
+    "CUSTOM_WORKFLOW_GLYPH": {
+      "name": "CUSTOM_WORKFLOW_GLYPH",
+      "description": "Custom glyph for specialized workflow automation",
+      "actions": [
+        "Trigger custom workflow A",
+        "Update workflow metrics",
+        "Notify stakeholders"
+      ],
+      "priority": "medium",
+      "metadata": {
+        "owner": "system",
+        "workflow_id": "WF-001",
+        "version": "1.0.0"
+      },
+      "created_at": "2026-01-03T07:39:36.566287",
+      "version": "1.0.0"
+    }
+  },
+  "history": [
+    {
+      "timestamp": "2026-01-03T07:39:36.565959",
+      "glyph_name": "COUNCIL_ALIGNMENT_GLYPH",
+      "emitter_node": "council_vote",
+      "context": {
+        "consensus_reached": true,
+        "avg_agreement": 0.72
+      },
+      "actions": [
+        "Record consensus decision in decision log",
+        "Update agent weight history",
+        "Evaluate perspective coverage"
+      ],
+      "priority": "medium",
+      "status": "pending"
+    }
+  ],
+  "dependencies": [
+    {
+      "timestamp": "2026-01-03T07:39:36.566606",
+      "source_node": "council_vote",
+      "target_node": "node_self_reflect",
+      "dependency_type": "consensus_influence",
+      "context": {
+        "influence_score": 0.8
+      }
+    }
+  ]
+}

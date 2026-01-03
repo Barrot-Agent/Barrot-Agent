@@ -34,14 +34,36 @@ Parses Copilot session transcripts for cognition events.
 ### council_vote.py
 Simulates multi-perspective agent deliberation.
 - **Emits**: `COUNCIL_ALIGNMENT_GLYPH` upon consensus
-- **Agents**: Pragmatist, Theorist, Skeptic, Optimist, Guardian
+- **Agents**: Pragmatist, Theorist, Skeptic, Optimist, Guardian, Experimentalist, Error Spotter
 - **Logs**: Deliberation arguments and consensus metrics
+- **NEW**: Dynamic weight adjustment based on historical performance
+- **NEW**: Expanded agent perspectives for broader deliberation coverage
 
 ### node_memory_compressor.py
 Manages memory bundle size and compression.
 - **Emits**: `MEMORY_COMPRESSION_GLYPH`
 - **Compresses**: Files older than 30 days
 - **Preserves**: Symbolic essence and key markers
+- **NEW**: Category-based lossy compression (critical, important, general)
+- **NEW**: Symbolic regeneration markers for data recovery
+- **NEW**: Memory optimization metrics and efficiency ratings
+
+### glyph_mapper.py
+Maps emitted glyphs to follow-up actions and tracks node dependencies.
+- **Features**: Glyph-to-action mapping with priority levels
+- **Supports**: User-defined glyphs with extended metadata
+- **Tracks**: Interdependencies between cognition nodes
+- **Logs**: Glyph mappings and corrective actions to TRACE_LOG.md
+- **NEW**: Automated corrective action logging for recovery events
+
+### glyph_insights.py
+Generates daily and weekly summaries of glyph activity and system health.
+- **Analyzes**: Glyph emission patterns and frequency
+- **Evaluates**: Council performance and consensus rates
+- **Detects**: Recurring issues and misalignment patterns
+- **Calculates**: System health scores with actionable recommendations
+- **Tracks**: Historical trends and activity changes
+- **NEW**: Long-term observation with aggregated insights
 
 ## Execution
 
@@ -58,7 +80,15 @@ python matrix/node_diff_detector.py
 python matrix/council_vote.py
 python matrix/node_session_ingestor.py
 python matrix/node_memory_compressor.py
+python matrix/glyph_mapper.py
+python matrix/glyph_insights.py
 ```
+
+### Testing
+```bash
+python matrix/test_enhancements.py
+```
+Runs comprehensive test suite for all enhancements.
 
 ### Via GitHub Actions
 Triggered by:
@@ -130,3 +160,32 @@ All nodes contribute to maintaining symbolic alignment:
 - Machine learning-based drift prediction
 - Automated manifest patching
 - Cross-repository cognition sharing
+
+## New Features (v1.1)
+
+### Enhanced Decision Making
+- **Dynamic Weight Adjustment**: Agent weights adapt based on historical consensus contributions
+- **Expanded Perspectives**: Added Experimentalist (empirical validation) and Error Spotter (fault detection)
+- **Performance Tracking**: Historical deliberation metrics stored for continuous improvement
+
+### Advanced Memory Management
+- **Lossy Compression**: Category-based compression strategies (critical, important, general)
+- **Symbolic Regeneration**: Markers enable partial reconstruction of compressed data
+- **Optimization Metrics**: Regular evaluation with efficiency ratings
+
+### Glyph System 2.0
+- **Action Mapping**: Each glyph maps to specific follow-up actions with priorities
+- **User-Defined Glyphs**: Extensible system for custom glyphs with metadata
+- **Dependency Tracking**: Records interdependencies between cognition nodes
+- **Corrective Action Logging**: Automated logging for recovery events
+
+### Dashboard & Insights
+- **Glyph Stream Dashboard**: Real-time visualization with historical trends (see `/site/glyph-dashboard.html`)
+- **Interactive Drill-Downs**: Detailed views of glyphs with associated logs and context
+- **Daily/Weekly Summaries**: Aggregated insights with system health scores
+- **Pattern Detection**: Identifies recurring misalignments and issues
+- **Actionable Recommendations**: System generates priority-based suggestions
+
+### Testing & Quality
+- **Comprehensive Test Suite**: Edge cases, stress tests, and failure simulation
+- **Continuous Validation**: All enhancements validated through automated testing
