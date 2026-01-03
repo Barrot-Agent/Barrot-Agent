@@ -124,7 +124,8 @@ class GapFillingEngine:
         elif "timestamp" in key_lower or "time" in key_lower or "date" in key_lower:
             return datetime.now(timezone.utc).isoformat()
         elif "id" in key_lower:
-            "fill id": self._infer_value(key, context)
+            # Use SHA-256 instead of MD5 for security
+            return hashlib.sha256(f"{context}.{key}".encode()).hexdigest()[:16]
         elif "name" in key_lower:
             return f"auto_generated_{key}"
         elif "description" in key_lower or "desc" in key_lower:
