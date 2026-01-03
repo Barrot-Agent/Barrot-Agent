@@ -1,13 +1,13 @@
 # Overlap Resolution Report
 
-**Generated**: 2026-01-03T21:04:27.946466Z
+**Generated**: 2026-01-03T21:05:11.913708Z
 
 ## Summary
 
-- **Total Directives Analyzed**: 4844
-- **Overlaps Detected**: 2776
-- **Unified Threads Created**: 1620
-- **Queries Restructured**: 1620
+- **Total Directives Analyzed**: 4886
+- **Overlaps Detected**: 2982
+- **Unified Threads Created**: 1623
+- **Queries Restructured**: 1623
 
 ## Unified Symbolic Threads
 
@@ -23,7 +23,7 @@
 
 **Unified Directive**: Distributed puzzle piece discovery...
 
-**Sources**: AGI_PUZZLE_PROTOCOL.md, MULTI_AGENT_PARALLEL_SYSTEM.md
+**Sources**: MULTI_AGENT_PARALLEL_SYSTEM.md, AGI_PUZZLE_PROTOCOL.md
 
 **Cluster Size**: 1 overlapping directives
 
@@ -31,7 +31,7 @@
 
 **Unified Directive**: Phase 1: Discovery Engine...
 
-**Sources**: AGI_PUZZLE_PROTOCOL.md, AGI_DEVELOPMENT.md
+**Sources**: AGI_DEVELOPMENT.md, AGI_PUZZLE_PROTOCOL.md
 
 **Cluster Size**: 1 overlapping directives
 
@@ -39,7 +39,7 @@
 
 **Unified Directive**: Phase 2: Component Extraction...
 
-**Sources**: AGI_PUZZLE_PROTOCOL.md, AGI_DEVELOPMENT.md
+**Sources**: AGI_DEVELOPMENT.md, AGI_PUZZLE_PROTOCOL.md
 
 **Cluster Size**: 1 overlapping directives
 
@@ -63,7 +63,7 @@
 
 **Unified Directive**: Phase 3: Integration Sprint (Hour 4-6)...
 
-**Sources**: AGI_PUZZLE_PROTOCOL.md, MULTI_AGENT_PARALLEL_SYSTEM.md
+**Sources**: MULTI_AGENT_PARALLEL_SYSTEM.md, AGI_PUZZLE_PROTOCOL.md
 
 **Cluster Size**: 1 overlapping directives
 
@@ -71,7 +71,7 @@
 
 **Unified Directive**: Phase 3: Test Integration (2-3 days)...
 
-**Sources**: AGI_PUZZLE_PROTOCOL.md, CHINESE_JAPANESE_AI_MODELS.md
+**Sources**: CHINESE_JAPANESE_AI_MODELS.md, AGI_PUZZLE_PROTOCOL.md
 
 **Cluster Size**: 1 overlapping directives
 
@@ -79,7 +79,7 @@
 
 **Unified Directive**: Phase 3: Integration Strategy...
 
-**Sources**: AGI_PUZZLE_PROTOCOL.md, AGI_DEVELOPMENT.md
+**Sources**: AGI_DEVELOPMENT.md, AGI_PUZZLE_PROTOCOL.md
 
 **Cluster Size**: 1 overlapping directives
 
