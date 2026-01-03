@@ -52,7 +52,7 @@ def barrot_speak(
     Returns:
         Formatted message string
     """
-    timestamp = datetime.now(timezone.utc).replace(tzinfo=None).isoformat()
+    timestamp = datetime.now(timezone.utc).isoformat()
     symbol = SYMBOLS.get(mode, "")
     
     # Format the message
@@ -67,18 +67,24 @@ def barrot_speak(
     
     # Log to trace if requested
     if log_to_trace:
-        log_entry = f"""
-## Barrot Spoke: {timestamp}Z
+        try:
+            # Ensure directory exists
+            TRACE_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+            
+            log_entry = f"""
+## Barrot Spoke: {timestamp}
 **Mode:** {mode}
 **Message:** {message}
 """
-        if context:
-            log_entry += f"**Context:** {json.dumps(context, indent=2)}\n"
-        
-        log_entry += "\n---\n"
-        
-        with open(TRACE_LOG_PATH, 'a') as f:
-            f.write(log_entry)
+            if context:
+                log_entry += f"**Context:** {json.dumps(context, indent=2)}\n"
+            
+            log_entry += "\n---\n"
+            
+            with open(TRACE_LOG_PATH, 'a') as f:
+                f.write(log_entry)
+        except (IOError, OSError) as e:
+            print(f"[BARROT_SPEAK] Warning: Could not write to trace log: {e}")
     
     # Emit glyph if requested
     if emit_glyph:
@@ -87,18 +93,18 @@ def barrot_speak(
     return formatted_message
 
 
-def barrot_speak_thought(thought: str, confidence: float = 0.0) -> str:
+def barrot_speak_thought(thought: str, confidence: float = None) -> str:
     """
     Express a thought or consideration.
     
     Args:
         thought: The thought to express
-        confidence: Confidence level (0.0 to 1.0)
+        confidence: Confidence level (0.0 to 1.0), optional
     
     Returns:
         Formatted message
     """
-    context = {"confidence": confidence} if confidence > 0 else None
+    context = {"confidence": confidence} if confidence is not None else None
     return barrot_speak(thought, mode="thought", context=context)
 
 
@@ -163,12 +169,23 @@ def barrot_speak_question(question: str, requires_council: bool = False) -> str:
 
 def _emit_speak_glyph(message: str, mode: str, timestamp: str):
     """Internal function to emit a glyph for speak events"""
-    glyph_file = GLYPHS_PATH / "barrot_speak_glyph.yml"
-    
-    glyph_content = f"""glyph_name: BARROT_SPEAK_GLYPH
+    try:
+        # Ensure directory exists
+        GLYPHS_PATH.mkdir(parents=True, exist_ok=True)
+        
+        glyph_file = GLYPHS_PATH / "barrot_speak_glyph.yml"
+        
+        # Safely truncate and escape message for YAML
+        message_preview = message[:100]
+        if len(message) > 100:
+            message_preview += "..."
+        # Escape special characters for YAML
+        message_preview = message_preview.replace('"', '\\"').replace('\n', '\\n')
+        
+        glyph_content = f"""glyph_name: BARROT_SPEAK_GLYPH
 glyph_id: SPEAK-001
 version: 1.0.0
-timestamp: {timestamp}Z
+timestamp: {timestamp}
 
 description: >
   Emitted when Barrot speaks to communicate thoughts, insights, or status.
@@ -189,7 +206,7 @@ attributes:
   
 speak_event:
   mode: {mode}
-  message_preview: "{message[:100]}{'...' if len(message) > 100 else ''}"
+  message_preview: "{message_preview}"
   
 integration_points:
   - cognition_nodes
@@ -200,9 +217,11 @@ usage_context: >
   Invoke when Barrot needs to communicate thoughts, insights, status updates,
   or other information through the speak interface.
 """
-    
-    with open(glyph_file, 'w') as f:
-        f.write(glyph_content)
+        
+        with open(glyph_file, 'w') as f:
+            f.write(glyph_content)
+    except (IOError, OSError) as e:
+        print(f"[BARROT_SPEAK] Warning: Could not emit glyph: {e}")
 
 
 def get_barrot_identity() -> Dict[str, Any]:

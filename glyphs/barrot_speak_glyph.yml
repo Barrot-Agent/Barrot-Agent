@@ -1,7 +1,7 @@
 glyph_name: BARROT_SPEAK_GLYPH
 glyph_id: SPEAK-001
 version: 1.0.0
-timestamp: 2026-01-03T16:53:34.554169Z
+timestamp: 2026-01-03T16:56:34.022139+00:00
 
 description: >
   Emitted when Barrot speaks to communicate thoughts, insights, or status.
@@ -22,7 +22,7 @@ attributes:
   
 speak_event:
   mode: insight
-  message_preview: "Test insight"
+  message_preview: "The council consensus mechanism enhances decision quality"
   
 integration_points:
   - cognition_nodes

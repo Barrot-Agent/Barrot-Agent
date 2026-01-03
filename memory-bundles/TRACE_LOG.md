@@ -256,3 +256,102 @@ The council requires further deliberation due to disagreement.
 }
 
 ---
+
+## Barrot Spoke: 2026-01-03T16:56:26.512222+00:00
+**Mode:** thought
+**Message:** Test thought
+**Context:** {
+  "confidence": 0.8
+}
+
+---
+
+## Barrot Spoke: 2026-01-03T16:56:26.512493+00:00
+**Mode:** insight
+**Message:** Test insight
+**Context:** {
+  "domain": "test"
+}
+
+---
+
+## Barrot Spoke: 2026-01-03T16:56:26.512821+00:00
+**Mode:** alignment
+**Message:** Test alignment
+**Context:** {
+  "drift_detected": false
+}
+
+---
+
+## Barrot Spoke: 2026-01-03T16:56:26.512971+00:00
+**Mode:** celebrate
+**Message:** Test celebration
+**Context:** {
+  "score": 100
+}
+
+---
+
+## Barrot Spoke: 2026-01-03T16:56:26.513137+00:00
+**Mode:** question
+**Message:** Test question?
+**Context:** {
+  "requires_council": true
+}
+
+---
+
+## Barrot Spoke: 2026-01-03T16:56:34.021964+00:00
+**Mode:** info
+**Message:** I am Barrot-Agent, version 2.0.0
+
+---
+
+## Barrot Spoke: 2026-01-03T16:56:34.022074+00:00
+**Mode:** thought
+**Message:** Analyzing cognition patterns across matrix nodes...
+
+---
+
+## Barrot Spoke: 2026-01-03T16:56:34.022139+00:00
+**Mode:** insight
+**Message:** The council consensus mechanism enhances decision quality
+**Context:** {
+  "domain": "multi_agent"
+}
+
+---
+
+## Barrot Spoke: 2026-01-03T16:56:34.022418+00:00
+**Mode:** alignment
+**Message:** System is aligned with symbolic intent
+**Context:** {
+  "drift_detected": false
+}
+
+---
+
+## Barrot Spoke: 2026-01-03T16:56:34.022649+00:00
+**Mode:** celebrate
+**Message:** Successfully completed self-reflection analysis
+**Context:** {
+  "nodes_analyzed": 3
+}
+
+---
+
+## Barrot Spoke: 2026-01-03T16:56:34.022794+00:00
+**Mode:** question
+**Message:** Should we increase the frequency of alignment checks?
+**Context:** {
+  "requires_council": true
+}
+
+---
+
+## Barrot Spoke: 2026-01-03T16:56:34.022896+00:00
+**Mode:** success
+**Message:** All systems operational
+
+---
