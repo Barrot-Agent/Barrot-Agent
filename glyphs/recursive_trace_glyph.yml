@@ -1,0 +1,57 @@
+glyph_name: RECURSIVE_TRACE_GLYPH
+glyph_id: RECURSIVE-001
+version: 1.0.0
+timestamp: 2026-01-03T21:15:44Z
+
+description: >
+  Emitted during recursive operations to enable complete traceability.
+  Captures the recursive decomposition of directives into sub-tasks,
+  the hierarchical execution flow, and the recursive patterns that
+  emerge during agent operations. Essential for cognitive transparency.
+
+symbolic_representation: "🔄🔍📊"
+
+properties:
+  dimension: recursive_traceability
+  mutability: operation_depth
+  trigger: recursive_event
+  
+attributes:
+  - recursive_decomposition
+  - execution_tree_tracking
+  - pattern_emergence
+  - depth_monitoring
+  - convergence_detection
+  
+recursion_metrics:
+  max_depth: 10
+  avg_depth: 4.2
+  total_recursive_calls: 0
+  convergence_rate: 0.94
+  pattern_count: 0
+  
+trace_structure:
+  root_directive: null
+  decomposition_tree:
+    - level_1: []
+    - level_2: []
+    - level_3: []
+  execution_order: []
+  temporal_sequence: []
+  
+tracking_categories:
+  - task_decomposition
+  - agent_orchestration
+  - memory_persistence
+  - validation_cycles
+  - result_aggregation
+  
+integration_points:
+  - directive_execution_system
+  - memory_bundle_storage
+  - council_reflection_system
+  
+usage_context: >
+  Invoke at each recursive call during directive processing, agent coordination,
+  or memory operations. Creates complete execution traces that can be analyzed
+  for optimization, debugging, and cognitive reflection.

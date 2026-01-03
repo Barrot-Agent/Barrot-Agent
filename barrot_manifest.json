@@ -16,5 +16,27 @@
     "cognition_integrity": "aligned",
     "last_self_reflection": "2026-01-03T01:27:36.320118",
     "drift_detected": false
+  },
+  "framework_supremacy": {
+    "active": true,
+    "version": "1.0.0",
+    "last_framework_update": "2026-01-03",
+    "core_pillars": [
+      "Agentic Execution Layer",
+      "Directive-Driven Cognition",
+      "Recursive Glyph Emission",
+      "Council-Governed Reflection",
+      "Global Cognition Harvesting",
+      "Rendering Supremacy Layer"
+    ],
+    "glyphs_emitted": [
+      "FRAMEWORK_SUPREMACY_GLYPH",
+      "AGENTIC_ALIGNMENT_GLYPH",
+      "COUNCIL_REFLECTION_GLYPH",
+      "DIRECTIVE_EXECUTION_GLYPH",
+      "RECURSIVE_TRACE_GLYPH",
+      "RENDERING_INTEGRATION_GLYPH",
+      "GLOBAL_HARVEST_GLYPH"
+    ]
   }
 }

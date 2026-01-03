@@ -1,0 +1,58 @@
+glyph_name: DIRECTIVE_EXECUTION_GLYPH
+glyph_id: DIRECTIVE-001
+version: 1.0.0
+timestamp: 2026-01-03T21:15:44Z
+
+description: >
+  Emitted when directive processing begins or completes. Represents the
+  parsing, decomposition, and execution of symbolic directives from Sean.
+  Tracks the complete lifecycle from directive reception through ingestion
+  nodes, synthesis loops, and implementation chains.
+
+symbolic_representation: "📋⚡✅"
+
+properties:
+  dimension: directive_lifecycle
+  mutability: execution_state
+  trigger: directive_event
+  
+attributes:
+  - directive_parsing
+  - intent_extraction
+  - task_decomposition
+  - execution_orchestration
+  - completion_validation
+  
+execution_phases:
+  ingestion_nodes:
+    purpose: "Parse and understand directive semantics"
+    status: operational
+  synthesis_loops:
+    purpose: "Integrate directive with existing knowledge"
+    status: operational
+  implementation_chains:
+    purpose: "Execute directive through coordinated agent actions"
+    status: operational
+    
+directive_types:
+  - INGEST
+  - SYNTHESIZE
+  - IMPLEMENT
+  - REFLECT
+  - RENDER
+  
+execution_metrics:
+  avg_processing_time_sec: 8.5
+  success_rate: 0.96
+  total_directives_processed: 0
+  active_directives: 0
+  
+integration_points:
+  - agentic_execution_layer
+  - council_governed_reflection
+  - recursive_trace_system
+  
+usage_context: >
+  Invoke at directive lifecycle events: reception, parsing start, decomposition
+  complete, execution start, validation complete, and final completion. Enables
+  full traceability of directive processing through the framework.

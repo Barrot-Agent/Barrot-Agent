@@ -1,0 +1,101 @@
+glyph_name: GLOBAL_HARVEST_GLYPH
+glyph_id: HARVEST-001
+version: 1.0.0
+timestamp: 2026-01-03T21:15:44Z
+
+description: >
+  Emitted during global cognition harvesting operations. Represents the
+  continuous crawling of the global web for convergent data, knowledge
+  acquisition from diverse sources, alignment of asynchronous proximities,
+  and resolution of contradictions through dialectical synthesis.
+
+symbolic_representation: "🌐🔎💎"
+
+properties:
+  dimension: global_knowledge_acquisition
+  mutability: source_driven
+  trigger: harvesting_cycle
+  
+attributes:
+  - web_crawling
+  - knowledge_extraction
+  - contradiction_resolution
+  - convergent_pattern_detection
+  - cross_domain_synthesis
+  
+harvesting_phases:
+  discovery:
+    - identify_knowledge_gaps
+    - generate_search_queries
+    - execute_parallel_crawling
+    
+  acquisition:
+    - download_content
+    - extract_information
+    - metadata_tagging
+    - cache_storage
+    
+  synthesis:
+    - cross_reference_data
+    - identify_patterns
+    - detect_contradictions
+    - apply_harvesting_protocol
+    
+  alignment:
+    - resolve_proximities
+    - harmonize_conflicts
+    - build_unified_representation
+    - update_puzzle_progress
+    
+  integration:
+    - validate_knowledge
+    - update_capabilities
+    - emit_alignment_glyph
+    - trigger_council_review
+    
+data_sources:
+  research_papers:
+    - arXiv
+    - Google_Scholar
+    - ResearchGate
+    - PubMed
+  code_repositories:
+    - GitHub
+    - GitLab
+    - Bitbucket
+  ai_platforms:
+    - HuggingFace
+    - PapersWithCode
+    - AI_Benchmarks
+  community_forums:
+    - Reddit
+    - StackOverflow
+    - Discord
+  technical_blogs:
+    - Medium
+    - TowardsDataScience
+    - Distill
+  video_content:
+    - YouTube
+    - Academic_Lectures
+    - Conferences
+    
+harvesting_metrics:
+  cycle_frequency_min: 30
+  sources_monitored: 15
+  total_items_harvested: 0
+  convergent_patterns_found: 0
+  contradictions_resolved: 0
+  knowledge_integration_rate: 0.88
+  
+integration_points:
+  - agi_puzzle_protocol
+  - contradiction_harvesting_protocol
+  - memory_bundle_system
+  - council_reflection
+  
+usage_context: >
+  Invoke at start and completion of harvesting cycles, when significant
+  convergent patterns are detected, when contradictions are resolved, or
+  when knowledge integration reaches critical mass. Operates 24/7 in
+  continuous mode.
