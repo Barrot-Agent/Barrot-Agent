@@ -1,13 +1,13 @@
 # Overlap Resolution Report
 
-**Generated**: 2026-01-03T21:00:23.792145Z
+**Generated**: 2026-01-03T21:04:27.946466Z
 
 ## Summary
 
-- **Total Directives Analyzed**: 4801
-- **Overlaps Detected**: 2611
-- **Unified Threads Created**: 1619
-- **Queries Restructured**: 1619
+- **Total Directives Analyzed**: 4844
+- **Overlaps Detected**: 2776
+- **Unified Threads Created**: 1620
+- **Queries Restructured**: 1620
 
 ## Unified Symbolic Threads
 
@@ -23,7 +23,7 @@
 
 **Unified Directive**: Distributed puzzle piece discovery...
 
-**Sources**: MULTI_AGENT_PARALLEL_SYSTEM.md, AGI_PUZZLE_PROTOCOL.md
+**Sources**: AGI_PUZZLE_PROTOCOL.md, MULTI_AGENT_PARALLEL_SYSTEM.md
 
 **Cluster Size**: 1 overlapping directives
 
@@ -31,7 +31,7 @@
 
 **Unified Directive**: Phase 1: Discovery Engine...
 
-**Sources**: AGI_DEVELOPMENT.md, AGI_PUZZLE_PROTOCOL.md
+**Sources**: AGI_PUZZLE_PROTOCOL.md, AGI_DEVELOPMENT.md
 
 **Cluster Size**: 1 overlapping directives
 
@@ -39,7 +39,7 @@
 
 **Unified Directive**: Phase 2: Component Extraction...
 
-**Sources**: AGI_DEVELOPMENT.md, AGI_PUZZLE_PROTOCOL.md
+**Sources**: AGI_PUZZLE_PROTOCOL.md, AGI_DEVELOPMENT.md
 
 **Cluster Size**: 1 overlapping directives
 
@@ -63,7 +63,7 @@
 
 **Unified Directive**: Phase 3: Integration Sprint (Hour 4-6)...
 
-**Sources**: MULTI_AGENT_PARALLEL_SYSTEM.md, AGI_PUZZLE_PROTOCOL.md
+**Sources**: AGI_PUZZLE_PROTOCOL.md, MULTI_AGENT_PARALLEL_SYSTEM.md
 
 **Cluster Size**: 1 overlapping directives
 
@@ -71,7 +71,7 @@
 
 **Unified Directive**: Phase 3: Test Integration (2-3 days)...
 
-**Sources**: CHINESE_JAPANESE_AI_MODELS.md, AGI_PUZZLE_PROTOCOL.md
+**Sources**: AGI_PUZZLE_PROTOCOL.md, CHINESE_JAPANESE_AI_MODELS.md
 
 **Cluster Size**: 1 overlapping directives
 
@@ -79,7 +79,7 @@
 
 **Unified Directive**: Phase 3: Integration Strategy...
 
-**Sources**: AGI_DEVELOPMENT.md, AGI_PUZZLE_PROTOCOL.md
+**Sources**: AGI_PUZZLE_PROTOCOL.md, AGI_DEVELOPMENT.md
 
 **Cluster Size**: 1 overlapping directives
 
@@ -87,7 +87,7 @@
 
 **Unified Directive**: Phase 3: Integration Strategy...
 
-**Sources**: AGENT_CAPABILITY_ABSORPTION.md, AGI_PUZZLE_PROTOCOL.md
+**Sources**: AGI_PUZZLE_PROTOCOL.md, AGENT_CAPABILITY_ABSORPTION.md
 
 **Cluster Size**: 1 overlapping directives
 

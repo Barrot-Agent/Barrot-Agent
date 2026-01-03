@@ -78,9 +78,9 @@ PROTOCOL_TEMPLATES = {
 }
 
 def generate_protocol_id(protocol_name):
-    """Generate unique protocol ID using UUID"""
-    # Use UUID for better uniqueness guarantees
-    return str(uuid.uuid4())[:16]
+    """Generate unique protocol ID using full UUID"""
+    # Use full UUID for maximum uniqueness guarantees
+    return str(uuid.uuid4())
 
 def load_protocol_registry():
     """Load or create protocol registry"""

@@ -38,9 +38,9 @@ BASE_AGENTS = [
 ]
 
 def generate_agent_id(base_id, mutation_index):
-    """Generate unique agent ID using UUID for cloned/mutated agents"""
-    # Use UUID for better uniqueness guarantees
-    return f"{base_id}_{str(uuid.uuid4())[:8]}"
+    """Generate unique agent ID using full UUID for cloned/mutated agents"""
+    # Use full UUID for maximum uniqueness guarantees
+    return f"{base_id}_{str(uuid.uuid4())}"
 
 def clone_agent(base_agent, purpose=None):
     """Clone an agent with optional purpose specialization"""
