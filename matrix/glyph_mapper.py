@@ -65,6 +65,61 @@ GLYPH_ACTION_MAPPINGS = {
         ],
         "priority": "medium",
         "auto_trigger": ["node_session_ingestor"]
+    },
+    "RENDERING_METHODOLOGY_GLYPH": {
+        "actions": [
+            "Apply rendering insights to current initiatives",
+            "Update rendering best practices documentation",
+            "Integrate superior methodologies into workflow",
+            "Benchmark against industry standards",
+            "Share insights with agent council"
+        ],
+        "priority": "high",
+        "auto_trigger": ["rendering_synthesis_engine"]
+    },
+    "COMPETITIVE_SUPREMACY_GLYPH": {
+        "actions": [
+            "Document competitive advantages",
+            "Update methodology rankings",
+            "Apply superior techniques to all initiatives",
+            "Archive baseline comparisons",
+            "Trigger initiative retroactive alignment"
+        ],
+        "priority": "high",
+        "auto_trigger": ["competitive_analysis_engine"]
+    },
+    "RENDERING_INTEGRATION_GLYPH": {
+        "actions": [
+            "Apply rendering protocols to identified initiatives",
+            "Monitor integration success metrics",
+            "Document integration patterns",
+            "Update initiative tracking systems",
+            "Trigger validation cycles"
+        ],
+        "priority": "high",
+        "auto_trigger": ["integration_engine"]
+    },
+    "INITIATIVE_AUGMENTATION_GLYPH": {
+        "actions": [
+            "Measure augmentation impact",
+            "Document success patterns",
+            "Share learnings across initiatives",
+            "Update capability baselines",
+            "Trigger next synthesis cycle"
+        ],
+        "priority": "high",
+        "auto_trigger": ["augmentation_tracker"]
+    },
+    "GAP_FILLING_CONFIRMATION_GLYPH": {
+        "actions": [
+            "Document gap resolution journey",
+            "Archive gap analysis findings",
+            "Update capability matrix",
+            "Trigger celebration protocol",
+            "Initiate next gap discovery cycle"
+        ],
+        "priority": "critical",
+        "auto_trigger": ["gap_analyzer"]
     }
 }
 
