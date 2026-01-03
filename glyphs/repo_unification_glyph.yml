@@ -1,0 +1,7 @@
+# REPO_UNIFICATION_GLYPH
+timestamp: 2026-01-03T21:05:12.001327Z
+system: cognition_fusion
+context:
+  directories_aligned: 4
+  total_resources: 64
+  structure: {'memory-bundles': 27, 'matrix': 15, 'tool_profiles': 5, 'glyphs': 17}

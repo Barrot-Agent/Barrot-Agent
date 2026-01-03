@@ -1,0 +1,9 @@
+# OVERLAP_RESOLUTION_GLYPH
+timestamp: 2026-01-03T21:05:11.936599Z
+system: cognition_fusion
+context:
+  directives_analyzed: 4886
+  overlaps_detected: 2982
+  overlaps_resolved: 1623
+  queries_restructured: 1623
+  status: complete

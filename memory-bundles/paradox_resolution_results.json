@@ -1,0 +1,129 @@
+{
+  "analysis_timestamp": "2026-01-03T21:05:12.000118Z",
+  "contradictions_found": 8,
+  "paradoxes_found": 0,
+  "drift_indicators": 0,
+  "capsized_logic_instances": 1,
+  "contradiction_resolutions": [
+    {
+      "original_contradiction": {
+        "type": "contradiction",
+        "source": "OUTPUT_LOGGING.md",
+        "statement1": "ive format: `{logname}-YYYY-MM.md`\n- Current logs always remain as primary files\n\n---\n\n## \ud83c\udfaf Vantage Point O",
+        "statement2": "cs.md | tail -30\n```\n\n### Log Rotation\n- Logs are never deleted, only appended\n- When logs exceed 10MB, th",
+        "severity": "medium"
+      },
+      "resolution_strategy": "prioritize_specificity",
+      "resolved_statement": "ive format: `{logname}-YYYY-MM.md`\n- Current logs always remain as primary files\n\n---\n\n## \ud83c\udfaf Vantage Point O",
+      "confidence": 0.7,
+      "resolved_at": "2026-01-03T21:05:12.000071Z"
+    },
+    {
+      "original_contradiction": {
+        "type": "contradiction",
+        "source": "OUTPUT_LOGGING.md",
+        "statement1": "rmance tracked** - All metrics quantified\n10. \u2705 **Always available** - 24/7 access to all logs\n\n---\n\n## \ud83d\udccc L",
+        "statement2": "cs.md | tail -30\n```\n\n### Log Rotation\n- Logs are never deleted, only appended\n- When logs exceed 10MB, th",
+        "severity": "medium"
+      },
+      "resolution_strategy": "prioritize_specificity",
+      "resolved_statement": "rmance tracked** - All metrics quantified\n10. \u2705 **Always available** - 24/7 access to all logs\n\n---\n\n## \ud83d\udccc L",
+      "confidence": 0.7,
+      "resolved_at": "2026-01-03T21:05:12.000082Z"
+    },
+    {
+      "original_contradiction": {
+        "type": "contradiction",
+        "source": "VSCODE_SETUP.md",
+        "statement1": "e/settings.json`:\n\n### Editor\n- Format on save: **Enabled**\n- Tab size: **2 spaces**\n- Trim trailing whites",
+        "statement2": "Smart commit: **Enabled**\n- Sync confirmation: **Disabled** (for faster workflow)\n\n---\n\n## \ud83d\ude80 Quick Tasks\n\nP",
+        "severity": "medium"
+      },
+      "resolution_strategy": "prioritize_specificity",
+      "resolved_statement": "e/settings.json`:\n\n### Editor\n- Format on save: **Enabled**\n- Tab size: **2 spaces**\n- Trim trailing whites",
+      "confidence": 0.7,
+      "resolved_at": "2026-01-03T21:05:12.000085Z"
+    },
+    {
+      "original_contradiction": {
+        "type": "contradiction",
+        "source": "VSCODE_SETUP.md",
+        "statement1": "size: **2 spaces**\n- Trim trailing whitespace: **Enabled**\n- Insert final newline: **Enabled**\n\n### YAML\n-",
+        "statement2": "Smart commit: **Enabled**\n- Sync confirmation: **Disabled** (for faster workflow)\n\n---\n\n## \ud83d\ude80 Quick Tasks\n\nP",
+        "severity": "medium"
+      },
+      "resolution_strategy": "prioritize_specificity",
+      "resolved_statement": "size: **2 spaces**\n- Trim trailing whitespace: **Enabled**\n- Insert final newline: **Enabled**\n\n### YAML\n-",
+      "confidence": 0.7,
+      "resolved_at": "2026-01-03T21:05:12.000088Z"
+    },
+    {
+      "original_contradiction": {
+        "type": "contradiction",
+        "source": "VSCODE_SETUP.md",
+        "statement1": "whitespace: **Enabled**\n- Insert final newline: **Enabled**\n\n### YAML\n- Schema validation: **Enabled**\n- Fo",
+        "statement2": "Smart commit: **Enabled**\n- Sync confirmation: **Disabled** (for faster workflow)\n\n---\n\n## \ud83d\ude80 Quick Tasks\n\nP",
+        "severity": "medium"
+      },
+      "resolution_strategy": "prioritize_specificity",
+      "resolved_statement": "whitespace: **Enabled**\n- Insert final newline: **Enabled**\n\n### YAML\n- Schema validation: **Enabled**\n- Fo",
+      "confidence": 0.7,
+      "resolved_at": "2026-01-03T21:05:12.000090Z"
+    },
+    {
+      "original_contradiction": {
+        "type": "contradiction",
+        "source": "INGESTION_MANIFEST.md",
+        "statement1": "commend improvements\n\n**Operational Protocol**:\n- Always assume user may have incomplete understanding\n- Pr",
+        "statement2": "xams continuously\n5. **Relentless Optimization**: Never accept less than #1\n\n**Status**: All benchmarks in",
+        "severity": "medium"
+      },
+      "resolution_strategy": "prioritize_specificity",
+      "resolved_statement": "commend improvements\n\n**Operational Protocol**:\n- Always assume user may have incomplete understanding\n- Pr",
+      "confidence": 0.7,
+      "resolved_at": "2026-01-03T21:05:12.000092Z"
+    },
+    {
+      "original_contradiction": {
+        "type": "contradiction",
+        "source": "WORKFLOW_TROUBLESHOOTING.md",
+        "statement1": "t\n```\n\n---\n\n## \ud83d\udee0\ufe0f Workflow Best Practices\n\n### 1. Always Use Specific Action Versions\n\n\u274c **Bad**: `uses: ac",
+        "statement2": "s\n  id-token: write  # For OIDC\n```\n\n### Secrets\n\nNever hardcode secrets in workflows:\n\n\u274c **Bad**: `token:",
+        "severity": "medium"
+      },
+      "resolution_strategy": "prioritize_specificity",
+      "resolved_statement": "t\n```\n\n---\n\n## \ud83d\udee0\ufe0f Workflow Best Practices\n\n### 1. Always Use Specific Action Versions\n\n\u274c **Bad**: `uses: ac",
+      "confidence": 0.7,
+      "resolved_at": "2026-01-03T21:05:12.000094Z"
+    },
+    {
+      "original_contradiction": {
+        "type": "contradiction",
+        "source": "WORKFLOW_TROUBLESHOOTING.md",
+        "statement1": "-\n\n## \ud83d\udd10 Security Considerations\n\n### Permissions\n\nAlways use minimal required permissions:\n\n```yaml\npermiss",
+        "statement2": "s\n  id-token: write  # For OIDC\n```\n\n### Secrets\n\nNever hardcode secrets in workflows:\n\n\u274c **Bad**: `token:",
+        "severity": "medium"
+      },
+      "resolution_strategy": "prioritize_specificity",
+      "resolved_statement": "-\n\n## \ud83d\udd10 Security Considerations\n\n### Permissions\n\nAlways use minimal required permissions:\n\n```yaml\npermiss",
+      "confidence": 0.7,
+      "resolved_at": "2026-01-03T21:05:12.000096Z"
+    }
+  ],
+  "paradox_resolutions": [],
+  "unified_cognition": {
+    "timestamp": "2026-01-03T21:05:12.000101Z",
+    "resolutions_applied": 8,
+    "unified_principles": [
+      "ive format: `{logname}-YYYY-MM.md`\n- Current logs always remain as primary files\n\n---\n\n## \ud83c\udfaf Vantage ",
+      "rmance tracked** - All metrics quantified\n10. \u2705 **Always available** - 24/7 access to all logs\n\n---\n",
+      "e/settings.json`:\n\n### Editor\n- Format on save: **Enabled**\n- Tab size: **2 spaces**\n- Trim trailing",
+      "size: **2 spaces**\n- Trim trailing whitespace: **Enabled**\n- Insert final newline: **Enabled**\n\n### ",
+      "whitespace: **Enabled**\n- Insert final newline: **Enabled**\n\n### YAML\n- Schema validation: **Enabled",
+      "commend improvements\n\n**Operational Protocol**:\n- Always assume user may have incomplete understandi",
+      "t\n```\n\n---\n\n## \ud83d\udee0\ufe0f Workflow Best Practices\n\n### 1. Always Use Specific Action Versions\n\n\u274c **Bad**: `u",
+      "-\n\n## \ud83d\udd10 Security Considerations\n\n### Permissions\n\nAlways use minimal required permissions:\n\n```yaml\n"
+    ],
+    "confidence_score": 0.7
+  }
+}
