@@ -34,7 +34,28 @@ load_latest_bundle()
 # --- RUN MATRIX NODES ---
 def run_matrix():
     print("[BOOTSTRAP] Executing cognition nodes...")
-    for node in MATRIX_PATH.glob("node_*.py"):
+    
+    # Check for priority nodes (configured in manifest)
+    abundance_config = manifest.get("abundance_cognition", {})
+    priority_nodes = []
+    
+    # If abundance cognition is active, prioritize it
+    if abundance_config.get("active", False):
+        print("[BOOTSTRAP] Abundance Cognition Directive is active")
+        abundance_node = MATRIX_PATH / "node_abundance_ingestor.py"
+        if abundance_node.exists():
+            priority_nodes.append(abundance_node)
+    
+    # Run priority nodes first
+    for node in priority_nodes:
+        print(f"  → Running {node.name} (Priority)")
+        subprocess.run(["python", str(node)], check=False)
+    
+    # Run remaining matrix nodes
+    for node in sorted(MATRIX_PATH.glob("node_*.py")):
+        # Skip nodes that were already run as priority
+        if node in priority_nodes:
+            continue
         print(f"  → Running {node.name}")
         subprocess.run(["python", str(node)], check=False)
 
