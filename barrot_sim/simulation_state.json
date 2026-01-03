@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-03T21:23:50.883638+00:00",
+  "last_updated": "2026-01-03T21:24:26.091664+00:00",
   "active_chambers": [],
   "history": [
     {
@@ -202,6 +202,66 @@
         "council_votes": [],
         "reality_drift": 0.0,
         "closed_at": "2026-01-03T21:23:50.883514+00:00"
+      }
+    },
+    {
+      "chamber_id": "integration_chamber",
+      "mode": "forecast",
+      "active": false,
+      "state": {
+        "created": "2026-01-03T21:24:26.090505+00:00",
+        "agents": [
+          {
+            "id": "agent_0",
+            "name": "Integration Test Agent",
+            "config": {
+              "agent_id": "test_agent",
+              "name": "Integration Test Agent",
+              "type": "forecaster",
+              "capabilities": [
+                "prediction",
+                "analysis"
+              ],
+              "mutations": [],
+              "performance_history": [],
+              "created_at": "2026-01-03T21:24:26.090691+00:00"
+            },
+            "mutations": [],
+            "added_at": "2026-01-03T21:24:26.091309+00:00"
+          }
+        ],
+        "directives": [
+          {
+            "directive": {
+              "name": "SIMULATION_INTEGRATION_DIRECTIVE",
+              "description": "Test integration of all simulation components",
+              "impact_areas": [
+                "memory",
+                "matrix",
+                "council"
+              ]
+            },
+            "injected_at": "2026-01-03T21:24:26.091315+00:00",
+            "impact": null
+          },
+          {
+            "directive": {
+              "name": "SIMULATION_INTEGRATION_DIRECTIVE",
+              "description": "Test integration of all simulation components",
+              "impact_areas": [
+                "memory",
+                "matrix",
+                "council"
+              ]
+            },
+            "injected_at": "2026-01-03T21:24:26.091325+00:00",
+            "impact": null
+          }
+        ],
+        "glyphs_emitted": [],
+        "council_votes": [],
+        "reality_drift": 0.0,
+        "closed_at": "2026-01-03T21:24:26.091489+00:00"
       }
     }
   ]

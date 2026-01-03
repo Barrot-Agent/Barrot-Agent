@@ -842,3 +842,184 @@
   }
 }
 ```
+
+## CHAMBER_CREATED
+**Timestamp:** 2026-01-03T21:24:26.090560+00:00
+
+```json
+{
+  "chamber_id": "integration_chamber",
+  "mode": "forecast"
+}
+```
+
+## DIRECTIVE_FORECAST_GLYPH
+**Timestamp:** 2026-01-03T21:24:26.090795+00:00
+
+```json
+{
+  "forecast": {
+    "directive_name": "SIMULATION_INTEGRATION_DIRECTIVE",
+    "forecast_time": "2026-01-03T21:24:26.090737+00:00",
+    "impacts": {
+      "memory": "low",
+      "matrix": "low",
+      "council": "low"
+    },
+    "confidence": 0.85,
+    "risks": [],
+    "opportunities": [],
+    "recommendations": [
+      "Implementation can proceed with standard monitoring"
+    ]
+  },
+  "timestamp": "2026-01-03T21:24:26.090763+00:00"
+}
+```
+
+## COUNCIL_ECHO_GLYPH
+**Timestamp:** 2026-01-03T21:24:26.091079+00:00
+
+```json
+{
+  "deliberation": {
+    "topic": "Approve simulation layer activation",
+    "timestamp": "2026-01-03T21:24:26.091040+00:00",
+    "baseline": {
+      "conditions": {
+        "practicality": "high",
+        "opportunity": "high",
+        "risk": "low"
+      },
+      "votes": {
+        "Pragmatist": 0.9728205072028203,
+        "Theorist": 0.7993812241424825,
+        "Skeptic": 0.5075130663698929,
+        "Optimist": 0.6922786994009106,
+        "Guardian": 0.9870922427899742,
+        "Experimentalist": 0.5757439200311709,
+        "Error Spotter": 0.48547485582875743
+      },
+      "consensus": {
+        "reached": true,
+        "avg_agreement": 0.717,
+        "disagreement_level": 0.174,
+        "participating_agents": 7
+      }
+    }
+  },
+  "timestamp": "2026-01-03T21:24:26.091048+00:00"
+}
+```
+
+## SIMULATION_COMPLETED
+**Timestamp:** 2026-01-03T21:24:26.091368+00:00
+
+```json
+{
+  "chamber_id": "integration_chamber",
+  "scenario": {
+    "directives": [
+      {
+        "name": "SIMULATION_INTEGRATION_DIRECTIVE",
+        "description": "Test integration of all simulation components",
+        "impact_areas": [
+          "memory",
+          "matrix",
+          "council"
+        ]
+      }
+    ]
+  },
+  "started_at": "2026-01-03T21:24:26.091319+00:00",
+  "outcomes": [
+    {
+      "directive": {
+        "name": "SIMULATION_INTEGRATION_DIRECTIVE",
+        "description": "Test integration of all simulation components",
+        "impact_areas": [
+          "memory",
+          "matrix",
+          "council"
+        ]
+      },
+      "predicted_impact": {
+        "memory_impact": "low",
+        "matrix_impact": "medium",
+        "council_impact": "high"
+      },
+      "confidence": 0.75
+    }
+  ],
+  "completed_at": "2026-01-03T21:24:26.091331+00:00"
+}
+```
+
+## CHAMBER_CLOSED
+**Timestamp:** 2026-01-03T21:24:26.091527+00:00
+
+```json
+{
+  "chamber_id": "integration_chamber",
+  "results": {
+    "chamber_id": "integration_chamber",
+    "mode": "forecast",
+    "active": false,
+    "state": {
+      "created": "2026-01-03T21:24:26.090505+00:00",
+      "agents": [
+        {
+          "id": "agent_0",
+          "name": "Integration Test Agent",
+          "config": {
+            "agent_id": "test_agent",
+            "name": "Integration Test Agent",
+            "type": "forecaster",
+            "capabilities": [
+              "prediction",
+              "analysis"
+            ],
+            "mutations": [],
+            "performance_history": [],
+            "created_at": "2026-01-03T21:24:26.090691+00:00"
+          },
+          "mutations": [],
+          "added_at": "2026-01-03T21:24:26.091309+00:00"
+        }
+      ],
+      "directives": [
+        {
+          "directive": {
+            "name": "SIMULATION_INTEGRATION_DIRECTIVE",
+            "description": "Test integration of all simulation components",
+            "impact_areas": [
+              "memory",
+              "matrix",
+              "council"
+            ]
+          },
+          "injected_at": "2026-01-03T21:24:26.091315+00:00",
+          "impact": null
+        },
+        {
+          "directive": {
+            "name": "SIMULATION_INTEGRATION_DIRECTIVE",
+            "description": "Test integration of all simulation components",
+            "impact_areas": [
+              "memory",
+              "matrix",
+              "council"
+            ]
+          },
+          "injected_at": "2026-01-03T21:24:26.091325+00:00",
+          "impact": null
+        }
+      ],
+      "glyphs_emitted": [],
+      "council_votes": [],
+      "reality_drift": 0.0,
+      "closed_at": "2026-01-03T21:24:26.091489+00:00"
+    }
+  }
+}
+```
