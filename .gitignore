@@ -31,3 +31,7 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+# Simulation runtime data (excluded from git)
+# Note: simulation_state.json and simulation_log.md track runtime state
+# These files may grow large and should not be committed frequently

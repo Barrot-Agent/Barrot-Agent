@@ -1023,3 +1023,238 @@
   }
 }
 ```
+
+## DIRECTIVE_FORECAST_GLYPH
+**Timestamp:** 2026-01-03T21:26:27.780085+00:00
+
+```json
+{
+  "forecast": {
+    "directive_name": "COGNITIVE_ENHANCEMENT_DIRECTIVE",
+    "forecast_time": "2026-01-03T21:26:27.764130+00:00",
+    "impacts": {
+      "memory": "low",
+      "matrix": "low",
+      "council": "low"
+    },
+    "confidence": 1.0,
+    "risks": [],
+    "opportunities": [],
+    "recommendations": [
+      "Implementation can proceed with standard monitoring"
+    ]
+  },
+  "timestamp": "2026-01-03T21:26:27.780046+00:00"
+}
+```
+
+## COUNCIL_ECHO_GLYPH
+**Timestamp:** 2026-01-03T21:26:27.781213+00:00
+
+```json
+{
+  "deliberation": {
+    "topic": "Approve COGNITIVE_ENHANCEMENT directive",
+    "timestamp": "2026-01-03T21:26:27.781151+00:00",
+    "baseline": {
+      "conditions": {
+        "practicality": "high",
+        "complexity": "medium",
+        "risk": "low",
+        "opportunity": "high"
+      },
+      "votes": {
+        "Pragmatist": 0.6635502409593411,
+        "Theorist": 0.444062177412754,
+        "Skeptic": 0.3976176784165595,
+        "Optimist": 1.007068332653189,
+        "Guardian": 0.6790786984613278,
+        "Experimentalist": 0.6600682410929439,
+        "Error Spotter": 0.45060485393701416
+      },
+      "consensus": {
+        "reached": true,
+        "avg_agreement": 0.615,
+        "disagreement_level": 0.158,
+        "participating_agents": 7
+      }
+    },
+    "altered": {
+      "conditions": {
+        "risk": "medium"
+      },
+      "votes": {
+        "Pragmatist": 0.6968344558885479,
+        "Theorist": 0.8304650821038417,
+        "Skeptic": 0.5491406693897164,
+        "Optimist": 0.9110233440583988,
+        "Guardian": 0.7953902353476578,
+        "Experimentalist": 0.8104838287710636,
+        "Error Spotter": 0.30050695445481473
+      },
+      "consensus": {
+        "reached": true,
+        "avg_agreement": 0.699,
+        "disagreement_level": 0.157,
+        "participating_agents": 7
+      }
+    },
+    "delta": {
+      "agreement_change": 0.084,
+      "disagreement_change": -0.001,
+      "consensus_changed": false
+    }
+  },
+  "timestamp": "2026-01-03T21:26:27.781188+00:00"
+}
+```
+
+## CHAMBER_CREATED
+**Timestamp:** 2026-01-03T21:26:27.782145+00:00
+
+```json
+{
+  "chamber_id": "cognitive_enhancement_chamber",
+  "mode": "forecast"
+}
+```
+
+## SIMULATION_COMPLETED
+**Timestamp:** 2026-01-03T21:26:27.782236+00:00
+
+```json
+{
+  "chamber_id": "cognitive_enhancement_chamber",
+  "scenario": {
+    "directives": [
+      {
+        "name": "COGNITIVE_ENHANCEMENT_DIRECTIVE",
+        "description": "Enhance matrix reasoning with quantum polarity navigation",
+        "impact_areas": [
+          "memory",
+          "matrix",
+          "council"
+        ],
+        "requirements": [
+          "hermetic_quantum_fusion",
+          "temporal_plasticity"
+        ]
+      }
+    ],
+    "agents": [
+      "enhancement_agent"
+    ]
+  },
+  "started_at": "2026-01-03T21:26:27.782205+00:00",
+  "outcomes": [
+    {
+      "directive": {
+        "name": "COGNITIVE_ENHANCEMENT_DIRECTIVE",
+        "description": "Enhance matrix reasoning with quantum polarity navigation",
+        "impact_areas": [
+          "memory",
+          "matrix",
+          "council"
+        ],
+        "requirements": [
+          "hermetic_quantum_fusion",
+          "temporal_plasticity"
+        ]
+      },
+      "predicted_impact": {
+        "memory_impact": "low",
+        "matrix_impact": "medium",
+        "council_impact": "high"
+      },
+      "confidence": 0.75
+    }
+  ],
+  "completed_at": "2026-01-03T21:26:27.782212+00:00"
+}
+```
+
+## CHAMBER_CLOSED
+**Timestamp:** 2026-01-03T21:26:27.782747+00:00
+
+```json
+{
+  "chamber_id": "cognitive_enhancement_chamber",
+  "results": {
+    "chamber_id": "cognitive_enhancement_chamber",
+    "mode": "forecast",
+    "active": false,
+    "state": {
+      "created": "2026-01-03T21:26:27.782110+00:00",
+      "agents": [
+        {
+          "id": "agent_0",
+          "name": "Cognitive Enhancement Agent",
+          "config": {
+            "agent_id": "enhancement_agent",
+            "name": "Cognitive Enhancement Agent",
+            "type": "enhancer",
+            "capabilities": [
+              "quantum_reasoning",
+              "polarity_navigation"
+            ],
+            "mutations": [],
+            "performance_history": [
+              {
+                "metrics": {
+                  "speed": 0.92,
+                  "accuracy": 0.88,
+                  "consistency": 0.95
+                },
+                "timestamp": "2026-01-03T21:26:27.781731+00:00"
+              }
+            ],
+            "created_at": "2026-01-03T21:26:27.781725+00:00"
+          },
+          "mutations": [],
+          "added_at": "2026-01-03T21:26:27.782198+00:00"
+        }
+      ],
+      "directives": [
+        {
+          "directive": {
+            "name": "COGNITIVE_ENHANCEMENT_DIRECTIVE",
+            "description": "Enhance matrix reasoning with quantum polarity navigation",
+            "impact_areas": [
+              "memory",
+              "matrix",
+              "council"
+            ],
+            "requirements": [
+              "hermetic_quantum_fusion",
+              "temporal_plasticity"
+            ]
+          },
+          "injected_at": "2026-01-03T21:26:27.782202+00:00",
+          "impact": null
+        },
+        {
+          "directive": {
+            "name": "COGNITIVE_ENHANCEMENT_DIRECTIVE",
+            "description": "Enhance matrix reasoning with quantum polarity navigation",
+            "impact_areas": [
+              "memory",
+              "matrix",
+              "council"
+            ],
+            "requirements": [
+              "hermetic_quantum_fusion",
+              "temporal_plasticity"
+            ]
+          },
+          "injected_at": "2026-01-03T21:26:27.782209+00:00",
+          "impact": null
+        }
+      ],
+      "glyphs_emitted": [],
+      "council_votes": [],
+      "reality_drift": 0.0,
+      "closed_at": "2026-01-03T21:26:27.782693+00:00"
+    }
+  }
+}
+```
