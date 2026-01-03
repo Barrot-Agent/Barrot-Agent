@@ -1,0 +1,46 @@
+glyph_name: SIMULATION_LAYER_INITIALIZED_GLYPH
+glyph_id: SIM-001
+version: 1.0.0
+timestamp: 2026-01-03T21:15:00Z
+
+description: >
+  Emitted when the barrot_sim symbolic simulation layer is initialized.
+  Represents the activation of reality modeling and forecasting capabilities.
+
+symbolic_representation: "🧪 🔮 ✨"
+
+properties:
+  dimension: simulation_meta
+  mutability: initialization
+  trigger: simulation_engine_start
+  
+attributes:
+  - reality_modeling
+  - symbolic_forecasting
+  - chamber_isolation
+  - cascade_prediction
+  
+initialization_metrics:
+  simulation_chambers: 0
+  active_forecasts: 0
+  agent_sandboxes: 0
+  drift_detectors: 1
+
+capabilities:
+  - directive_forecasting
+  - agentic_sandboxing
+  - glyph_cascade_modeling
+  - council_echo_testing
+  - reality_drift_detection
+
+integration_points:
+  - simulation_engine
+  - directive_forecast
+  - agentic_sandbox
+  - glyph_cascade
+  - council_echo
+  - reality_drift
+  
+usage_context: >
+  Invoke when initializing the simulation layer to establish symbolic
+  modeling environment. Triggers initialization of all simulation subsystems.

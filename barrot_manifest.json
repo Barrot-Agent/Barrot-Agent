@@ -16,5 +16,15 @@
     "cognition_integrity": "aligned",
     "last_self_reflection": "2026-01-03T01:27:36.320118",
     "drift_detected": false
-  }
+  },
+  "reality_simulation_active": true,
+  "simulation_layer": "barrot_sim/",
+  "glyphs_emitted": [
+    "SIMULATION_LAYER_INITIALIZED_GLYPH",
+    "DIRECTIVE_FORECAST_GLYPH",
+    "AGENTIC_SANDBOX_GLYPH",
+    "COUNCIL_ECHO_GLYPH",
+    "REALITY_DRIFT_GLYPH"
+  ],
+  "last_simulation_update": "2026-01-03"
 }

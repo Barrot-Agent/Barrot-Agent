@@ -1,0 +1,208 @@
+{
+  "last_updated": "2026-01-03T21:23:50.883638+00:00",
+  "active_chambers": [],
+  "history": [
+    {
+      "chamber_id": "test_chamber_1",
+      "mode": "forecast",
+      "active": false,
+      "state": {
+        "created": "2026-01-03T21:23:20.272242+00:00",
+        "agents": [
+          {
+            "id": "agent_0",
+            "name": "Test Agent",
+            "config": {
+              "name": "Test Agent",
+              "type": "forecaster"
+            },
+            "mutations": [],
+            "added_at": "2026-01-03T21:23:20.272433+00:00"
+          }
+        ],
+        "directives": [
+          {
+            "directive": {
+              "name": "TEST_DIRECTIVE"
+            },
+            "injected_at": "2026-01-03T21:23:20.272440+00:00",
+            "impact": null
+          },
+          {
+            "directive": {
+              "name": "TEST_DIRECTIVE"
+            },
+            "injected_at": "2026-01-03T21:23:20.272447+00:00",
+            "impact": null
+          }
+        ],
+        "glyphs_emitted": [],
+        "council_votes": [],
+        "reality_drift": 0.0,
+        "closed_at": "2026-01-03T21:23:20.272555+00:00"
+      }
+    },
+    {
+      "chamber_id": "integration_test",
+      "mode": "test",
+      "active": false,
+      "state": {
+        "created": "2026-01-03T21:23:20.279099+00:00",
+        "agents": [
+          {
+            "id": "agent_0",
+            "name": "Integration Agent",
+            "config": {
+              "agent_id": "integration_agent",
+              "name": "Integration Agent",
+              "type": "tester",
+              "capabilities": [],
+              "mutations": [],
+              "performance_history": [],
+              "created_at": "2026-01-03T21:23:20.279214+00:00"
+            },
+            "mutations": [],
+            "added_at": "2026-01-03T21:23:20.279219+00:00"
+          }
+        ],
+        "directives": [],
+        "glyphs_emitted": [],
+        "council_votes": [],
+        "reality_drift": 0.0,
+        "closed_at": "2026-01-03T21:23:20.279317+00:00"
+      }
+    },
+    {
+      "chamber_id": "dup_test",
+      "mode": "forecast",
+      "active": false,
+      "state": {
+        "created": "2026-01-03T21:23:20.279667+00:00",
+        "agents": [],
+        "directives": [],
+        "glyphs_emitted": [],
+        "council_votes": [],
+        "reality_drift": 0.0,
+        "closed_at": "2026-01-03T21:23:20.279823+00:00"
+      }
+    },
+    {
+      "chamber_id": "test_chamber_1",
+      "mode": "forecast",
+      "active": false,
+      "state": {
+        "created": "2026-01-03T21:23:42.428544+00:00",
+        "agents": [
+          {
+            "id": "agent_0",
+            "name": "Test Agent",
+            "config": {
+              "name": "Test Agent",
+              "type": "forecaster"
+            },
+            "mutations": [],
+            "added_at": "2026-01-03T21:23:42.428665+00:00"
+          }
+        ],
+        "directives": [
+          {
+            "directive": {
+              "name": "TEST_DIRECTIVE"
+            },
+            "injected_at": "2026-01-03T21:23:42.428670+00:00",
+            "impact": null
+          },
+          {
+            "directive": {
+              "name": "TEST_DIRECTIVE"
+            },
+            "injected_at": "2026-01-03T21:23:42.428677+00:00",
+            "impact": null
+          }
+        ],
+        "glyphs_emitted": [],
+        "council_votes": [],
+        "reality_drift": 0.0,
+        "closed_at": "2026-01-03T21:23:42.428809+00:00"
+      }
+    },
+    {
+      "chamber_id": "integration_test",
+      "mode": "test",
+      "active": false,
+      "state": {
+        "created": "2026-01-03T21:23:42.430349+00:00",
+        "agents": [
+          {
+            "id": "agent_0",
+            "name": "Integration Agent",
+            "config": {
+              "agent_id": "integration_agent",
+              "name": "Integration Agent",
+              "type": "tester",
+              "capabilities": [],
+              "mutations": [],
+              "performance_history": [],
+              "created_at": "2026-01-03T21:23:42.430429+00:00"
+            },
+            "mutations": [],
+            "added_at": "2026-01-03T21:23:42.430434+00:00"
+          }
+        ],
+        "directives": [],
+        "glyphs_emitted": [],
+        "council_votes": [],
+        "reality_drift": 0.0,
+        "closed_at": "2026-01-03T21:23:42.430519+00:00"
+      }
+    },
+    {
+      "chamber_id": "dup_test",
+      "mode": "forecast",
+      "active": false,
+      "state": {
+        "created": "2026-01-03T21:23:42.430938+00:00",
+        "agents": [],
+        "directives": [],
+        "glyphs_emitted": [],
+        "council_votes": [],
+        "reality_drift": 0.0,
+        "closed_at": "2026-01-03T21:23:42.431020+00:00"
+      }
+    },
+    {
+      "chamber_id": "test_chamber_1",
+      "mode": "forecast",
+      "active": false,
+      "state": {
+        "created": "2026-01-03T21:23:50.883238+00:00",
+        "agents": [
+          {
+            "id": "agent_0",
+            "name": "Test Agent",
+            "config": {
+              "name": "Test Agent",
+              "type": "forecaster"
+            },
+            "mutations": [],
+            "added_at": "2026-01-03T21:23:50.883357+00:00"
+          }
+        ],
+        "directives": [
+          {
+            "directive": {
+              "name": "TEST_DIRECTIVE",
+              "impact": "analyze"
+            },
+            "injected_at": "2026-01-03T21:23:50.883366+00:00",
+            "impact": null
+          }
+        ],
+        "glyphs_emitted": [],
+        "council_votes": [],
+        "reality_drift": 0.0,
+        "closed_at": "2026-01-03T21:23:50.883514+00:00"
+      }
+    }
+  ]
+}

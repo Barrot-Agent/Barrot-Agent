@@ -1,0 +1,51 @@
+glyph_name: REALITY_DRIFT_GLYPH
+glyph_id: SIM-005
+version: 1.0.0
+timestamp: 2026-01-03T21:15:00Z
+
+description: >
+  Emitted when symbolic divergence is detected between simulated and live cognition.
+  Represents misalignment requiring recalibration of simulation parameters.
+
+symbolic_representation: "⚠ 📉 🌊"
+
+properties:
+  dimension: divergence_detection
+  mutability: drift_based
+  trigger: divergence_threshold
+  
+attributes:
+  - state_comparison
+  - drift_calculation
+  - severity_assessment
+  - recalibration_recommendation
+  
+drift_metrics:
+  - memory_utilization_drift
+  - matrix_coherence_drift
+  - council_consensus_drift
+  - glyph_emission_drift
+  - directive_compliance_drift
+
+severity_levels:
+  - minimal
+  - low
+  - medium
+  - high
+  - critical
+
+drift_thresholds:
+  low_sensitivity: 0.30
+  medium_sensitivity: 0.20
+  high_sensitivity: 0.15
+  critical_sensitivity: 0.10
+
+integration_points:
+  - reality_drift
+  - simulation_engine
+  - live_cognition_state
+  - simulated_states
+  
+usage_context: >
+  Invoke when drift between simulation and reality exceeds threshold.
+  Triggers recalibration and alignment procedures to maintain accuracy.

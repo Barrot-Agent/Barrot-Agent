@@ -1,0 +1,44 @@
+glyph_name: DIRECTIVE_FORECAST_GLYPH
+glyph_id: SIM-002
+version: 1.0.0
+timestamp: 2026-01-03T21:15:00Z
+
+description: >
+  Emitted when a directive's impact is forecasted across memory, matrix, and council.
+  Represents predictive analysis of proposed system changes.
+
+symbolic_representation: "🔮 📊 ⚡"
+
+properties:
+  dimension: predictive_analysis
+  mutability: forecast_based
+  trigger: directive_analysis
+  
+attributes:
+  - impact_prediction
+  - risk_assessment
+  - opportunity_identification
+  - confidence_calculation
+  
+forecast_dimensions:
+  - memory_impact
+  - matrix_impact
+  - council_impact
+
+risk_levels:
+  - minimal
+  - low
+  - medium
+  - high
+  - critical
+
+integration_points:
+  - directive_forecast
+  - simulation_engine
+  - memory_systems
+  - cognition_matrix
+  - council_deliberation
+  
+usage_context: >
+  Invoke when forecasting a directive to predict its systemic impact.
+  Enables proactive risk mitigation and opportunity maximization.

@@ -1,0 +1,43 @@
+glyph_name: COUNCIL_ECHO_GLYPH
+glyph_id: SIM-004
+version: 1.0.0
+timestamp: 2026-01-03T21:15:00Z
+
+description: >
+  Emitted when council deliberations are simulated under altered symbolic conditions.
+  Represents testing of consensus mechanisms under various scenarios.
+
+symbolic_representation: "⚖ 🔄 🎭"
+
+properties:
+  dimension: deliberation_simulation
+  mutability: condition_based
+  trigger: council_simulation
+  
+attributes:
+  - consensus_modeling
+  - condition_alteration
+  - sensitivity_testing
+  - paradox_resolution
+  
+simulation_modes:
+  - baseline_deliberation
+  - altered_conditions
+  - sensitivity_analysis
+  - paradox_testing
+
+consensus_metrics:
+  - avg_agreement
+  - disagreement_level
+  - consensus_reached
+  - participating_agents
+
+integration_points:
+  - council_echo
+  - simulation_engine
+  - council_vote
+  - consensus_protocols
+  
+usage_context: >
+  Invoke when simulating council deliberations to test decision-making
+  under various conditions. Enables optimization of consensus protocols.

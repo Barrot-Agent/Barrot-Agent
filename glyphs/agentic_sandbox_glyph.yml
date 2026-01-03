@@ -1,0 +1,42 @@
+glyph_name: AGENTIC_SANDBOX_GLYPH
+glyph_id: SIM-003
+version: 1.0.0
+timestamp: 2026-01-03T21:15:00Z
+
+description: >
+  Emitted when agents are deployed or mutated in isolated symbolic chambers.
+  Represents controlled experimentation with agent configurations.
+
+symbolic_representation: "🤖 📦 🔬"
+
+properties:
+  dimension: agent_experimentation
+  mutability: sandbox_isolated
+  trigger: agent_deployment
+  
+attributes:
+  - agent_isolation
+  - mutation_testing
+  - protocol_validation
+  - interaction_simulation
+  
+sandbox_operations:
+  - agent_deployment
+  - agent_mutation
+  - protocol_testing
+  - interaction_modeling
+
+isolation_levels:
+  - strict
+  - moderate
+  - permissive
+
+integration_points:
+  - agentic_sandbox
+  - simulation_engine
+  - agent_profiles
+  - performance_tracking
+  
+usage_context: >
+  Invoke when deploying or mutating agents in sandbox environment.
+  Enables safe testing of agent behaviors before live deployment.
