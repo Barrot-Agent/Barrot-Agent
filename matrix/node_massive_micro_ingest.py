@@ -124,7 +124,7 @@ class GapFillingEngine:
         elif "timestamp" in key_lower or "time" in key_lower or "date" in key_lower:
             return datetime.now(timezone.utc).isoformat()
         elif "id" in key_lower:
-            return hashlib.md5(f"{context}.{key}".encode()).hexdigest()[:8]
+            "fill id": self._infer_value(key, context)
         elif "name" in key_lower:
             return f"auto_generated_{key}"
         elif "description" in key_lower or "desc" in key_lower:
@@ -132,7 +132,8 @@ class GapFillingEngine:
         elif "config" in key_lower or "settings" in key_lower:
             return {}
         else:
-            return f"auto_filled_{key}"
+            # Use SHA-256 instead of MD5 for security
+            return hashlib.sha256(f"auto_filled_{key}_{context}".encode()).hexdigest()[:16]
     
     def analyze_and_propose_processes(self, ingested_data: Dict[str, Any]) -> List[Dict[str, Any]]:
         """Analyze ingested data and propose optimal processes for maximum output"""
@@ -298,10 +299,15 @@ class MassiveMicroIngestor:
         """
         Recursively ingest source and its sources up to max_depth levels
         Ingests: source -> source's sources -> source's source's sources -> ... (5 levels)
+        
+        Note: Implements depth limiting and early exit to prevent exponential complexity
         """
         if current_depth >= max_depth:
             print(f"[MMI] Maximum source depth ({max_depth}) reached for {source_name}")
             return {"depth_limit_reached": True, "depth": current_depth}
+        
+        # Safety check: limit number of child sources to prevent exponential explosion
+        MAX_CHILD_SOURCES = 10
         
         print(f"[MMI] Ingesting source at depth {current_depth}: {source_name}")
         
@@ -323,6 +329,11 @@ class MassiveMicroIngestor:
         
         # Extract sources from current source (recursive extraction)
         child_sources = self._extract_sources(source)
+        
+        # Limit child sources to prevent exponential complexity
+        if len(child_sources) > MAX_CHILD_SOURCES:
+            print(f"[MMI] Limiting child sources from {len(child_sources)} to {MAX_CHILD_SOURCES}")
+            child_sources = child_sources[:MAX_CHILD_SOURCES]
         
         # Recursively ingest child sources
         for i, child_source in enumerate(child_sources):
@@ -349,13 +360,14 @@ class MassiveMicroIngestor:
         
         if isinstance(payload, dict):
             for key, value in payload.items():
+                # Use SHA-256 for secure, collision-resistant IDs
                 component = {
-                    "id": hashlib.md5(f"{context}.{key}.{level}".encode()).hexdigest()[:12],
+                    "id": hashlib.sha256(f"{context}.{key}.{level}".encode()).hexdigest()[:12],
                     "level": level,
                     "type": type(value).__name__,
                     "source_key": key,
                     "context": context,
-                    "value_hash": hashlib.md5(str(value).encode()).hexdigest()[:8],
+                    "value_hash": hashlib.sha256(str(value).encode()).hexdigest()[:8],
                     "timestamp": datetime.now(timezone.utc).isoformat()
                 }
                 
@@ -376,13 +388,14 @@ class MassiveMicroIngestor:
         
         elif isinstance(payload, list):
             for i, item in enumerate(payload):
+                # Use SHA-256 for secure, collision-resistant IDs
                 component = {
-                    "id": hashlib.md5(f"{context}[{i}].{level}".encode()).hexdigest()[:12],
+                    "id": hashlib.sha256(f"{context}[{i}].{level}".encode()).hexdigest()[:12],
                     "level": level,
                     "type": type(item).__name__,
                     "source_index": i,
                     "context": context,
-                    "value_hash": hashlib.md5(str(item).encode()).hexdigest()[:8],
+                    "value_hash": hashlib.sha256(str(item).encode()).hexdigest()[:8],
                     "timestamp": datetime.now(timezone.utc).isoformat()
                 }
                 components.append(component)

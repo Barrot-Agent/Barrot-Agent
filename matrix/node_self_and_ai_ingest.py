@@ -6,6 +6,7 @@ Barrot ingests himself (self-ingestion) and all 22 employed AI models
 
 import json
 import sys
+import hashlib
 from pathlib import Path
 from datetime import datetime, timezone
 from typing import Dict, List, Any
