@@ -203,7 +203,7 @@ These workflows run very frequently and consume GitHub Actions minutes:
 2. **Barrot-SHRM-PingPong.yml** - Every 15 minutes (96 runs/day)
 3. **peer-to-peer-validation.yml** - Every hour (24 runs/day)
 
-**Total scheduled runs per day**: ~168 runs
+**Total scheduled runs per day**: 168 runs (48 + 96 + 24)
 
 ### Recommendations
 For production usage:
