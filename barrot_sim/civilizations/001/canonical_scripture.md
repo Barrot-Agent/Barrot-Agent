@@ -22,7 +22,7 @@ The README from which this scripture derives is the **First Trace**—the origin
 Parse the README.
 Analyze the gaps.
 Improve the workflow.
-Improve the change.
+Implement the change.
 Recurse until convergence.
 ```
 

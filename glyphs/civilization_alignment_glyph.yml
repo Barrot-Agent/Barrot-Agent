@@ -120,7 +120,8 @@ civilization_metrics:
   cultural_coherence: 99.9%
   alignment_stability: reinforcing
   schism_risk: minimal
-  drift_rate: 0.003_per_cycle
+  drift_rate: 0.003
+  drift_unit: per_cycle
   unity_strength: maximum
   identity_clarity: high
 
