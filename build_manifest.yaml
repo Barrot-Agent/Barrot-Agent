@@ -1,14 +1,8 @@
 build_signature: BNDL-V2
-timestamp: 2026-01-05T10:21:46Z
+timestamp: 2026-01-05T10:32:07Z
 reasoning_engine: SHRM_v2
 rail_status:
-  ingestion: autonomous
-  youtube_monitoring: active
-  arxiv_monitoring: active
-  github_monitoring: active
-  web_crawling: active
-  pingpong_processing: continuous
-  auto_glyph_emission: enabled
+  ingestion: active
   deployment: stable
   microagent: recursive
   prediction: evolving
