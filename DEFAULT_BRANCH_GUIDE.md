@@ -17,8 +17,6 @@ The industry standard shifted from `master` to `main` (lowercase) as the default
 
 ## For New Contributors
 
-## For New Contributors
-
 The default branch is now `main`. When cloning the repository:
 
 ```bash

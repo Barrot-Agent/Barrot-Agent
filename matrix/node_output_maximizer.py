@@ -97,7 +97,7 @@ class OutputMaximizer:
 
 def main():
     print("[OUTPUT-MAX] Output Maximizer initialized")
-    maximizer = OutputMaximizer()
+    OutputMaximizer()
 
 if __name__ == "__main__":
     main()

@@ -15,7 +15,8 @@ class PlanckAnalyzer:
     """Analyze at planck scale - the fundamental limit"""
     
     def __init__(self):
-        self.planck_components = []
+        # Initializer kept for future extensibility; no state currently required
+        pass
     
     def analyze_planck_scale(self, data: Any) -> Dict[str, Any]:
         """Analyze data at planck scale"""
@@ -70,7 +71,7 @@ class PlanckAnalyzer:
 
 def main():
     print("[PLANCK] Planck Analyzer initialized")
-    analyzer = PlanckAnalyzer()
+    PlanckAnalyzer()
 
 if __name__ == "__main__":
     main()

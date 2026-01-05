@@ -12,7 +12,8 @@ class SourceTracer:
     """Trace sources recursively"""
     
     def __init__(self):
-        self.traced_sources = []
+        # Initializer kept for future extensibility; no state currently required
+        pass
     
     def trace_sources(self, data: Any, max_depth: int = 10) -> Dict[str, Any]:
         """Trace sources to maximum depth"""
@@ -78,7 +79,7 @@ class SourceTracer:
 
 def main():
     print("[TRACER] Source Tracer initialized")
-    tracer = SourceTracer()
+    SourceTracer()
 
 if __name__ == "__main__":
     main()

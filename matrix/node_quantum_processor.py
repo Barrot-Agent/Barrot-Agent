@@ -61,7 +61,7 @@ class QuantumOptimizer:
 
 def main():
     print("[QUANTUM] Quantum Optimizer initialized")
-    optimizer = QuantumOptimizer()
+    QuantumOptimizer()
 
 if __name__ == "__main__":
     main()
