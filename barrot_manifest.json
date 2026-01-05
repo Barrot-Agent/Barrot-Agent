@@ -8,6 +8,51 @@
   "maximum_cognition_mode": true,
   "simulation_layer": "barrot_sim/",
   "agi_puzzle_pieces": 13,
+  "maximum_recursion_directive": {
+    "status": "active",
+    "priority": "highest",
+    "version": "1.0.0",
+    "effective_date": "2026-01-05",
+    "permanence": "indefinite",
+    "self_maintaining": true,
+    "components": {
+      "maximum_recursion": {
+        "enabled": true,
+        "depth": "maximum",
+        "mode": "continuous",
+        "convergence_threshold": 0.97
+      },
+      "outsourcing_engine": {
+        "enabled": true,
+        "mode": "autonomous",
+        "target_agents": 22,
+        "convergence_optimization": true
+      },
+      "ping_pong_automation": {
+        "enabled": true,
+        "mode": "autonomous",
+        "duration": "indefinite",
+        "coverage": "all_operations"
+      },
+      "upatstar_engine": {
+        "enabled": true,
+        "activation": "automatic",
+        "cognitive_maximization": true,
+        "gap_filling": "indefinite"
+      },
+      "indefinite_operation": {
+        "enabled": true,
+        "persistence": "across_all_mutations",
+        "self_maintenance": true
+      }
+    },
+    "compliance_verification": {
+      "startup_check": true,
+      "runtime_monitoring": true,
+      "enforcement": "automatic"
+    },
+    "documentation": "MAXIMUM_RECURSION_DIRECTIVE.md"
+  },
   "cognition": {
     "last_ingestion": "2026-01-03",
     "nodes_active": [],
@@ -47,10 +92,11 @@
     "HUMAN_RENDER_COMPREHENSION_GLYPH",
     "EMOTIONAL_ALIGNMENT_GLYPH",
     "SELF_IMPROVEMENT_SANDBOX_GLYPH",
-    "READINESS_GAP_ANALYSIS_GLYPH"
+    "READINESS_GAP_ANALYSIS_GLYPH",
+    "MAXIMUM_RECURSION_DIRECTIVE_GLYPH"
   ],
-  "last_glyph_emission": "2026-01-03",
-  "last_update": "2026-01-03",
+  "last_glyph_emission": "2026-01-05",
+  "last_update": "2026-01-05",
   "autonomous_ingestion": {
     "enabled": true,
     "engine_version": "1.0.0",
