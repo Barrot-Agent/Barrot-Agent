@@ -62,7 +62,7 @@
     "source_of_truth": "github",
     "last_trace_reconciliation": "2026-01-03",
     "cognition_integrity": "aligned",
-    "last_self_reflection": "2026-01-05T01:50:19.509794",
+    "last_self_reflection": "2026-01-06T01:42:03.711577",
     "drift_detected": false
   },
   "glyphs_emitted": [
@@ -101,7 +101,12 @@
     "enabled": true,
     "engine_version": "1.0.0",
     "last_ingestion": "2026-01-05T05:57:00Z",
-    "sources_active": ["youtube", "arxiv", "github", "web"],
+    "sources_active": [
+      "youtube",
+      "arxiv",
+      "github",
+      "web"
+    ],
     "auto_update_memory_bundles": true,
     "pingpong_processing": "continuous"
   }

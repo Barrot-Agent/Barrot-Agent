@@ -1,7 +1,7 @@
 glyph_name: SESSION_TRACE_GLYPH
 glyph_id: SESS-001
 version: 1.0.0
-timestamp: 2026-01-05T01:50:19.801806Z
+timestamp: 2026-01-06T01:42:04.135178Z
 
 description: >
   Emitted when a Copilot session transcript is ingested and analyzed.
