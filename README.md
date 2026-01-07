@@ -2,7 +2,7 @@
 
 **The Autonomous AGI Discovery System**
 
-Welcome to **B-Agent (Barrot)** - an advanced autonomous AI agent system that systematically discovers and assembles AGI components through a structured 56-piece puzzle framework. Powered by 22 specialized AI agents working in parallel, Barrot operates continuously to achieve autonomous operations, recursive self-improvement, and distributed intelligence.
+Welcome to **B-Agent (Barrot)** - an advanced autonomous AI agent system that systematically discovers and assembles AGI components through a structured 56-piece puzzle framework. Powered by 22 specialized agents with recursive reasoning capabilities, B-Agent pushes the boundaries of AI-driven self-enhancement for faster innovation.
 
 [![GitHub](https://img.shields.io/badge/GitHub-Barrot--Agent-blue)](https://github.com/Barrot-Agent/B-Agent)
 [![Dashboard](https://img.shields.io/badge/Dashboard-Live-green)](https://barrot-agent.github.io/B-Agent/)
@@ -148,4 +148,30 @@ memory_bundles:
 
 ## 📁 Repository Structure
 
+```
+barrot-cognition/
+├── nano-substrate/
+│   ├── README.md
+│   ├── config/
+│   │   ├── build-manifest.json
+│   │   ├── core-atoms.json
+│   │   ├── mutation-rails.json
+│   │   ├── substrate-version.json
+│   ├── schema/
+│   │   ├── atoms.schema.json
+│   │   ├── ledger-entry.schema.json
+│   │   ├── contradiction-matrix.schema.json
+│   │   ├── build-manifest.schema.json
+│   ├── examples/
+│       └── ingest-event.example.json
+├── barrot_cognition/
+│   ├── __init__.py
+│   ├── loader.py
+│   ├── models.py
+│   ├── substrate.py
+│   ├── ingestor.py
+│   ├── build_context.py
+│   └── priorities.py
+tests/
+└── test_barrot_cognition.py
 ```
